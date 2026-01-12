@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "1944d01762f55522",
+    "type": "split",
+    "children": [
+      {
+        "id": "e7278e2e98aab2b6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d2afc241b7b7ef3f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/posts/dev/in-rust-we-trust/chapter16.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "chapter16"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5efb654748176d33",
+    "type": "split",
+    "children": [
+      {
+        "id": "5b501f40b9711085",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f341dd8fd183fa04",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "bd35624c3346477a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "335b868165b9f83e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b67e343037ce5372",
+    "type": "split",
+    "children": [
+      {
+        "id": "6ef6190e0ec38e5a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4c5eda744e171762",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "src/posts/dev/in-rust-we-trust/chapter16.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for chapter16"
+            }
+          },
+          {
+            "id": "7e2f748c70d69b1f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "src/posts/dev/in-rust-we-trust/chapter16.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from chapter16"
+            }
+          },
+          {
+            "id": "de001c50c8281cfe",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "17a27a062947bc66",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "7f93f6bd17fa96d5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "src/posts/dev/in-rust-we-trust/chapter16.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of chapter16"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "f341dd8fd183fa04",
+  "lastOpenFiles": [
+    "src/routes/graph/+page.svelte",
+    "src/lib/components/Graph.svelte",
+    "src/routes/graph/+page.server.ts",
+    "src/routes/graph",
+    "node_modules/d3/README.md",
+    "node_modules/d3/package.json",
+    "node_modules/d3/src/index.js",
+    "node_modules/d3/src",
+    "node_modules/d3/dist/d3.min.js",
+    "node_modules/d3/dist/d3.js",
+    "node_modules/d3/dist",
+    "node_modules/@types/d3-drag/package.json",
+    "node_modules/@types/d3-drag/README.md",
+    "node_modules/@types/d3-chord/README.md",
+    "node_modules/d3-dsv/node_modules/commander/Readme.md",
+    "node_modules/d3-dsv/node_modules/commander/CHANGELOG.md",
+    "node_modules/d3-dsv/README.md",
+    "node_modules/@types/d3-array/README.md",
+    "node_modules/@types/d3/README.md",
+    "node_modules/safer-buffer/Readme.md",
+    "node_modules/safer-buffer/Porting-Buffer.md",
+    "node_modules/robust-predicates/README.md",
+    "node_modules/iconv-lite/Changelog.md",
+    "node_modules/iconv-lite/README.md",
+    "node_modules/rw/README.md",
+    "node_modules/delaunator/README.md",
+    "node_modules/internmap/README.md",
+    "node_modules/d3-zoom/README.md",
+    "node_modules/d3-transition/README.md",
+    "node_modules/d3-timer/README.md",
+    "node_modules/d3-time-format/README.md",
+    "node_modules/d3-time/README.md",
+    "node_modules/d3-shape/README.md",
+    "node_modules/d3-selection/README.md",
+    "node_modules/d3-scale-chromatic/README.md",
+    "node_modules/d3-scale/README.md"
+  ]
+}
