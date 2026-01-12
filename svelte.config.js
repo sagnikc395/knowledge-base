@@ -33,17 +33,10 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: null
-		}),
+		adapter: adapter(),
 		alias: {
 			$posts: 'src/posts'
 		},
-		paths: {
-			base: ''
-		}
 	}
 };
 
