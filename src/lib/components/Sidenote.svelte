@@ -1,5 +1,5 @@
-<script>
-	export let id; //unique id for the checkbox
+<script lang="ts">
+	export let id: string;
 </script>
 
 <span>
