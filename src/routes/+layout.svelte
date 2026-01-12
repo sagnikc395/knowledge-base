@@ -19,11 +19,12 @@
 
 <style>
 	:global(body) {
-		/* Tufte's core layout requirements */
-		width: 87.5%;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 1400px;
+		/* Tufte defaults */
 		counter-reset: sidenote-counter;
+	}
+
+	/* Ensure markdown images don't break the margin */
+	:global(article img) {
+		max-width: 100%;
 	}
 </style>
