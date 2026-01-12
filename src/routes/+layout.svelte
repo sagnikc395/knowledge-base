@@ -16,18 +16,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 </svelte:head>
 
+<!-- eslint-disable svelte/no-navigation-without-resolve -->
 <div class="app-shell">
-	<button class="menu-toggle" onclick={toggleMenu} aria-label="Toggle Menu">
-		☰
-	</button>
+	<button class="menu-toggle" onclick={toggleMenu} aria-label="Toggle Menu"> ☰ </button>
 
 	<nav class:open={isMenuOpen}>
 		<h3><a href="/" onclick={() => (isMenuOpen = false)}>Knowledge Base</a></h3>
-		{#each Object.entries(data.menu) as [category, items]}
+		{#each Object.entries(data.menu) as [category, items] (category)}
 			<div class="category">
 				<p class="category-title"><strong>{category.toUpperCase()}</strong></p>
 				<ul>
-					{#each items as item}
+					{#each items as item (item.slug)}
 						<li>
 							<a href="/notes/{item.slug}" onclick={() => (isMenuOpen = false)}>
 								{item.title}
@@ -170,7 +169,7 @@
 		.menu-toggle {
 			display: block;
 		}
-		
+
 		:global(body) {
 			/* Restore Tufte-like behavior on mobile but managed by us */
 			width: 100% !important;

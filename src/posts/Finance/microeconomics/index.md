@@ -5,5 +5,5 @@ tags:
   - economics
   - microeconomics
 ---
-my course notes for the MIT14.01 Principles of MicroEconomics
 
+my course notes for the MIT14.01 Principles of MicroEconomics

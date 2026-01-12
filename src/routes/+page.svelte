@@ -2,6 +2,7 @@
 	let { data } = $props();
 </script>
 
+<!-- eslint-disable svelte/no-navigation-without-resolve -->
 <section>
 	<h1 class="title">Knowledge Base</h1>
 	<p class="subtitle">A collection of notes, thoughts, and technical write-ups.</p>
@@ -10,11 +11,11 @@
 		<p>Welcome. Select a topic from the sidebar or explore the categories below.</p>
 
 		<div class="categories-grid">
-			{#each Object.entries(data.menu) as [category, items]}
+			{#each Object.entries(data.menu) as [category, items] (category)}
 				<div class="category-card">
 					<h2>{category.toUpperCase()}</h2>
 					<ul>
-						{#each items as item}
+						{#each items as item (item.slug)}
 							<li>
 								<a href="/notes/{item.slug}">{item.title}</a>
 								{#if item.date}
@@ -50,10 +51,10 @@
 		font-size: 0.8rem;
 		color: #666;
 	}
-    
-    @media (prefers-color-scheme: dark) {
-        .date {
-            color: #aaa;
-        }
-    }
+
+	@media (prefers-color-scheme: dark) {
+		.date {
+			color: #aaa;
+		}
+	}
 </style>

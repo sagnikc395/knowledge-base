@@ -7,15 +7,20 @@ tags:
   - DOM
 date: 31/7/25
 ---
+
 ### DOM Events:
+
 - We can listen to any DOM event on an element (such as click or `pointermove`) with a `on<name>` function.
-```svelte 
-<div onpointermove={onpointermove}>
+
+```svelte
+<div {onpointermove}>
 	The pointer is at {Math.round(m.x)} x {Math.round(m.y)}
 </div>
 ```
+
 - Like any other property where the name matches the value, we also use the short form.
-```svelte 
+
+```svelte
 <script>
 	let m = $state({ x: 0, y: 0 });
 

@@ -1,7 +1,6 @@
 ---
 title: '"<% tp.file.title %>"'
-draft: "false"
-tags: 
+draft: 'false'
+tags:
 date:
 ---
-   

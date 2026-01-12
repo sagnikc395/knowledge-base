@@ -7,5 +7,7 @@ tags:
   - sveltekit
 date: 28/5/25
 ---
+
 ### How to fetch and pass data from the backend to the frontend in Sveltekit
-- 
+
+-

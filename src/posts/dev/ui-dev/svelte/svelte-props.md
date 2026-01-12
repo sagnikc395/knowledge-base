@@ -8,11 +8,14 @@ tags:
   - props
   - state
 ---
+
 ### Declaring Props:
-- In any real application, we'll need to pass data from one component down to its children. 
-- To do that , we need to declare properties, generally shortened to 'props'. 
-- In Svelte, we do that with the `$props` rune. 
-```svelte 
+
+- In any real application, we'll need to pass data from one component down to its children.
+- To do that , we need to declare properties, generally shortened to 'props'.
+- In Svelte, we do that with the `$props` rune.
+
+```svelte
 <!--  Nested.svelte -->
 <script>
 	let { answer,desc } = $props();
@@ -31,19 +34,23 @@ tags:
 ```
 
 ### Default Values:
+
 - We can easily specify default values for props in `Nested.svelte`.
-```svelte 
+
+```svelte
 <script lang="ts">
-	let {answer = 'another ans'} = $props();
+	let { answer = 'another ans' } = $props();
 </script>
 ```
 
 - Now if we add a second component without an answer prop, it will fall back to the default!
 
 ### Spread Props:
+
 - We need not explicitly use all the various properties of the sent object via props.
 - But if the properties of sent props maps to the expected props , we can 'spread' them onto the component instead.
-```svelte 
+
+```svelte
 <!-- PackgeInfo.sv-->
 <script>
 	let { name, version, description, website } = $props();
@@ -71,11 +78,12 @@ const pkg = {
 ```
 
 - Similarly in `PackageInfo.svelte` we can get an object containing all the props that were passed into a component using a rest property:
-```svelte 
+
+```svelte
 <script>
-	let {name, ...stuff} = $props();
+	let { name, ...stuff } = $props();
 </script>
 ```
 
 - Or we can skip the destructuring altogether and access the properties by their object paths.
-- 
+-

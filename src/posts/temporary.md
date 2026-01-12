@@ -1,6 +1,6 @@
 ---
-title: "Tufte Style Post"
-date: "2026-01-12"
+title: 'Tufte Style Post'
+date: '2026-01-12'
 ---
 
 <script>
@@ -10,8 +10,8 @@ date: "2026-01-12"
 
 # An Essay on Design
 
-This is a sentence that requires a formal sidenote 
-<Sidenote id="sn-1">Tufte CSS is inspired by the work of Edward Tufte.</Sidenote> 
+This is a sentence that requires a formal sidenote
+<Sidenote id="sn-1">Tufte CSS is inspired by the work of Edward Tufte.</Sidenote>
 which will appear in the margin on large screens.
 
 <Marginnote id="mn-1">
