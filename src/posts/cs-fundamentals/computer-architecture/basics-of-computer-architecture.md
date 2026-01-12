@@ -32,7 +32,7 @@ date: 13/12/24
 
 - Goal: How Computers Work(from the ground up)
 - How a broad system of modern computers work from the ground up.
-  ![Apple Chip](image.png)
+  ![Apple Chip](/images/cs-fundamentals/image.png)
 
 ### Major High Level Goals of this Course:
 
@@ -75,7 +75,7 @@ date: 13/12/24
   - Devices run on top of it.
   - which manipulate electrons.
 
-- ![Transformation Hierarchy](image-1.png)
+- ![Transformation Hierarchy](/images/cs-fundamentals/image-1.png)
 
 - SW/HW Interface and Micro-Architecture region is the narrow /traditional of Computer Architecture.
 - but nowadays architecture are much broader and cut across the stack.
@@ -96,7 +96,7 @@ date: 13/12/24
   - Many algorithms for the same problem.
 
 - Microarchitecture -> RISC-V,ARM etc. implementation of the ISA.
-- ![Transformation Hierarchy](image-2.png)
+- ![Transformation Hierarchy](/images/cs-fundamentals/image-2.png)
 - Digital Logic implements the microarchitecture through the use of gates and logic.
 
 ### Computer Architecture:

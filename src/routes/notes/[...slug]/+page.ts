@@ -6,7 +6,13 @@ export const load: PageLoad = async ({ params }) => {
 	const modules = import.meta.glob('/src/posts/**/*.md');
 
 	// Construct the key that matches the glob pattern
-	const key = `/src/posts/${params.slug}.md`;
+	let slug = params.slug;
+	if (slug.endsWith('/')) {
+		slug = slug.slice(0, -1);
+	}
+	slug = decodeURIComponent(slug);
+
+	const key = `/src/posts/${slug}.md`;
 
 	type MarkdownModule = {
 		default: unknown;
@@ -21,5 +27,6 @@ export const load: PageLoad = async ({ params }) => {
 		};
 	}
 
+	console.error(`Failed to find note for slug: "${params.slug}". Tried key: "${key}"`);
 	throw error(404, `Note not found: ${params.slug}`);
 };

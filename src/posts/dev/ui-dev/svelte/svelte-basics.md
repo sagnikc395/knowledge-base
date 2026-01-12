@@ -64,7 +64,7 @@ date: 31/5/25
 ```
 
 - We can use curly braces inside attributes.
-- It's not uncommon to have an attribute where the name and value are the same, like src={src}. So we can write a convenient shorthand for that as:
+- It's not uncommon to have an attribute where the name and value are the same, like `src={src}`. So we can write a convenient shorthand for that as:
 
 ```svelte
 <img {src} alt="{name} dances." />

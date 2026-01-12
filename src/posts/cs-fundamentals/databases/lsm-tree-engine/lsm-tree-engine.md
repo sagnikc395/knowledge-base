@@ -39,7 +39,7 @@ date: 24/5/25
 
 ### Write Path:
 
-- ![[Screenshot 2025-05-24 at 9.23.45 AM.png]]
+- ![](/images/cs-fundamentals/databases/Screenshot%202025-05-24%20at%209.23.45%20AM.png)
 - 4 steps for the write path of LSM:
   - Write the key-value pair to the write ahead log so that it can be recovered after the storage engine crashes.
   - Write the key-value pair to memtable. After operations 1 and 2 , are completed, we can then notify the user that the write operation is completed.

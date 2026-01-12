@@ -23,8 +23,13 @@ date: 31/5/25
   - Handling Environment Variables
   - Configurable rendering (SSR,SSG,CSR)
   - Deployment
-- ![[Screenshot 2025-05-31 at 9.27.21 AM.png]]
-- ![[Screenshot 2025-05-31 at 9.27.52 AM.png]]
+### Creating a Project
+
+- `npm create svelte@latest my-app`
+- ![](/images/dev/Screenshot%202025-05-31%20at%209.27.21%20AM.png)
+- ![](/images/dev/Screenshot%202025-05-31%20at%209.27.52%20AM.png)
+
+### SvelteKit vs Svelte
 - Sveltekit apps are SSR by default for speed and SEO.
 - Can set the rendering type per page basis or for the entire site also.
 
@@ -58,5 +63,5 @@ src/
 ### Pages:
 
 - Sveltekit uses file based routing where routes according to the files in our project.
-- ![[Screenshot 2025-05-31 at 11.59.01 AM.png]]
+- ![](/images/dev/Screenshot%202025-05-31%20at%2011.59.01%20AM.png)
 -
