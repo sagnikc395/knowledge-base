@@ -22,6 +22,13 @@
 
 	<nav class:open={isMenuOpen}>
 		<h3><a href="/" onclick={() => (isMenuOpen = false)}>Knowledge Base</a></h3>
+		<div class="category">
+			<ul>
+				<li>
+					<a href="/graph" onclick={() => (isMenuOpen = false)}> Graph View </a>
+				</li>
+			</ul>
+		</div>
 		{#each Object.entries(data.menu) as [category, items] (category)}
 			<div class="category">
 				<p class="category-title"><strong>{category.toUpperCase()}</strong></p>
