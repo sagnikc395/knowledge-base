@@ -10,11 +10,12 @@ date: 31/5/25
 
 - routes -> +page.svelte; main page that gets loaded for the first time.
 
-## First bit of svelte code:
-
-- <\script> -> where we do our imports, setup our js and setup our state.
-- create our own svelte file:
-- inside the routes folders.
+<h2>First bit of svelte code:</h2>
+<ul>
+<li>&lt;\script> -> where we do our imports, setup our js and setup our state.</li>
+<li>create our own svelte file:</li>
+<li>inside the routes folders.</li>
+</ul>
 - Component name convention is to use a uppercase named file -> not necessary but use it like that.
 - There are techniques which we can use snippets to share code , but for the most part, we are using a single file component -> whatever we write in that file ends up being scoped to that component and that component only.
 

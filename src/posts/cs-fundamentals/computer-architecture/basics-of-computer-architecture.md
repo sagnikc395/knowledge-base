@@ -100,9 +100,8 @@ date: 13/12/24
 - is the science and art of designing computing platforms (hardware,interface,system SW and programming model).
 - to acheieve a set of design goals.
 	- Eg: highest performance on earth on workloads X,Y,Z
-	- Eg: longest battery life at a form factor that fis in your pocket with cost < $$$ CHF
+	- Eg: longest battery life at a form factor that fis in your pocket with cost &lt; $$$ CHF
 	- Eg: best average performance across all known workloads at the best performance/ cost ratio.
-
 - Designing a supercomputer is different from designing a smartphone -> But, many fundamentals principles are similar.
 
 - Differnet platforms , different goals, -> ML Accelerator Chip, 850k cores.

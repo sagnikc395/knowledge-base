@@ -12,7 +12,7 @@ date: 21/6/25
 
 ### Anatomy of a Rust Program:
 - main function is special. It always is the first code that runs in every executable Rust program.
-- Function body is wrapped in {}. Rust requires curly brackets around all function bodies. It's good style to place the opening curly bracket on the same line as the function declaration, adding 1 space in between.
+- Function body is wrapped in `{}`. Rust requires curly brackets around all function bodies. It’s good style to place the opening curly bracket on the same line as the function declaration, adding 1 space in between.
 - println calls a Rust macro. If it was a function call instead it would be entered as println (i.e without the !).
 	- using a ! means that we are calling a macro instead of a normal function and the macros don't always follow the same rules as functions.
 - Secondly we pass the string `hello, world` as an argument to println! and the string is printed to the screen.

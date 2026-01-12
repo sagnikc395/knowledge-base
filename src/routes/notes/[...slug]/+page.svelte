@@ -1,5 +1,6 @@
 <script lang="ts">
-	export let data;
+	let { data } = $props();
+    let Content = $derived(data.content);
 </script>
 
 <svelte:head>
@@ -11,6 +12,6 @@
 	<p class="subtitle">{data.meta.date}</p>
 
 	<div class="content">
-		<svelte:component this={data.content} />
+		<Content />
 	</div>
 </section>

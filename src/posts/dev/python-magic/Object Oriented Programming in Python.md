@@ -373,7 +373,11 @@ p3 = p1 + p2
 |Division|/|__truediv__|
 |Floor Division|//|__floordiv__|
 |Remainder (modulo)|%|__mod__|
-|Bitwise Left Shift|<<|__lshift__|
+<tr>
+<td>Bitwise Left Shift</td>
+<td>&lt;&lt;</td>
+<td><strong>lshift</strong></td>
+</tr>
 |Bitwise Right Shift|>>|__rshift__|
 |Bitwise AND|&|__and__|
 |Bitwise OR|\||__or__|

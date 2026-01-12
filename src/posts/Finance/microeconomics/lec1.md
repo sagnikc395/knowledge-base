@@ -92,5 +92,3 @@ date: 19/7/25
 					- can't trust the market to do that only the govt can.
 					- great argument in theory , but practically doesn't work.
 					- its too damn hard to make all those decisions.
-
-####
