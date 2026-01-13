@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e7278e2e98aab2b6",
+        "id": "05f66bc18e8a0b35",
         "type": "tabs",
         "children": [
           {
-            "id": "d2afc241b7b7ef3f",
+            "id": "1cbc550eba76d1ed",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/posts/dev/in-rust-we-trust/chapter16.md",
+                "file": "src/posts/dev/game-dev/handle-user-input.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chapter16"
+              "title": "handle-user-input"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "b67e343037ce5372",
@@ -94,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/posts/dev/in-rust-we-trust/chapter16.md",
+                "file": "src/posts/dev/game-dev/handle-user-input.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for chapter16"
+              "title": "Backlinks for handle-user-input"
             }
           },
           {
@@ -113,12 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/posts/dev/in-rust-we-trust/chapter16.md",
+                "file": "src/posts/dev/game-dev/handle-user-input.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from chapter16"
+              "title": "Outgoing links from handle-user-input"
             }
           },
           {
@@ -183,8 +184,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "f341dd8fd183fa04",
+  "active": "1cbc550eba76d1ed",
   "lastOpenFiles": [
+    "src/posts/dev/game-dev/ebit-engine.md",
+    "src/posts/dev/game-dev/handle-user-input.md",
+    "src/posts/dev/game-dev/fundamentals.md",
+    "src/posts/dev/game-dev",
+    "src/posts/dev/in-rust-we-trust/chapter16.md",
     "src/routes/graph/+page.svelte",
     "src/lib/components/Graph.svelte",
     "src/routes/graph/+page.server.ts",
@@ -195,8 +201,6 @@
     "node_modules/d3/src",
     "node_modules/d3/dist/d3.min.js",
     "node_modules/d3/dist/d3.js",
-    "node_modules/d3/dist",
-    "node_modules/@types/d3-drag/package.json",
     "node_modules/@types/d3-drag/README.md",
     "node_modules/@types/d3-chord/README.md",
     "node_modules/d3-dsv/node_modules/commander/Readme.md",
@@ -217,9 +221,6 @@
     "node_modules/d3-timer/README.md",
     "node_modules/d3-time-format/README.md",
     "node_modules/d3-time/README.md",
-    "node_modules/d3-shape/README.md",
-    "node_modules/d3-selection/README.md",
-    "node_modules/d3-scale-chromatic/README.md",
-    "node_modules/d3-scale/README.md"
+    "node_modules/d3-shape/README.md"
   ]
 }

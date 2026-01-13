@@ -1,0 +1,48 @@
+---
+title: Fundamentals of Game Dev
+tags:
+  - game-dev
+  - ebitengine
+date: 1/12/25
+---
+- Variable
+	- named storage location. 
+	- containers used to organize data.
+- Flag
+	- represents a quality or condition of something.
+	- flag could represent whether a game has started yet, or whether a 2nd player has joined a game or not.
+	- typically binary, eg: representing the state -> inactive or active state.
+- Game State
+	- Think of it as a snapshot of all the elements of a game at a particular moment in time.
+	- Eg: coordinates of the player on the screen, the coordinates of an enemy etc.
+	- games will read in a user input and then modify the game state based on which buttons are / are not pressed.
+	- Eg: 
+		- Consider the case when a player will press a button for jumping.
+		- Press detected after that and handled in the next frame (game loop)
+		- when the game loop sees the jump button is being pressed, a "jumping" flag could be set to true on a character, and the character would then start their ascent.
+		- When player releases the button responsible for jumping , on the next game loop iteration the release of the button is detected and then it is handled.
+		- "jumping" flag could be set to false when the button is then released, and in some games, this would then affect how high the character can jump.
+	- Games will support for saving and loading and record the game state by writing to a file. 
+	- Games may record and restore the entire game state, or only a part of it.
+- Game Loop
+	- Loops the entire cycle of the game.
+	- Typically runs many times per second.
+	- Typical game loop looks like:
+		- reads user input 
+		- then processes and updates the game state.
+		- then draws the game on the screen.
+	- Each time the loop completes, it will return to the first statement and then start it all over again.
+	- Games sometimes limit the number of times this happens / s , to reduce the amount of system resources used.
+	- Can be useful above a certain number of updates/frames per second, because adding more updates/frames makes no perceivable difference.
+- Drawing:
+	- For computer screens, Y direction is actually flipped, and (0,0) is the top leftmost pixel of the screen.
+	- (0,1) is thus the pixel directly below (0,0).
+	- On a screen with dimensions as (1920,1080), (0,1079) is the bottom leftmost pixel, because the coordinates start at 0.(1919,0) is the top rightmost pixel, and (1919,1079) is the bottom most rightmost pixel.
+- Input Devices:
+	- Depending on where a game is being played, following input devices are generally available:
+		- keyboard 
+		- mouse 
+		- touch screen 
+		- gamepads
+	- when creating a game, it is important to consider which types of input we want to support.
+	- eg: releasing a mobile game, would need touch screen support.
