@@ -20,4 +20,8 @@ tags:
 	- Setting the tick rate too high will consume excessive system resources, and may lower the frame rate.
 	- At high enough tick rates, the system may struggle to maintain the timing of each tick, even when sacrificing the frame rate.
 	- Even if the system is able to sustain the high tick rate, battery-powered devices will drain more quickly.
-	- A good default is a tick rate of 100, results in a accurate and responsive input handling without using resources excessively.s
+	- A good default is a tick rate of 100, results in a accurate and responsive input handling without using resources excessively.
+- Handling Keyboard Input
+	- To detect whether or not a key is currently pressed, we call `ebiten.IsKeyPressed`.
+	- When we want to detect whether or not a key is just starting to be pressed this tick, we call `inpututil.IsKeyJustPressed`.
+	- `IsKeyPressed` always returns true every tick the key continues to be pressed, while `IsKeyJustPressed` only will return true , the first tick the key press event is observed.
