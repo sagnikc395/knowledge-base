@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/posts/dev/game-dev/handle-user-input.md",
+                "file": "src/posts/game-dev/handle-user-input.md",
                 "mode": "source",
                 "source": false
               },
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "b67e343037ce5372",
@@ -95,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/posts/dev/game-dev/handle-user-input.md",
+                "file": "src/posts/game-dev/handle-user-input.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/posts/dev/game-dev/handle-user-input.md",
+                "file": "src/posts/game-dev/handle-user-input.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -186,10 +185,11 @@
   },
   "active": "1cbc550eba76d1ed",
   "lastOpenFiles": [
-    "src/posts/dev/game-dev/ebit-engine.md",
-    "src/posts/dev/game-dev/handle-user-input.md",
-    "src/posts/dev/game-dev/fundamentals.md",
-    "src/posts/dev/game-dev",
+    "src/posts/temporary.md",
+    "src/posts/game-dev/handle-user-input.md",
+    "src/posts/game-dev/ebit-engine.md",
+    "src/posts/game-dev/fundamentals.md",
+    "src/posts/game-dev",
     "src/posts/dev/in-rust-we-trust/chapter16.md",
     "src/routes/graph/+page.svelte",
     "src/lib/components/Graph.svelte",
@@ -220,7 +220,6 @@
     "node_modules/d3-transition/README.md",
     "node_modules/d3-timer/README.md",
     "node_modules/d3-time-format/README.md",
-    "node_modules/d3-time/README.md",
-    "node_modules/d3-shape/README.md"
+    "node_modules/d3-time/README.md"
   ]
 }
