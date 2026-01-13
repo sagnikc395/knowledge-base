@@ -1,0 +1,35 @@
+---
+title: Javascript Fundamentals
+tags:
+  - projects
+  - javascript
+  - 100xdevs
+date: 1/13/25
+---
+- course notes for 100xDev Javascript Fundamentals.
+-  why languages ?
+	- computer has ram and storage.
+	- whenever we have application locally resides in the SSD
+	- when we run something -- it runs in RAM
+	- the current things in RAM, other things in SSD 
+	- what exactly goes to RAM? Some hardware and circuits - machine at the lowest level only understands a bunch of numbers 
+	- RAM doesnt understand programming languages -> represented by 0s and 1s.
+	- Using something called compilers -> high level code , compiled to 0s and 1s. by the compiler. Much easier to run for loops, 0s and 1s. High level need of a programming language.
+	- Every language has a compiler which convers the developer code into binary.
+	- Compilers -> converts high level developer code into binary
+- Interpreted vs compiled languages 
+	- C++ is compiled -> compiles the code into binary by the compiler
+	- JS is interpreted directly. No specific compilation step
+	- Goes line by line ; doesn't worry about high level compilation of the whole thing
+		-  usually goes line by line 
+		- can run partially if the error comes later
+- why JS >> Other languages in some use-cases
+	- 
+- Strict vs Dynamic Languages
+- Single Threaded nature of JS 
+- Simple Primitives in JS(number, strings, booleans)
+- Complex Primitives in JS(arrays, objects)
+- Functions in JS
+- Practise problem solving 
+- Callback functions, event loop, callback queue, asynchronous programming 
+- Callback Hell and Promises
