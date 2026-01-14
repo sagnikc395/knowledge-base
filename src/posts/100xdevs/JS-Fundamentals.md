@@ -24,12 +24,37 @@ date: 1/13/25
 		-  usually goes line by line 
 		- can run partially if the error comes later
 - why JS >> Other languages in some use-cases
-	- 
-- Strict vs Dynamic Languages
+	- browsers can only understand HTML/CSS/JS.
+	- Due to Node.js , Javascript can also be used for "Backend Development".
+	- Javascript is loosely typed and it allows us to changes the types of the variables.
+	- Project might have runtime errors -> leads to use of Typescript.
+		- makes js more static -> same things that we see here, added into Javascript.
+	- Strict vs Dynamic Languages
 - Single Threaded nature of JS 
+	- JS is a single threaded language.
+	- the number of cores -> one of the specs of a new machine.
+	- one single core -> run code at a single time.
+	- the more the number of cores that we have, the more the number of processes that we can run.
+	- there is something called context switching -> not everything needs the RAM right now.
+	- It is some place that can run some code at the single time.
+	- Cannot run parallely.
+	- JS is always restricted to a single core.
+		- cannot split our program to 2 cores , to split your loads and reduce load -> making it more optimal.
+		- This is why it is considered to be a bad language for scalable systems.
+		- Practically, JS runs line by line and only one line runs at a time. Go lets your create goroutines, JS doesn't.
 - Simple Primitives in JS(number, strings, booleans)
+	- covered in the repo.
 - Complex Primitives in JS(arrays, objects)
+	- arrays -> storage items of the same / different types.
+	- objects -> key/value pairs of items and custom values.
+	- arrays dont have to be of objects and can be of differnt types mixed together.
 - Functions in JS
-- Practise problem solving 
+	- lets us abstract out logic in our program.
+	- take arguments in an input
+	- return a value as an output
+	- can think of them as an independent program that is supposed to do something given an input.
+	- functions can take other functions as input -> callbacks.
 - Callback functions, event loop, callback queue, asynchronous programming 
+	- callback functions -> function take other functions as inputs 
+	- 
 - Callback Hell and Promises
