@@ -63,4 +63,17 @@ date: 1/14/25
 		- First thing it does is to check whether we have reached the end of input.
 		- If that is true, it will set l.ch to 0, ASCII for NULL, and signifies either we havent read anything yet or eof.
 			- But if we haven't reached the end of input yet it will set l.ch to the next character by accessing `l.input[l.readPosition]`.
-			- 
+			- `l.position` is then updated to the just used `l.readPosition` and `l.readPosition` is incremented by one. This way, `l.readPosition` always points to the next position where we are going to read from next and `l.position` always points to the position from where we last read.
+	- `nextToken()` first pass:
+		- we look at the current character under examination `l.ch` and return a token depending on which character it is.
+		- before returning the token we advance our pointers into the input so that when we call `NextToken()` again the `l.ch` field is already updated. 
+		- `newToken()` function helps us to initialize these tokens.
+	- Adding support for identifiers/ keywords:
+		- Our lexer needs to do is recognize whether the current character is a letter or not, if so
+		- it needs to read the rest of the identifier/ keyword until it encounters a non-letter character.
+		- Having read that identifier/keyword , we then need to find out if it is a identifier or a keyword , so we can use the correct token.TokenType.
+		- `isLetter()` just checks whether the given argument is a letter.Also treats `_` as letter and allows it in identifiers and keywords.
+		- `readIdentifier()` -> reads an identifier and advances our lexer's positions until it encounters a non-letter-character.
+		- `LookUpIdent()` checks the keywords table to see whether the given identifier is in fact a keyword or not. 
+			- If it is, it returns the keyword's `TokenType` constant.
+			- If it isn't, we just get back token.IDENT, which is the TokenType for all user-defined identifiers.
