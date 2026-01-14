@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4debf9af8496a199",
+        "id": "9e0024f6419404a5",
         "type": "tabs",
         "children": [
           {
-            "id": "7893019e0c31251d",
+            "id": "b90805441626366c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/posts/100xdevs/JS-Fundamentals.md",
+                "file": "src/posts/programming-languages/building an interpreter.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "JS-Fundamentals"
+              "title": "building an interpreter"
             }
           }
         ]
@@ -165,13 +165,35 @@
               "icon": "lucide-list",
               "title": "Outline of chapter16"
             }
+          },
+          {
+            "id": "57a9c90c652165d2",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "src/posts/programming-languages/building an interpreter.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties for building an interpreter"
+            }
+          },
+          {
+            "id": "7f78cc99e52dfb49",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,13 +203,17 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7893019e0c31251d",
+  "active": "b90805441626366c",
   "lastOpenFiles": [
-    "src/posts/100xdevs/html-css-fundamentals.md",
+    "src/posts/todo/nov-3.md",
+    "src/posts/programming-languages/building an interpreter.md",
+    "src/posts/programming-languages",
     "src/posts/100xdevs/JS-Fundamentals.md",
+    "src/posts/100xdevs/html-css-fundamentals.md",
     "src/posts/100xdevs/svelte-notes/skeleton of svelte projects.md",
     "src/posts/100xdevs/svelte-notes/data-flow.md",
     "src/posts/100xdevs/svelte-notes/sveltekit.md",
@@ -209,7 +235,6 @@
     "node_modules/d3/README.md",
     "node_modules/d3/package.json",
     "node_modules/d3/src/index.js",
-    "node_modules/d3/src",
     "node_modules/@types/d3-drag/README.md",
     "node_modules/@types/d3-chord/README.md",
     "node_modules/d3-dsv/node_modules/commander/Readme.md",
@@ -219,8 +244,6 @@
     "node_modules/@types/d3/README.md",
     "node_modules/safer-buffer/Readme.md",
     "node_modules/safer-buffer/Porting-Buffer.md",
-    "node_modules/robust-predicates/README.md",
-    "node_modules/iconv-lite/Changelog.md",
-    "node_modules/iconv-lite/README.md"
+    "node_modules/robust-predicates/README.md"
   ]
 }
