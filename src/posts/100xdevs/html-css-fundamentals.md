@@ -2,10 +2,11 @@
 title: HTML,CSS Fundamentals for learning web dev
 tags:
   - 100xdevs
-  - html-css
+  - html
+  - css
 date: 1/13/25
 ---
-- html basics
+## HTML Basics: 
 	- 2 jargons that we need to know
 		- tags
 		- attributes
@@ -74,3 +75,36 @@ date: 1/13/25
 	- different from tags
 	- tags are top-level things that define the structure
 	- each tag have multiple attribute that define what they can do.
+
+## CSS :
+- to add styles to our websites
+- used for positioning things on the page and making it accessible to users.
+- only way to style inside our browser is using CSS.
+- add using the style tags -> to add different styles
+	- like background-color
+	- color 
+	- etc.
+- common styling attributes:
+	- color
+	- background
+	- border-radius -> gives it a better radius to make it style better
+	- border  -> adding border to the div to segregate the things 
+	- padding / margin -> spacing 
+	- box-shadow -> shadowing effect -> similar to border -> can tweak the direction and how it appears , unlike borders
+- to debug spaces / any UI thing can check from the chrome dev tools.
+- the right way to position something n the screen is to use it via flexbox
+	- display: flex 
+	- on parent 
+	- makes all the div siblings reside in the same line 
+- display: flex 
+	- tells the parent tag to use the flexbox
+	- the children elements need to be positioned someway , right next to each other
+	- even if we put div inside it , it will come right next to each other
+	- always have the parent be a flexbox and the children will be peers
+- to make it equidistant:
+	- justify-content:
+	- default is flex start
+	- end is end starting
+	- space-between -> all tyhe children should be equidistant
+- the default is absolute-positioning and we align them using float: left and float:right
+- 
