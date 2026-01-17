@@ -56,5 +56,11 @@ date: 1/13/25
 	- functions can take other functions as input -> callbacks.
 - Callback functions, event loop, callback queue, asynchronous programming 
 	- callback functions -> function take other functions as inputs 
-	- 
+	- can change what function to get called, changed and pass the function as an argument.
+	- passing a functions as an arguments.
+	- inside the function, we are calling back some other functions 
+	- that's why its named as call back function.
+	- Eg: setTimeout -> takes a function and calling it after sometime is a callback
+	- Single Threaded -> only one thread available for the runtime to use 
+	- Non blocking call -> if we make an expensive network call / db call -> it will defer the call until the thread is free to do the execution.
 - Callback Hell and Promises
