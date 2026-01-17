@@ -64,7 +64,6 @@ date: 1/13/25
 	- Single Threaded -> only one thread available for the runtime to use 
 	- Non blocking call -> if we make an expensive network call / db call -> it will defer the call until the thread is free to do the execution.
 - Callback Hell and Promises
-
 - Basic JS APIs
 	- JS refresher and practice for JS.
 - Classes 
@@ -81,22 +80,21 @@ date: 1/13/25
 	- present to use out of the box.
 - JSON
 	- Javascript Object Notation.
-	- JSON.parse to extract the string into a valid JSON object
-	- JSON.stringify to encode the object into a string.
+	- `JSON.parse()` to extract the string into a valid JSON object
+	- `JSON.stringify()` to encode the object into a string.
 	- interchange bw strings and json using this 
 	- use case: when we get data from a server when we need to encode and decode the data -> stringify a data into a string , and while interacting with it , turn in back into object.
 - Math 
-	- Math.random() -> gives a random number bw 0 and 1 
-	- Math.floor()
-	- Math.ceil()
-	- Math.max()
-	- Math.min()
+	- `Math.random()` -> gives a random number bw 0 and 1 
+	- `Math.floor()`
+	- `Math.ceil()`
+	- `Math.max()`
+	- `Math.min()`
 - Objects
 	- can set , unset properties on objects.
-	- get the original object -> obj 
-	- get all the keys of the object -> Object.keys(obj)
-	- get all the values of the object -> Object.values(obj)
-	- get all the entries of the object -> Object.entries(obj) (key-value pairs)
-	- check if the property of the object is its own or from parent node -> obj.hasOwnProperty("property-name")
-	- assign a new key and value to the object -> Object.assign({},obj,{newProperty: "newValue"})
-- 
+	- get the original object -> `obj` 
+	- get all the keys of the object -> `Object.keys(obj)`
+	- get all the values of the object -> `Object.values(obj)`
+	- get all the entries of the object -> `Object.entries(obj)` (key-value pairs)
+	- check if the property of the object is its own or from parent node -> `obj.hasOwnProperty("property-name")`
+	- assign a new key and value to the object -> `Object.assign({},obj,{newProperty: "newValue"})`
