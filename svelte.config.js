@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 import remarkUnwrapImages from 'remark-unwrap-images';
@@ -36,22 +36,6 @@ function escapeSvelte(str) {
 	return str.replace(/{/g, '&#123;').replace(/}/g, '&#125;');
 }
 
-const base = process.env.BASE_PATH || '';
-
-/**
- *
- * @returns
- */
-function remarkPrependBase() {
-	return (tree) => {
-		visit(tree, 'image', (node) => {
-			if (node.url.startsWith('/')) {
-				node.url = `${base}${node.url}`;
-			}
-		});
-	};
-}
-
 function rehypeAddAltFromSrc() {
 	return (tree) => {
 		visit(tree, 'element', (node) => {
@@ -76,7 +60,7 @@ const config = {
 			layout: {
 				_: path.join(process.cwd(), 'src/lib/components/MarkdownLayout.svelte')
 			},
-			remarkPlugins: [remarkUnwrapImages, remarkMath, remarkPrependBase],
+			remarkPlugins: [remarkUnwrapImages, remarkMath],
 			highlight: {
 				highlighter: async (code, lang = 'text') => {
 					const html = highlighter.codeToHtml(code, {
@@ -109,12 +93,7 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter({
-			fallback: '404.html'
-		}),
-		paths: {
-			base: base
-		},
+		adapter: adapter(),
 		alias: {
 			$posts: 'src/posts'
 		}
