@@ -40,7 +40,7 @@ date: 19/7/25
   - ie. think of the traditional markets
   - modern market doesn't work that way.
   - core is there should be buyers and there should be sellers.
-  - ![[Screenshot 2025-07-19 at 4.42.04 PM.png]]
+  - ![Screenshot 2025-07-19 at 4.42.04 PM.png](/images/migrated/Finance/microeconomics/assets/Screenshot%202025-07-19%20at%204.42.04%20PM.png)
   - negative correlation bw price of roses and quantity.
   - why ?
     - because of opportunity cost.

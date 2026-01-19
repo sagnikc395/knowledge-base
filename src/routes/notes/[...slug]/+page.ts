@@ -1,5 +1,6 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
+import type { Component } from 'svelte';
 
 export const load: PageLoad = async ({ params }) => {
 	// Use import.meta.glob to get all markdown files
@@ -15,7 +16,7 @@ export const load: PageLoad = async ({ params }) => {
 	const key = `/src/posts/${slug}.md`;
 
 	type MarkdownModule = {
-		default: unknown;
+		default: Component;
 		metadata: Record<string, unknown>;
 	};
 

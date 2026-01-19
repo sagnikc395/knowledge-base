@@ -169,7 +169,7 @@ export const counter = $state({
 - This causes an error, as we can't use runes in normal .js files, only .svelte.js files.
 - Renaming the file as shared.svelte.js
 
-```shared.svelte.js
+```javascript
 export const counter = $state({
 	count: 0
 });

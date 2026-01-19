@@ -1,4 +1,4 @@
-import type { Post } from '$lib/types';
+import type { Post, TreeNode, FolderNode } from '$lib/types';
 
 export async function getPosts(): Promise<Post[]> {
 	const posts: Post[] = [];
@@ -55,4 +55,60 @@ export async function getPosts(): Promise<Post[]> {
 	}
 
 	return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+export async function getPostTree(): Promise<TreeNode[]> {
+	const posts = await getPosts();
+	const root: TreeNode[] = [];
+
+	for (const post of posts) {
+		const parts = post.slug.split('/');
+		let currentLevel = root;
+
+		for (let i = 0; i < parts.length; i++) {
+			const part = parts[i];
+			const isLast = i === parts.length - 1;
+
+			if (isLast) {
+				currentLevel.push({
+					type: 'file',
+					name: post.title, // Use title for display if preferred, or part for filename
+					post
+				});
+			} else {
+				let folder = currentLevel.find(
+					(node): node is FolderNode => node.type === 'folder' && node.name === part
+				);
+
+				if (!folder) {
+					folder = {
+						type: 'folder',
+						name: part,
+						children: []
+					};
+					currentLevel.push(folder);
+				}
+
+				currentLevel = folder.children;
+			}
+		}
+	}
+
+	function sortTree(nodes: TreeNode[]) {
+		nodes.sort((a, b) => {
+			if (a.type === b.type) {
+				return a.name.localeCompare(b.name);
+			}
+			return a.type === 'folder' ? -1 : 1;
+		});
+		nodes.forEach((node) => {
+			if (node.type === 'folder') {
+				sortTree(node.children);
+			}
+		});
+	}
+
+	sortTree(root);
+
+	return root;
 }

@@ -21,7 +21,7 @@ date: 1/18/25
 	- But when we do this , the problem is the command is then not found.
 - Everytime we create an docker container from an Docker image.
 	- An instance of the Docker image is created -> it contains a complete snapshot of the operating system.
-	- ![[Screenshot 2026-01-18 at 11.48.05 AM.png]]
+	- ![Screenshot 2026-01-18 at 11.48.05 AM.png](/images/migrated/data-engineering-zoomcamp/imgs/Screenshot%202026-01-18%20at%2011.48.05%20AM.png)
 	- It is stateless and doesn't preserve the state.
 	- Instead of Ubuntu we can also use the direct python image of 3.13 directly also.
 - When installing the Python 3.13 image :
@@ -47,7 +47,7 @@ date: 1/18/25
 ### Data Pipelines:
 - A data pipeline is a service that receives data as input and outputs more data.
 - Eg: reading a CSV file, transforming the data somehow and storing it as a table in a PostgreSQL database.
-- ![[Screenshot 2026-01-18 at 1.17.04 PM.png]]
+- ![Screenshot 2026-01-18 at 1.17.04 PM.png](/images/migrated/data-engineering-zoomcamp/imgs/Screenshot%202026-01-18%20at%201.17.04%20PM.png)
 - We have CSV files and parses the CSV files and creates the parquert files -> takes in some input and produces some output.
 - Anything that can take data from one and put in some destination is called a data pipeline.
 #### Building a basic pipeline in `pipeline/pipeline.py`: 
@@ -57,7 +57,7 @@ date: 1/18/25
 - want a isolated environment for setting up pyarrow and parquet.
 - create an virtual environment for the environment , different from the virtual environment we have for the docker image.
 - easier to isolate one project from another 
-- ![[Screenshot 2026-01-18 at 1.35.58 PM.png]]
+- ![Screenshot 2026-01-18 at 1.35.58 PM.png](/images/migrated/data-engineering-zoomcamp/imgs/Screenshot%202026-01-18%20at%201.35.58%20PM.png)
 - using uv to manage creating virtual environments 
 	- `uv init --python 3.13`
 	- it creates its own python and it will use the uv's python to manage the project and to add the dependencies.
@@ -101,7 +101,7 @@ date: 1/18/25
 			- not a main dependency, using this dependency to just interaction with dev,not dependent on production use case.
 			- `uv run pgcli -h localhost -p 5432 -u root -d ny_taxi`
 	- Flow of things till now :
-		- ![[Screenshot 2026-01-18 at 7.01.38 PM.png]]
+		- ![Screenshot 2026-01-18 at 7.01.38 PM.png](/images/migrated/data-engineering-zoomcamp/imgs/Screenshot%202026-01-18%20at%207.01.38%20PM.png)
 	- Even if we disconnect from it now, it will still have all the data till now.
 
 #### Interactive Analysis of Our Data using Jupyter 
@@ -166,17 +166,17 @@ date: 1/18/25
 
 
 #### Architecture till now:
-- ![[Screenshot 2026-01-18 at 9.46.25 PM.png]]
+- ![Screenshot 2026-01-18 at 9.46.25 PM.png](/images/migrated/data-engineering-zoomcamp/imgs/Screenshot%202026-01-18%20at%209.46.25%20PM.png)
 - when we try to connect to the localhost , it is trying to connect to the localhost internally to docker not to our local.
 - need to create using `docker network`
 - things within the same network can see each other.
 	- `pgdatabase` in `postgres:18` container 
 	- `taxi_ingest:v001` in `ingest` container 
-	- ![[Screenshot 2026-01-18 at 9.53.50 PM.png]]
+	- ![Screenshot 2026-01-18 at 9.53.50 PM.png](/images/migrated/data-engineering-zoomcamp/imgs/Screenshot%202026-01-18%20at%209.53.50%20PM.png)
 	- they can then see each other and can also access ports of each other.
 	- after resolving this, we added pgAdmin to run in the same network to get a better UI.
 	- After adding pgadmin:
-		- ![[Screenshot 2026-01-18 at 10.04.45 PM.png]]
+		- ![Screenshot 2026-01-18 at 10.04.45 PM.png](/images/migrated/data-engineering-zoomcamp/imgs/Screenshot%202026-01-18%20at%2010.04.45%20PM.png)
 #### docker-compose
 - to execute both the services db up and setup pgAdmin together.
 - creates volumes and networks
