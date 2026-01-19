@@ -1,0 +1,91 @@
+---
+title: Taste is the New Moat - Building Winterfell
+tags:
+  - css
+  - design
+  - 100xdevs
+date: 1/19/25
+---
+- ref: https://winterfell.dev 
+- Main Idea: **have an approach and taking ownership while building applications** 
+- AI Era
+	- AI can replicate nearly everything 
+	- intense debate online about whether human engineers are still necessary
+	- what is the distinction b/w project and a product.
+		- edge cases 
+		- micro interactions 
+		- performance 
+	- other factors:
+		- thoughtful defaults
+		- do it now mindset
+- winterfell
+	- generates contract for web3 applications using prompts 
+	- similar like lovable.
+- edge cases 
+	- added templates for people who dont want to create contract from scratch.
+	- if there is already a chat existing, ask the user for a new chat, instead appending everything (prompt + template) in a single chat.
+	- learning: think of all the edge cases in the application and what all features you wanna support with your own constraints.
+	- users might wanna export the codebase to your Github 
+		- users choosing repo name is already existing -> added a small ui change to show it is not available.
+		- if available show a green sign -> users are able to know , users will come back -> small retention things required to launch it to the market.
+	- anything that we ship should have a purpose, otherwise it will drive customers away.
+	- while making features , always things of these small edge cases that can happen.
+- thoughtful defaults
+	- while building, make the thing as much polished as we can.
+	- think of it as the users will come into the picture, they will use it and what all interactions will come into the picture.
+	- think of everything as intention of building and shipping a product 
+	- take ownership and make your product e2e ready.
+	- don't leave and make things only functional - focus on experience also
+- ui/ux and dx 
+	- best resourceful application, should be functional, maintainable, can be itered fast and should be useful for others.
+	- have clean distinctions on what we are building.
+	- not only ui/ux , but also write clean code -> better dx lets you debug and maintain code easier.
+- project/ product 
+	- project
+		- application which was built to just showcase its purpose
+		- bugs and improvements kept to solve later.
+		- shortcuts taken to hit the deadline
+	- product
+		- an application which is being built in a way that real users will kick in 
+		- take the ownership of quality at every level. just don't ship code that "works" - refine it until it truly serves users well.
+		- think in terms of scalability, maintenance and evolution.
+- understand the user journey map 
+	- always place the user journey maps before writing a single line of code
+	- onboarding / entry point 
+		- winterfell -> primarily entered through developer channels.
+		- core audience to developers
+		- require sign in via github -> primary authenticated 
+			- want the code in their local github 
+		- non -developer users , Google Sign in as fallback authentication.
+	- discovery
+		- aim to deliver by exploring key features through clear and intuitive navigation.
+	- playground 
+		- user experience though interaction with the site.
+		- needed to make the playground page the most polished.
+		- the core of the product -> shouldn't send a bad signal -> remove rigidness and to support the site.
+		- all the behaviors should work like a charm.
+	- retention and trust signals
+		- if users feel stuck or annoyed, they wont use it again.
+		- try to take reviews 
+		- the repository creation small ui fix -> red if already exists or green if can be created 
+			- think of small edge cases like this , to make ux better.
+- iceberg principle : 
+	- small feature like adding collaborator actually hides several imp considerations beneath the surface.
+	- difference bw project perspective and production perspective.
+- taste is not personal preference 
+	- you can always know a good website from a bad one.
+	- how to develop good taste ?
+		- not only browse websites from users perspective , but also from a developer's eye
+		- eg: gumroad and its neobrutalist theme of website.
+		- train yourself with intent , it can't be imposed or downloaded.
+	- inspiration
+		- scroll products not products 
+			- eg: huly.io -> discord but for teams 
+			- eg: cal.com 
+			- eg: aceternity.ui
+			- eg: reactbits 
+		- decode -> understand their behaviour 
+		- internalize -> rebuild those interactions 
+		- refine -> remove the unneccessary clogs and make the application own it, even if it is copied 
+- "learn to write clean code, not just UIs. and learn to write it with bare hands"
+- "in a world of scarcity, we treasure tools, in a world of abundance, we treasure taste"
