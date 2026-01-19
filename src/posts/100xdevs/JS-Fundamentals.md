@@ -4,7 +4,7 @@ tags:
   - projects
   - javascript
   - 100xdevs
-date: 1/13/25
+date: 1/19/25
 ---
 - course notes for 100xDev Javascript Fundamentals.
 -  why languages ?
@@ -98,3 +98,56 @@ date: 1/13/25
 	- get all the entries of the object -> `Object.entries(obj)` (key-value pairs)
 	- check if the property of the object is its own or from parent node -> `obj.hasOwnProperty("property-name")`
 	- assign a new key and value to the object -> `Object.assign({},obj,{newProperty: "newValue"})`
+- Async functions vs Sync Functions 
+	- what does synchronous mean ?
+		- together, one after the other or sequential 
+		- only one things is happening at a time 
+		- async -> opposite of async 
+			- happens in parts 
+			- multiple things are context switching with each other 
+		- eg: human body and brain is single threaded; we can only do one thing at a time -> but we can context switch b/w tasks , or we can delegaet tasks to other people.
+	-  async functions 
+		- eg: filesystem access in nodejs 
+		- net amount of time take to do a task can be decreased using async functions (delegating and context switching)
+- setTimeout is like a global async function that JS provides that we can use it to check it.
+	- part of the browser api , very common use 
+	- running a specific function after a duration (in ms)
+	```javascript 
+	setTimeout(() => {
+		console.log("ok")},1000
+	);
+	```
+- one way to make an async function synchronous is to use busywaiting 
+	- ```javascript 
+	  function syncSleep() {
+		  let a = 1;
+		  for(let i=0;i<10000000;i++) {
+		  a++;
+		  }
+	 }
+	  
+	  syncSleep();
+	  ```
+  - we can defer the execution of this , by delaying it for some time. 
+  - what are the common async functions ?
+	  - `setTimeout()`
+	  - `fs.readFile` to read a file from your filesystem 
+		  - async , because can't read a file immediately
+		  - can take some time to access the file 
+		  - other process might be executing it
+		  - you yourself might be editing it 
+		  - when done reading , it will call a callback to us 
+	- `fetch` to fetch some data from an API endpoint 
+		- async call -> getting data from someone's elses server.
+- the console.log after `fs.readFile` is executed function, cause accessing the file takes time, and `fs.readFile` is anyway asynchronous
+	- and since it is expensive and async, we proceed do our own thing.
+- Real world use of callbacks 
+- JS  Architecture in the Browser
+	- check this out : http://latentflip.com/loupe/
+	- call stack where your code gets places if its synchronous 
+	- callback queue 
+		- when we become idle, the event loop finally runs 
+		- checks if something there in the callback queue or not and then puts it in the callstack
+	- 
+- Promises
+- Async Await 
