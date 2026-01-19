@@ -4,7 +4,7 @@ tags:
   - data-engineering
   - terraform
   - sql
-date: 1/18/25
+date: 1/18/26
 ---
 ### Difference b/w an Data Engineer and and AI Engineer
 - Data Engineer -> making sure all the data is captured, ready for analysis , clean and can be used. 

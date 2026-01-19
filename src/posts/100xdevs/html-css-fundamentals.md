@@ -4,7 +4,7 @@ tags:
   - 100xdevs
   - html
   - css
-date: 1/13/25
+date: 1/13/26
 ---
 ## HTML Basics: 
 	- 2 jargons that we need to know

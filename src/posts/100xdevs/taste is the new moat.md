@@ -4,7 +4,7 @@ tags:
   - css
   - design
   - 100xdevs
-date: 1/19/25
+date: 1/19/26
 ---
 - ref: https://winterfell.dev 
 - Main Idea: **have an approach and taking ownership while building applications** 

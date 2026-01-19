@@ -4,7 +4,7 @@ tags:
   - projects
   - javascript
   - 100xdevs
-date: 1/19/25
+date: 1/19/26
 ---
 - course notes for 100xDev Javascript Fundamentals.
 -  why languages ?
