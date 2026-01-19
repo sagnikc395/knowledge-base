@@ -6,7 +6,7 @@ tags:
   - 100xdevs
 date: 1/19/26
 ---
-- course notes for 100xDev Javascript Fundamentals.
+###  course notes for 100xDev Javascript Fundamentals.
 -  why languages ?
 	- computer has ram and storage.
 	- whenever we have application locally resides in the SSD
@@ -63,7 +63,7 @@ date: 1/19/26
 	- Eg: setTimeout -> takes a function and calling it after sometime is a callback
 	- Single Threaded -> only one thread available for the runtime to use 
 	- Non blocking call -> if we make an expensive network call / db call -> it will defer the call until the thread is free to do the execution.
-- Callback Hell and Promises
+- Callback Hell and Promises 
 - Basic JS APIs
 	- JS refresher and practice for JS.
 - Classes 
@@ -109,7 +109,7 @@ date: 1/19/26
 	-  async functions 
 		- eg: filesystem access in nodejs 
 		- net amount of time take to do a task can be decreased using async functions (delegating and context switching)
-- setTimeout is like a global async function that JS provides that we can use it to check it.
+	- setTimeout is like a global async function that JS provides that we can use it to check it.
 	- part of the browser api , very common use 
 	- running a specific function after a duration (in ms)
 	```javascript 
@@ -117,8 +117,8 @@ date: 1/19/26
 		console.log("ok")},1000
 	);
 	```
-- one way to make an async function synchronous is to use busywaiting 
-	- ```javascript 
+	- one way to make an async function synchronous is to use busywaiting 
+	 - ```javascript 
 	  function syncSleep() {
 		  let a = 1;
 		  for(let i=0;i<10000000;i++) {
@@ -148,6 +148,56 @@ date: 1/19/26
 	- callback queue 
 		- when we become idle, the event loop finally runs 
 		- checks if something there in the callback queue or not and then puts it in the callstack
-	- 
+	- every line of reaching there, is reaching the callstack -> what is being put on the stack to run that.
+		- only one thing put at a time if all of our code is synchronous.
+		- otherwise , the asynchronous code is not put there 
+		- when the loop finally exists, the stack can be popped.
+		- if we only have synchronous code, all the code is placed on the call stack.
+	- for async code:
+		- events pushed to callback queue, until the thread is busy.
+		- it will be kept waiting, when the call stack is empty, the callback queue will then put the event back into the callback queue.
+		- if there is some async task that is completed, it gets pulled from callback queue to the call stack.
 - Promises
+	- How can we create an asynchronous function of our own ?
+	- usually all async function that well write will be on top of JS provided async functions like `setTimeout` of `fs.readFile`
+	- leaner way to write it is to use promises than callbacks.
+	- rather than user giving a callback to the next one, we use the `.then` method on the promise to resolve it after it has been successful.
+	- the data of the promise comes asynchronously when loading the `.then` is called  to know where to send the data.
+		- to know the next party knows that the data is here.
+	- Promise is just like a class -like Date class.
+		- when we initialize it , we have to give the first argument as function and the argument is the resolve argument.
+		- ```js
+		  var d = new Promise(function(onDone){
+		  resolve("some data");
+		  });
+		  
+		  function callback() {
+		  console.log(d);
+		  }
+		  
+		  d.then(callback);
+		  ```
+		- Promise can have 3 states possible ->`Pending`, `Resolved` ,`Rejected`. 
+		- `.then()` method called on this promise when it is being resolves.
+		- Just a class introduced to cleanup callbacks and to write async way.
 - Async Await 
+	- Much more cleaner way 
+	- Syntactic sugar , under the hood still using callbacks.
+	```js
+	function sagniksAsyncFunction() {
+	let p = new Promise(function(resolve) => {
+	resolve("hi there")};
+	return p;
+	)};
+	
+	async function main() {
+		const value = awit sagniksAsyncFunction(); 
+		console.log(value);
+	};
+	
+	await main();
+	```
+	- 2 keywords and removes the use of all the `.then` syntax and no callbacks syntax is required any more.
+	- This control will not go beyond the log.
+	- Under the hood it is the same exact logic and the thread is not blocked, it will just queue the async tasks.
+	- 
