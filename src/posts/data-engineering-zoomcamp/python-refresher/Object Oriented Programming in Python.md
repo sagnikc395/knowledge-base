@@ -2,7 +2,6 @@
 title: Object Oriented Programming In Python
 tags:
   - python
-  - boot-dev
   - oop
   - basic-programming
 date: 3/1/25

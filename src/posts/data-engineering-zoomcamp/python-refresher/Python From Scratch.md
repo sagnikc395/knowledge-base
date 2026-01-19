@@ -3,7 +3,6 @@ title: Python from Scratch
 tags:
   - basic-programming
   - python
-  - boot-dev
 date: 28/12/24
 ---
 
