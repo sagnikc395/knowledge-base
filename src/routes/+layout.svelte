@@ -46,9 +46,25 @@
 		{/each}
 	</nav>
 
-	<main onclick={() => (isMenuOpen = false)}>
+	<main>
 		{@render children()}
 	</main>
+
+	{#if isMenuOpen}
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<div
+			class="scrim"
+			onclick={() => {
+				isMenuOpen = false;
+			}}
+			onkeydown={() => {
+				isMenuOpen = false;
+			}}
+			role="button"
+			tabindex="0"
+			aria-label="Close menu"
+		></div>
+	{/if}
 </div>
 
 <style>
@@ -67,6 +83,17 @@
 		display: flex;
 		min-height: 100vh;
 		position: relative;
+	}
+
+	.scrim {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.1);
+		z-index: 99; /* Below nav, above main */
 	}
 
 	/* Sidebar Navigation */
@@ -167,6 +194,10 @@
 
 		nav.open {
 			transform: translateX(0);
+		}
+
+		.scrim {
+			display: block;
 		}
 
 		main {

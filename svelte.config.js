@@ -11,7 +11,21 @@ import { visit } from 'unist-util-visit';
 const theme = 'vesper';
 const highlighter = await createHighlighter({
 	themes: [theme],
-	langs: ['javascript', 'typescript', 'html', 'css', 'svelte', 'shell', 'bash', 'json', 'python', 'go', 'c', 'cpp', 'sql']
+	langs: [
+		'javascript',
+		'typescript',
+		'html',
+		'css',
+		'svelte',
+		'shell',
+		'bash',
+		'json',
+		'python',
+		'go',
+		'c',
+		'cpp',
+		'sql'
+	]
 });
 
 /**
@@ -19,9 +33,7 @@ const highlighter = await createHighlighter({
  * @returns {string}
  */
 function escapeSvelte(str) {
-	return str
-		.replace(/{/g, '&#123;')
-		.replace(/}/g, '&#125;');
+	return str.replace(/{/g, '&#123;').replace(/}/g, '&#125;');
 }
 
 const base = process.env.BASE_PATH || '';
@@ -35,6 +47,19 @@ function remarkPrependBase() {
 		visit(tree, 'image', (node) => {
 			if (node.url.startsWith('/')) {
 				node.url = `${base}${node.url}`;
+			}
+		});
+	};
+}
+
+function rehypeAddAltFromSrc() {
+	return (tree) => {
+		visit(tree, 'element', (node) => {
+			if (node.tagName === 'img' && !node.properties.alt && node.properties.src) {
+				const parts = node.properties.src.split('/');
+				const filename = parts[parts.length - 1];
+				// decode URI component and remove extension
+				node.properties.alt = decodeURIComponent(filename).replace(/\.[^/.]+$/, '');
 			}
 		});
 	};
@@ -54,11 +79,22 @@ const config = {
 			remarkPlugins: [remarkUnwrapImages, remarkMath, remarkPrependBase],
 			highlight: {
 				highlighter: async (code, lang = 'text') => {
-					const html = highlighter.codeToHtml(code, { lang, theme });
+					const html = highlighter.codeToHtml(code, {
+						lang,
+						theme,
+						transformers: [
+							{
+								pre(node) {
+									delete node.properties.tabindex;
+								}
+							}
+						]
+					});
 					return escapeSvelte(html);
 				}
 			},
 			rehypePlugins: [
+				rehypeAddAltFromSrc,
 				[
 					rehypeKatex,
 					{
@@ -67,7 +103,6 @@ const config = {
 						trust: true,
 						strict: false
 					}
-				
 				]
 			]
 		})
@@ -82,7 +117,7 @@ const config = {
 		},
 		alias: {
 			$posts: 'src/posts'
-		},
+		}
 	}
 };
 
