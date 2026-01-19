@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	let { data } = $props();
 </script>
 
@@ -17,7 +18,7 @@
 					<ul>
 						{#each items as item (item.slug)}
 							<li>
-								<a href="/notes/{item.slug}">{item.title}</a>
+								<a href="{base}/notes/{item.slug}">{item.title}</a>
 								{#if item.date}
 									<span class="date">
 										— {new Date(item.date).toLocaleDateString()}

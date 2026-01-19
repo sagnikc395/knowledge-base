@@ -50,6 +50,7 @@ const config = {
 						trust: true,
 						strict: false
 					}
+				
 				]
 			]
 		})

@@ -2,6 +2,7 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import '$lib/tufte.css';
 	import 'katex/dist/katex.min.css';
+	import { base } from '$app/paths';
 
 	let { data, children } = $props();
 	let isMenuOpen = $state(false);
@@ -21,11 +22,11 @@
 	<button class="menu-toggle" onclick={toggleMenu} aria-label="Toggle Menu"> ☰ </button>
 
 	<nav class:open={isMenuOpen}>
-		<h3><a href="/" onclick={() => (isMenuOpen = false)}>Knowledge Base</a></h3>
+		<h3><a href="{base}/" onclick={() => (isMenuOpen = false)}>Knowledge Base</a></h3>
 		<div class="category">
 			<ul>
 				<li>
-					<a href="/graph" onclick={() => (isMenuOpen = false)}> Graph View </a>
+					<a href="{base}/graph" onclick={() => (isMenuOpen = false)}> Graph View </a>
 				</li>
 			</ul>
 		</div>
@@ -35,7 +36,7 @@
 				<ul>
 					{#each items as item (item.slug)}
 						<li>
-							<a href="/notes/{item.slug}" onclick={() => (isMenuOpen = false)}>
+							<a href="{base}/notes/{item.slug}" onclick={() => (isMenuOpen = false)}>
 								{item.title}
 							</a>
 						</li>

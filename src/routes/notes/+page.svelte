@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { TreeNode } from '$lib/types';
+	import { base } from '$app/paths';
 	let { data } = $props();
 </script>
 
@@ -15,7 +16,7 @@
 				</ul>
 			</details>
 		{:else}
-			<a href="/notes/{node.post.slug}">{node.name}</a>
+			<a href="{base}/notes/{node.post.slug}">{node.name}</a>
 			{#if node.post.date}
 				<span class="date">
 					— {new Date(node.post.date).toLocaleDateString()}
