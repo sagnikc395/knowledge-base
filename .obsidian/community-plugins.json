@@ -1,3 +1,5 @@
 [
-  "obsidian-git"
+  "obsidian-git",
+  "simple-code-formatter",
+  "obsidian-linter"
 ]
