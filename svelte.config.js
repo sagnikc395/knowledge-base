@@ -6,6 +6,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import path from 'path';
 import { createHighlighter } from 'shiki';
+import { visit } from 'unist-util-visit';
 
 const theme = 'vesper';
 const highlighter = await createHighlighter({
@@ -23,6 +24,22 @@ function escapeSvelte(str) {
 		.replace(/}/g, '&#125;');
 }
 
+const base = process.env.BASE_PATH || '';
+
+/**
+ *
+ * @returns
+ */
+function remarkPrependBase() {
+	return (tree) => {
+		visit(tree, 'image', (node) => {
+			if (node.url.startsWith('/')) {
+				node.url = `${base}${node.url}`;
+			}
+		});
+	};
+}
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', '.md'],
@@ -34,7 +51,7 @@ const config = {
 			layout: {
 				_: path.join(process.cwd(), 'src/lib/components/MarkdownLayout.svelte')
 			},
-			remarkPlugins: [remarkUnwrapImages, remarkMath],
+			remarkPlugins: [remarkUnwrapImages, remarkMath, remarkPrependBase],
 			highlight: {
 				highlighter: async (code, lang = 'text') => {
 					const html = highlighter.codeToHtml(code, { lang, theme });
@@ -61,7 +78,7 @@ const config = {
 			fallback: '404.html'
 		}),
 		paths: {
-			base: process.env.BASE_PATH || ''
+			base: base
 		},
 		alias: {
 			$posts: 'src/posts'
