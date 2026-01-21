@@ -119,4 +119,17 @@ app.get("/health-checkup", (req, res) => {
 	- prebuilt template and logic to check how to do input validation.
 	- In Zod , what we are doing basically is parsing the input and checking on that
 		- We define the schema on what the data should be like and zod will parse based on that.
-	- 
+	- zod gives us everything and gives us a bunch of error messages
+		- super useful if you wanna show that in the UI.
+		- some methods are present that we need to use it and use `safeParse` and the success object to check if validation passed or not.
+### authentication and JWT 
+- anyone can send requests to your backend 
+- how to ensure that this user has access to a certain resource ?
+- dumb way - ask user to send username and password
+- Better way-
+	- give the user back a token on signup / login
+	- ask the user to send back the token in all future requests 
+	- when the user logs out, ask the user to forget the token (or revoke it from the backend)
+- ![[Screenshot 2026-01-21 at 6.23.32 PM.png]]
+- Either an authorization header and this token is how we do signin/ signup in websites.
+- User will creating this request and this is how we do authorization for it.
