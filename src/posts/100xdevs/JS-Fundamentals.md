@@ -200,4 +200,16 @@ date: 1/19/26
 	- 2 keywords and removes the use of all the `.then` syntax and no callbacks syntax is required any more.
 	- This control will not go beyond the log.
 	- Under the hood it is the same exact logic and the thread is not blocked, it will just queue the async tasks.
-	- 
+- Map,Filter and Arrow Functions:
+	-  Map, filter are helper functions when it comes to arrays.
+		- map
+			- define the transformation that we need to do in a function is added in the function 
+			- map is a global function , on the array class, whose first function is a callback and then maps that number with the result.
+			- maps the result with a initial input with a transformation function and maps to a new result in memory.
+		- filter 
+			- it filters an array based on some predicate on the array class.
+			- makes the syntax slightly cleaner.
+	- Arrow functions are another way to write functions in JS.
+		- arrow functions and normal functions are almost same, except when used in callbacks, when it can change.
+		- there is a difference in the bindiung of normal functions and arrow functions.
+	

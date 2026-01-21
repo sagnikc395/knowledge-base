@@ -1,5 +1,5 @@
 ---
-title: Express and Backend
+title: Express , Backend, Authentication , JWT
 tags:
   - express
   - backend
@@ -145,8 +145,31 @@ res.json(todos);
 - to actually handle the body inside, use a different library called bodyParser() to handle it -- express doesnt give it to us by default.
 	- actually middlewares!
 	- in any case body has some json , we use the middleware to first handle the body `app.use(bodyParser.json())` 
-
 #### fetch api
 - `fetch(url,{method: methodType}).then(handler)`
 - used mostly by frontend to fetch from the backend API.
-- 
+
+### query parameters
+- one of the ways a user can give input when sending input.
+- after the final route , add `?` and start to add your parameters.
+- get the name as `req.query.name` , where `name` is the argument name passed.
+- high level api for building the hospital-server , in-memory.
+	- GET -> going for a consultation to get check up -> get some data 
+	- POST -> going top get a new kidney inserted  -> add new data on the server 
+	- PUT -> going to get a kidney replaced -> update a data on a server
+	- DELETE -> going to get a kidney removed. -> delete some data from the server 
+- you should generally follow the best practices(generally) 
+	- however in real time it is not implemented for most cases.
+- Imp status codes
+	- 200 -> everything went fine
+	- 404 -> not found ; doctor is not there in the hospital
+	- 500 -> mid surgery light went away 
+	- 411 -> inputs were incorrect eg: wrong person came to the surgery
+	- 403 -> you are not allowed in the hospital.
+- input way to send get requests is query parameters
+- for post requests we send the data in the body.
+	- this is my input and how do you get the body here 
+	- we need a quick way to test response -> use insomnia 
+- good engineering practices is to do edge case tests and server checks
+	- eg: what should happen if there are no kidneys to delete.
+
