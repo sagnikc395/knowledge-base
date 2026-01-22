@@ -150,6 +150,8 @@ app.get("/health-checkup", (req, res) => {
 		- this is 2 way 
 		- can always convert the hashed result to the original string , provided we have some key.
 		- hashing doesnt really require a password, encryption requires a password.
+		- a string is encrypted using a password 
+		- string can also be decrypted using the same password.
 	- JSON web tokens 
 		- some hashing function, but only works for JSON input 
 		- gives more structured data -> more longer string 
@@ -166,8 +168,16 @@ app.get("/health-checkup", (req, res) => {
 			- very similar to encryption and decryption.
 			- ![[Screenshot 2026-01-21 at 8.13.01 PM.png]]
 			- `jwt.verify()` will only allow if the user if true, otherwise not.
+		- its neither of encryption or hashing (its technically a digital signature)
+		- anyone can see the original output given the signature 
+		- signature can be verified only using the password.
 	- Local Storage 
-
+		- a place in your browser where we can store some data 
+		- usually things that are stored include:
+			- authentication tokens 
+			- user language preferences 
+			- user theme preferences 
+			- etc
 ### fetch
 - to actually send requests from frontend to backend 
 - hitting the endpoint either by a browser or insomnia 
@@ -180,6 +190,46 @@ app.get("/health-checkup", (req, res) => {
 - Eg: using the `faker` api , we can try for free some data and see their response.
 - whenever the data resolves, the promise should reach there.
 - fetch will return a Promise and using the promisified response to resolve based on that.
-### mongodb 
-- basics of storage 
-- TODO!
+### Databases
+- until now, we have been storing data in memory , bad for a few reasons
+	- data can't be dynamic , if we update in memory objects, the updates are lost if the process restarts 
+	- there are multiple servers in the real world 
+- databases also support for querying and for optimized storage of the data.
+- In the real world, you dont have a single backend server, you have a cluster
+	- ![[Screenshot 2026-01-21 at 9.00.31 PM.png]]
+	- for most purposes we have multiple servers and connected to a single db (well not really in prod!), but still
+	- BE server fleet do business logic, do auth and other things.
+	- user hits the backend 
+	- backend hits the database 
+	- user doesnt have access to the database/ can't talk to the DB.
+- how is the db exposed, how does be knows where to connect and etc?
+	- only the backend server knows the URL of the databases
+	- need to store secrets and also other things 
+- there are various types of databases, depending on querying and the type of data that we want to store 
+	- graph dbs 
+	- vector dbs 
+	- sql dbs 
+	- nosql dbs
+- very famous nosql db -> mongodb 
+#### MongoDB
+- MongoDB lets us create databases
+- In each DB, it lets us create tables(collections)
+- in each table, it lets us dump JSON data.
+- It is schemaless
+- It scales well and is a decent choice for most use cases.
+- How to work with it ?
+	- create a mongodb instance 
+	- get our mongodb connection URL 
+	- download mongodb compass and explore the DB
+- while creating databases we have to create database-table and a collection name for the same.
+	- can create multiple database and create multiple collections(tables)
+- create a new signup endpoint that users can come and hit it to enter the details to our database.
+- can then do CRUD operations in the database.
+- How does backend connects to the database ?
+	- using libraries !
+	- express lets u create an HTTP server
+	- jsonwebtokens library lets us create jwts
+	- mongoose lets us connect to your database
+- mongodb is schemaless, but for normal CRUD operations we need some abstraction to add to item to a mongodb database 
+	- use the mongoose library to give schema and structure to it.
+ 
