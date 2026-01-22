@@ -131,5 +131,55 @@ app.get("/health-checkup", (req, res) => {
 	- ask the user to send back the token in all future requests 
 	- when the user logs out, ask the user to forget the token (or revoke it from the backend)
 - ![[Screenshot 2026-01-21 at 6.23.32 PM.png]]
-- Either an authorization header and this token is how we do signin/ signup in websites.
+- Either an authorization header and this token is how we do signin / signup in websites.
 - User will creating this request and this is how we do authorization for it.
+- Project :
+	- let people sign up to your website 
+	- only allowed signed in users to see people( create a dummy people list)
+	- only allowed the signin users can access the content.
+- before we learn authentication, some cryptography jargon:
+	- hashing 
+		- before we save the passwords to the db , we hash it, so that only users can access that.
+		- and the hashed password will be stored in database 
+		- hashing -> converting a simple string to complicated gibberish, so that its only one way ; can never guess -> can never decrypt back to password.
+		- how does the backend server validate this ?
+			- backend server reconverts back to the string and compares it.
+			- first inmemory we convert it back to the string and check if it is the same thing 
+			- one way (convert a string to hash )
+	- Encryption 
+		- this is 2 way 
+		- can always convert the hashed result to the original string , provided we have some key.
+		- hashing doesnt really require a password, encryption requires a password.
+	- JSON web tokens 
+		- some hashing function, but only works for JSON input 
+		- gives more structured data -> more longer string 
+		- in the end if we look at it, it is significantly different from hashing and encryption.
+		- takes JSON as a input 
+		- Token:
+			- it takes this and creates a token in the end 
+			- JWT 
+			- by default whoever has this input , can convert it back to the original object that we see.
+			- anyone who has the string , can look at the original string that was formatted.
+			- conversion anyone can do , but verification of this string can only be done by authorized backend servers that has created it.
+				- given the string and the password, can pass it through a verification function and only return the original data , if the original thing was used to verify that.
+			- `jwt.verify(<passwd>)` and can verified, only then we can authenticate the user.
+			- very similar to encryption and decryption.
+			- ![[Screenshot 2026-01-21 at 8.13.01 PM.png]]
+			- `jwt.verify()` will only allow if the user if true, otherwise not.
+	- Local Storage 
+
+### fetch
+- to actually send requests from frontend to backend 
+- hitting the endpoint either by a browser or insomnia 
+- how to send a request when the button is sent.
+- part of browser API , to hit to the backend server 
+- browsers expose something call fetch that hits the backend servers.
+- ![[Screenshot 2026-01-21 at 6.47.06 PM.png]]
+- using the `fetch` api globally to fetch the responses 
+- on right clicking and clicking on the console, we can see the response.
+- Eg: using the `faker` api , we can try for free some data and see their response.
+- whenever the data resolves, the promise should reach there.
+- fetch will return a Promise and using the promisified response to resolve based on that.
+### mongodb 
+- basics of storage 
+- TODO!
