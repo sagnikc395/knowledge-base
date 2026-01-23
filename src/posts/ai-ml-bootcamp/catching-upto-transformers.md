@@ -50,4 +50,80 @@ date: 1/23/26
 - openrouter and opencode to play around with different models.
 
 ### Fast Tracking the Course of AI:
+- intelligence 
+	- ability to achieve goals in a wide range of situations.
+- `<History />` of AI and other stuff 
+- why language is hard for computers ?
+	- Natural Language Processing 
+	- 4 different attempts to NLP
+		- Put up every possible word in the dictionary approach in it -> n-gram model 
+		-  Statistical Pattern based techniques -> Pattern Matching != Understanding 
+			- Machine could predict the next word based on frequency, but it had no concept of what the words actually meant.
+			- Breakthrough -> Words as Numbers (computers can also understand numbers), words doesnt make any implicit sense for computers.
+			- Challenge -> how do we turn a word into a list of numbers that captures its meaning ?
+			- `Apple` -> `[0.92,-0.14,0.05,....]`
+			- Hint: these are called embeddings and we are creating embeddings.
+		- Word Embeddings -> "Secret Sauce"
+			- How do we turn a word like "Apple" into a number that captures its meaning ?
+			- Capture the meaning not in 1d space but in a higher dimensional space 
+			- Instead of one number, we give each word a list of numbers(a vector).
+			- Each number represents a specific "dimension" of meaning.
+			- very big breakthrough as for every word, it can be very high.
+		- Eg: king and queen have similar numbers for royalty, but vastly different values for gender. This is how the machines represent concepts as data.
+		- ![[Screenshot 2026-01-23 at 10.55.13 AM.png]]
+		- Words as Positions in Space
+			- If a word is a list of numbers, its a point on a map. Similar words are close together, while different words are far apart.
+		- ![[Screenshot 2026-01-23 at 10.57.45 AM.png]]
+		- So , similar words are placed close together in a multi-dimensional space. Proximity indicates shared meaning.
+#### magic of embeddings
+- word math 
+	- king - man + woman  = queen 
+	- paris - france + italy = rome 
+	- walking  - walk + swim = swimming 
+- can embeddings solve our earlier problems ?
+	- in basic word embeddings, each word has exactly ONE position in space.
+	- "I went to the bank to deposit cash"
+	- "I sat on the bank of the river"
+#### Sequence Models (RNNs)
+- okay we can make embeddings now, but what to make of that embedding exactly.
+- we are not able to make use of the embedding and use it anyhow.
+- Idea: Process the sentence one word at a time, building up understanding as we go.
+	- Model maintains a "memory" of what it has read so far.
+- Eg: other models like GRUS, LSTMS etc. and other divergent fields like Mambas 
+- Even in fact , Transformers are the best version of top of the sequence models.
+- Its a architecture , that deals with the sequence and from each word they retain some memory.
+- the context and upcoming word , change the meaning of our word completely.
+- Problem : Forgetting 
+	- World ,storage and memroy is finite.
+	- And it has to go back a long vectors back.
+	- meaning would completey disrupt as it goes back a lot of tokens.
+- RNNs struggle with long sentences because they process information linearly and have limited memory capacity.
+	- LSTM came up after RNN, added gates for choice to add to its memory and the memory and the information that it needs to retain is very less.
+	- GRUS came after that 
+### Transformers
+- stage is set around 2017
+- what we have till now
+	- word embeddings
+	- sequence models(RNNs)
+	- Tons of internet data 
+	- Powerful GPUs
+- We are just lacking in a powerful way to make all these work better.
+-  (old idea) process words one by one, like reading a book from start to end.
+-  The idea of transformer 
+	- Simultaneous
+		- Look at every word in the sentence at the same time.
+	- Attention
+		- model "attends" to the most relevant words, no matter how far apart they are.
+- Have to make them more selective and it was wasting more of their information.
+- And the second thing that we need to do is , all the word that we are processing should be done parallely.
+	- Attention enables the model to focus only on the most relevant word.
+#### Attention in Action
+- when the model looks at the focus word, the attention mechanism tells it to pay the most attention to it.
+- ![[Screenshot 2026-01-23 at 12.58.46 PM.png]]
+- how it happens depends on the maths behind it 
+- Model "knows" what the pronouns refers to buiding a context aware representation of every word is.
+- Why Attention is powerful :
+	- More memory -> every word in a sentence "sees" every other word simultaneously , no matter how far apart they are 
+	- Parallel Processing -> Unlike RNNs that read word by word, Transformers process all words at once, making training incredibly fast.
+	- Deep Understanding -> The model builds a mathematical map of how every word relates to every other word in the specific context.
 - 

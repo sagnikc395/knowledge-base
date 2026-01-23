@@ -207,8 +207,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7f78cc99e52dfb49",
+  "active": "10f41bbb42a3d621",
   "lastOpenFiles": [
+    "src/posts/ai-ml-bootcamp/imgs/Screenshot 2026-01-23 at 12.58.46 PM.png",
+    "src/posts/ai-ml-bootcamp/imgs/Screenshot 2026-01-23 at 10.57.45 AM.png",
+    "src/posts/ai-ml-bootcamp/imgs",
+    "src/posts/ai-ml-bootcamp/imgs/Screenshot 2026-01-23 at 10.55.13 AM.png",
     "src/posts/ai-ml-bootcamp/catching-upto-transformers.md",
     "src/posts/ai-ml-bootcamp",
     "src/posts/100xdevs/react.md",
@@ -245,16 +249,12 @@
     "src/posts/data-engineering-zoomcamp/ddia",
     "src/posts/data-engineering-zoomcamp/ddia/ddia-notes.md",
     "src/posts/100xdevs/html-css-fundamentals.md",
-    "src/posts/100xdevs/taste is the new moat.md",
     "src/posts/data-engineering-zoomcamp/imgs/Screenshot 2026-01-18 at 10.04.45 PM.png",
-    "src/posts/data-engineering-zoomcamp/imgs/Screenshot 2026-01-18 at 10.03.26 PM.png",
-    "src/posts/data-engineering-zoomcamp/imgs/Screenshot 2026-01-18 at 10.03.16 PM.png",
     "src/posts/data-engineering-zoomcamp/imgs",
     "src/posts/data-engineering-zoomcamp",
     "src/posts/programming-languages",
     "src/posts/100xdevs/imgs",
     "src/posts/100xdevs",
-    "src/posts/game-dev",
-    "src/routes/graph/+page.svelte"
+    "src/posts/game-dev"
   ]
 }
