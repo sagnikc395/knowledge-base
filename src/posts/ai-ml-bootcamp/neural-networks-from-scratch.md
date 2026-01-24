@@ -91,4 +91,22 @@ date: 1/24/26
 		- basically like a chain of responsibility.
 		- error signal travel backwards from the output later through the hidden layers to the input.
 		- adjustment: each weight is adjusted proportionally to its contribution to the final mistake.
-	- 
+- **Learning Rate**:
+	- a hyperparameter -> something that is tunable and can be changed.
+	- how fast or how slow we can tune the loss minimization
+	- ![[Screenshot 2026-01-24 at 11.15.52 AM.png]]
+	- (loss with a 2d graph and 3d repr)
+	- loss landscape -> visualize how the loss looks for our loss function
+	- we try to move in the direction of the greatest gradient 
+	- learning rate telling us how fast to go there 
+		- high learning rate might take us directly or it might overshoot
+		- slow learning rate might take a lot of time to get to the optimum
+- **Gradient Descent**:
+	- Strategy:
+		- Step Downhill : Feel the slope and take a step in that direction that reduces the loss.
+		- Iterative Progress : repeat the process, taking step after step until we reach the bottom
+		- Goal : Reach the global minimum - the point where the model's error is the minimum.
+- Whole Training Loop:
+	- ![[Screenshot 2026-01-24 at 11.31.22 AM.png]]
+
+
