@@ -1,0 +1,94 @@
+---
+title: Neural Networks from Scratch
+tags:
+  - 100xdevs
+  - ai
+  - nlp
+  - neural-networks
+date: 1/24/26
+---
+- **Neural Networks Architecture** 
+	- how machines actually learn 
+	- ![[Screenshot 2026-01-24 at 10.02.45 AM.png]]
+	- first one -> input layer 
+	- last layer -> output layer 
+	- layers in the middle -> hidden layer , generally n number of hidden layers 
+	- the circular things are the neurons
+- **ML**
+	- Goal: understanding the fundamental mechanism of pattern discovery of data. i.e mathematical relationships within large datasets.
+	- Training is simple, iterative loop of guessing and correcting:
+		- start with a guess -> random values 
+		- measure error -> how far is the guess from the truth ?
+		- adjust -> modify the guess to be slightly less wrong 
+		- repeat -> do this millions of time, until error zeros or very very close to zero.
+	- ![[Screenshot 2026-01-24 at 10.21.57 AM.png]]
+- **Neuron -> A Tiny Decision Maker** 
+	- Building block of AI is a simple mathematical function, not a biological mystery.
+	- It takes some numbers in, performs basic arithmetic ,and outputs a signal.
+		- Inputs -> numerical data points representing features (eg: house size, pixel intensity)
+		- weights and summation -> importance assigned to each input, combined into a single weighted sum.
+		- activation -> a non-linear function that decides whether the signal should be "fired" or not "fired".
+		- ![[Screenshot 2026-01-24 at 10.24.49 AM.png]]
+		- Weights -> `W1,W2,W3....` , something that the change the weight accordingly to change the loss 
+		- Inputs -> Features 
+		- non-linearity -> activation function 
+	- Anatomy of a neuron :
+		- `output = activation(\sigma wixi + b)`
+		- weights -> w -> determine the strength and importance of each input signal
+		- bias (b) -> an offset that allows the neuron to shift its decision boundary 
+		- activation -> a nonlinear function that decides if the signal should "fire".
+	- the need for activation functions :
+		- Consider 
+			- Layer 1 -> `y := W1x + b1`
+			- Layer 2 -> `z = W2y + b2`
+		- Combining them we get 
+			- `Z = W2(W1x+b1) + b2`
+			- `Z = (W2W1)X + (W2b1+b2)`
+		- this will then simplify to:
+			- `z = W'x + b'` 
+			- where 
+				- `W' = W2W1`
+				- `b' = W2b1+b2`
+		- so basically if we are stacking layers cause it will just results in another linear function.
+		- so 100 layers of this thing will be equivalent to just one.
+		- so if we add non-linearity to this , we can solve this function.
+	- How Activation Function solves this :
+		- activation functions add "bends" to the math, preventing layers from collapsing into each other -> **breaking the linearity** and linear combination of operations.
+		- **Enabling Depth** -> "secret sauce" that allows deep networks to learn complex, multi-layered representations.
+		- **Universal Approximation** -> Non-linearity allows the networks to model any continuous functions, no matter how complex the function is.
+	- Different Activations Functions 
+		- sigmoid 
+			- classic S-curve 0-1.
+			- default used for probabilistic ML.
+		- tanh 
+			- zero centered (-1 to 1)
+			- often provides faster convergence than sigmoid.
+		- ReLU
+			- ![[Screenshot 2026-01-24 at 10.55.52 AM.png]]
+			- max(0,x) -> simple ,efficient and enables deep networks.
+		- Modern Variants 
+			- GELU -> modern smooth version of ReLU.
+			- Swish 
+- **Loss Functions**:
+	- The thing where the feedback loop starts.
+	- I.e minimizing this score the ML systems get better 
+	- loss = a single number measuring how wrong we are 
+	- lower loss implies better predictions 
+	- training goal of a ml system is to minimize the loss.
+	- most of the times we used mean squared error (MSE) to compute loss
+		- `L = (1/n) \sigma (predicition -target)^2`
+		- Squares will make all the errors positive 
+		- big errors will be penalized more than small errors 
+		- good for regression tasks.
+- Backpropogation:
+	- ![[Screenshot 2026-01-24 at 11.06.04 AM.png]]
+	- how does the machine knows which weights to adjust to minimize loss ?
+	- it checks which nodes weights that we need to change.
+	- Intuition for backprop:
+		- in a big org, something went wrong, and why are things are down ?
+			- ceo would ask vp , vp to managers and the managers to employees
+			- they are backpropogating to find the error and to trying to optimize the process
+		- basically like a chain of responsibility.
+		- error signal travel backwards from the output later through the hidden layers to the input.
+		- adjustment: each weight is adjusted proportionally to its contribution to the final mistake.
+	- 
