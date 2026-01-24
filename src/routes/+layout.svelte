@@ -1,5 +1,5 @@
 <script lang="ts">
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/favicon.png';
 	import '$lib/tufte.css';
 	import 'katex/dist/katex.min.css';
 	import { base } from '$app/paths';

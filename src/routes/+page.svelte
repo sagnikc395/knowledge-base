@@ -5,12 +5,10 @@
 
 <!-- eslint-disable svelte/no-navigation-without-resolve -->
 <section>
-	<h1 class="title">Knowledge Base</h1>
-	<p class="subtitle">A collection of notes, thoughts, and technical write-ups.</p>
+	<h1 class="title">💡 Knowledge Base</h1>
+	<p class="subtitle">A collection of scratch notes and write-ups.</p>
 
 	<div class="content">
-		<p>Welcome. Select a topic from the sidebar or explore the categories below.</p>
-
 		<div class="categories-grid">
 			{#each Object.entries(data.menu) as [category, items] (category)}
 				<div class="category-card">
