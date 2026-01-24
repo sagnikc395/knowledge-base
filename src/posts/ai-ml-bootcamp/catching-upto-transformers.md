@@ -126,4 +126,37 @@ date: 1/23/26
 	- More memory -> every word in a sentence "sees" every other word simultaneously , no matter how far apart they are 
 	- Parallel Processing -> Unlike RNNs that read word by word, Transformers process all words at once, making training incredibly fast.
 	- Deep Understanding -> The model builds a mathematical map of how every word relates to every other word in the specific context.
-- 
+- ![[Screenshot 2026-01-23 at 7.38.54 PM.png]]
+- By changing just one word (tired vs wide), the model's attention shifts, correctly identifying what "it" refers to in each context.
+- Whole Flow (of a transformer based language model):
+	- ![[Screenshot 2026-01-23 at 7.49.03 PM.png]]
+	- takes the sentence , outputs a list of words and adds to the sentence and basically repeats itself until the MAX_TOKEN_LENGTH that its allowed.
+- Why "Predict the Next Word" Creates Understanding 
+	- Grammar and Syntax
+		- Predicting the next word requires the model to internalize language structure and rules.
+	- Factual Knowledge 
+		- Correct predictions rely on learned factual relations between concepts.
+	- Logic and Understanding
+		- Following a chain of reasoning lets the model anticipate the appropriate continuation.
+- Generation of Text
+	- ![[Screenshot 2026-01-23 at 8.04.31 PM.png]]
+	- Generation is a iterative loop.
+	- Each predicted word is added back to the input and the model predicts the next word based on the updated context.
+
+### Foundation Models
+- "Foundation" models are pre-trained models based on huge corpus of data and training loop.
+- It's kind of like the base knowledge. 
+- We no longer build tools from scratch, we build on top of these giants.
+- General Purpose AI
+
+
+### Current Directions (2024-25)
+- Multimodality 
+	- AI is no longer just text. It can see images, hear voices, and speak back in real time.
+- Reasoning 
+	- How models are designed to "think" before they speak, solving complex math and logic problems.
+- Agents 
+	- shift from chatbot to agents that can use tools, browse the we, and complete multi-step tasks 
+	- different applications that we see on the internet that use some source of LLM 
+		- take input from user, use some LLM and building on top of that.
+	
