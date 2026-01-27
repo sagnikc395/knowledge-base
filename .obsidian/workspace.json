@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/posts/ai-ml-bootcamp/neural-networks-from-scratch.md",
+                "file": "src/posts/100xdevs/react.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "neural-networks-from-scratch"
+              "title": "react"
             }
           }
         ]
@@ -193,8 +193,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,8 +207,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fcfa141832d526d0",
+  "active": "7f78cc99e52dfb49",
   "lastOpenFiles": [
+    "src/posts/100xdevs/imgs/Screenshot 2026-01-26 at 8.03.17 PM.png",
+    "src/posts/programming-languages/golang notes.md",
+    "src/posts/programming-languages/building an interpreter.md",
+    "src/posts/ai-ml-bootcamp/neural-networks-from-scratch.md",
     "src/lib/assets/favicon.png",
     "src/lib/components/Sidenote.svelte",
     "src/lib/components/MarkdownLayout.svelte",
@@ -249,13 +252,9 @@
     "node_modules/mdast-util-wiki-link/node_modules/mdast-util-to-string/readme.md",
     "node_modules/micromark-util-decode-string/node_modules/micromark-util-types/readme.md",
     "node_modules/mdast-util-phrasing/node_modules/unist-util-is/readme.md",
-    "node_modules/parse-entities/node_modules/character-entities-legacy/readme.md",
-    "node_modules/micromark-util-decode-string/node_modules/micromark-util-character/readme.md",
-    "node_modules/micromark-util-decode-string/node_modules/micromark-util-symbol/readme.md",
     "src/posts/ai-ml-bootcamp/imgs/Screenshot 2026-01-24 at 11.31.22 AM.png",
     "src/posts/ai-ml-bootcamp/imgs/Screenshot 2026-01-24 at 11.15.52 AM.png",
     "src/posts/ai-ml-bootcamp/imgs/Screenshot 2026-01-24 at 11.06.04 AM.png",
-    "src/posts/ai-ml-bootcamp/imgs/Screenshot 2026-01-24 at 10.55.52 AM.png",
     "Untitled.canvas"
   ]
 }

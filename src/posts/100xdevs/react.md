@@ -6,7 +6,7 @@ tags:
   - frontend
 date: 1/22/26
 ---
-## before react 
+### before react 
 - why was react written a certain way
 - generating the foundations for react 
 - makes the process easier to learn harder concepts down the line 
@@ -54,4 +54,32 @@ date: 1/22/26
 	- Has a TODO been marked as complete ?
 	- Has a TODO been removed from the backend ?
 	- Hint: Remembering / keeping track of the old todos in a variable (virtual DOM)
+- In the real world, given a set of dynamic TODOs, we would have to render and re-render the latest data and update the DOM accordingly.
+	- given a state whatever we want on the screen , we need to update the DOM accordingly.
+	- ![[Screenshot 2026-01-26 at 8.03.17 PM.png]]
+- Better way to update the DOM(according to what React does):
+	- Dont clear the DOM upfront, update it based on what has changed.
+	- Question is, how does it calculate what all has changed ?
+		- Has a todo been marked as complete ?
+		- Has a todo been removed from the backend ?
+	- You calculate the difference 
+		- based on the diff, calculate the diff and its a slightly better way of solving the same problem.
+	- We remember the old todos in a variable -> Virtual DOM 
+		- Place where they have a storage of the DOM.
+
+### react
+- what is the easiest way to create a dynamic frontend website ?
+	- update a state variable
+		- general developer logic 
+	- delegate the task of figuring out the diff to a hefty function 
+		- react core library 
+	- tell the hefty function how to add, update and remove elements.
+		- react dom 
+		- react native 
+- react takes care of re-rendering the whole thing and figuring out what to print and what to update.
+	- our code is pretty lean and we dont have to update the changes here.
+- react dom , react native etc. exposes the functionalities to react, whereas react is a diff calculating framework that calculates the things to be put on the DOM.
+- virtual dom and real dom the changes are not propogated immediately 
+	- react does a bunch of optimizations and does a bunch call
+	- batching the changes helps in performance 
 - 
