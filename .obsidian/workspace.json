@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/posts/100xdevs/react.md",
+                "file": "src/posts/100xdevs/mongo-in-depth.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "react"
+              "title": "mongo-in-depth"
             }
           }
         ]
@@ -209,6 +209,10 @@
   },
   "active": "7f78cc99e52dfb49",
   "lastOpenFiles": [
+    "Screenshot 2026-01-26 at 8.55.18 PM.png",
+    "src/posts/100xdevs/imgs/Screenshot 2026-01-26 at 8.52.39 PM.png",
+    "src/posts/100xdevs/react.md",
+    "src/posts/100xdevs/mongo-in-depth.md",
     "src/posts/100xdevs/imgs/Screenshot 2026-01-26 at 8.03.17 PM.png",
     "src/posts/programming-languages/golang notes.md",
     "src/posts/programming-languages/building an interpreter.md",
@@ -250,11 +254,7 @@
     "node_modules/mdast-util-to-string/readme.md",
     "node_modules/mdast-util-wiki-link/node_modules/zwitch/readme.md",
     "node_modules/mdast-util-wiki-link/node_modules/mdast-util-to-string/readme.md",
-    "node_modules/micromark-util-decode-string/node_modules/micromark-util-types/readme.md",
-    "node_modules/mdast-util-phrasing/node_modules/unist-util-is/readme.md",
     "src/posts/ai-ml-bootcamp/imgs/Screenshot 2026-01-24 at 11.31.22 AM.png",
-    "src/posts/ai-ml-bootcamp/imgs/Screenshot 2026-01-24 at 11.15.52 AM.png",
-    "src/posts/ai-ml-bootcamp/imgs/Screenshot 2026-01-24 at 11.06.04 AM.png",
     "Untitled.canvas"
   ]
 }

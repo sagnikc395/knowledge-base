@@ -1,0 +1,41 @@
+---
+title: MongoDB in Depth
+tags:
+  - 100xdevs
+  - dbs
+  - mongodb
+date: 1/26/26
+---
+#### mongodb in depth 
+- understanding CRUD, mongoose and building an e2e authenticated app
+- what is a database 
+	- place where data is stored persistently 
+	- ![[Screenshot 2026-01-26 at 8.52.39 PM.png]]
+	- servers go and up all the time, databases are persistent 
+	- databases are also replicated multiple places so that it is safe.
+	- usually a cluster of servers where the data is stored.
+	- once we have bought them up, they usually stay there in the server.
+- generally where there is a single server where this things are stored.
+- Examples of data stored in db:
+	- Ex for Linkedin 
+		- user data 
+		- users posts
+		- users connection relationships
+		- messages history between two people
+	- request goes as :
+		- ![[Screenshot 2026-01-26 at 8.55.18 PM.png]]
+- Good questions to have:
+	- Why dont we let the users hit the databases directly ?
+	- What extra does the http server provide exactly ?
+		- Databases were created using protocols that browsers dont understand.
+		- Databases dont have granular access as a first class citizen. Ver hard to do user specific access in them.
+		- There are some databases (firebase) that lets us get rid of the http server and they try their best to provide granular access.
+- Databases usually allow access to 4 primitives:
+	- Create data 
+	- Read data
+	- Update data
+	- Delete data 
+	- popularly called as CRUD 
+- In mongoose, first we have to define the schema 
+- Mongoose is schemaless, but mongoose makes us define schema for things like autocompletions and valiadating data before it goes in the DB to make sure that we are doing things right 
+- Schemaless DBs can be very dangerous , using schemas in Mongo makes it slightly less dangerous.
