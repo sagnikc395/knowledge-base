@@ -82,4 +82,36 @@ date: 1/22/26
 - virtual dom and real dom the changes are not propogated immediately 
 	- react does a bunch of optimizations and does a bunch call
 	- batching the changes helps in performance 
+
+### diving deep into react:
+- jargon to learn 
+	- jsx 
+	- class vs classname
+	- static vs dynamic websites 
+	- state 
+	- components 
+	- re-rendering 
+- why do we need react ?
+	- for static websites, you don't
+	- dont need for dynamic websites - can do in HTML,CSS and JS.
+	- the contents of the page are changing , when we are changing the press buttons.
+	- For dynamic websites, these libraries makes us life easier to do DOM Manipulation.
+- react is just an easier way to write normal HTML/CSS/JS.
+- Its a new syntax, that under the hood gets converted to HTML/CSS/JS.
+- People realized that its harder to do DOM manipulation the conventional way.
+- new syntax to write frontends.
+
+- how react makes this better at writing frontends?
+	- For creating react app, we only need to usually worry about 2 things 
+		- State 
+			- An object that represents the current state of the application.
+			- It represents the dynamic things in our app (things that change)
+			- Eg: the value of the counter b
+		- Components 
+			- things that can be reused in our application and used throughout 
+			- how a DOM element should render, given a state.
+			- Eg: counter button itself		
+			- Eg: Button is a component that takes the state(currentCount) as an input and is supposed to render it accordingly.
+- We usually have to define all of our components once , and then all we have to do is to update the state of our application, React will take care of re-rendering the application.
+- ![[Screenshot 2026-01-27 at 6.52.32 PM.png]]
 - 
