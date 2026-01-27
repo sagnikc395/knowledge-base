@@ -6,7 +6,7 @@ tags:
   - mongodb
 date: 1/26/26
 ---
-#### mongodb in depth 
+## mongodb in depth 
 - understanding CRUD, mongoose and building an e2e authenticated app
 - what is a database 
 	- place where data is stored persistently 
@@ -37,5 +37,76 @@ date: 1/26/26
 	- Delete data 
 	- popularly called as CRUD 
 - In mongoose, first we have to define the schema 
-- Mongoose is schemaless, but mongoose makes us define schema for things like autocompletions and valiadating data before it goes in the DB to make sure that we are doing things right 
+- Mongoose is schemaless, but mongoose makes us define schema for things like autocompletions and validating data before it goes in the DB to make sure that we are doing things right 
 - Schemaless DBs can be very dangerous , using schemas in Mongo makes it slightly less dangerous.
+- In production , we use an ORM like Prisma.
+- Schema means the structure of the data that we are putting in there in the first place.
+- Eg: we want to define a course selling app , where we have two entities - user schema and course schema 
+```js 
+const UserSchema = new mongoose.Schema({
+	email: String,
+	password: String,
+	purchasedCourses: [{
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'Course'
+	}]
+});
+
+const CourseSchema = new mongoose.Schema({
+	title: String,
+	price: 5999
+});
+
+// and then we can use them as 
+const User = mongoose.model('User',UserSchema);
+const Course = mongoose.model('Course',CourseSchema);
+```
+
+-  SQL databases dont let us put nested , transitivite objects - we would have to do joins on the table to get the data.
+	- Mongodb lets us do it.
+- The way to do relationships in Mongodb , is to create an array of things to be done.
+	- These strings are what creates a table in the Mongodb Compass.
+#### CRUD Operations on MongoDB:
+- Insert data into the database using mongoose:
+- ```js 
+	  User.create({
+		  username: req.body.username,
+		  password: req.body.password
+	  });
+```
+- Find users by Id
+```js 
+	  User.findById("1");
+	  User.findOne({
+		  username: "sagnikc@gmail.com"
+	  });
+	  //find any 
+	  User.find({
+	  username: "sagnikc@gmail.com"
+	  });
+```
+- Update one , using the given id
+```js 
+	  User.updateOne({
+	  "id": "1"},
+	  {$push: {purchasedCourses: courseId}});
+```
+
+- To add a new entry to the database, `$push` is the syntax to do it with the given course id.
+- Delete 
+```js 
+User.deleteMany({});
+
+User.deleteOne({
+	username:"sagnikc@gmail.com"
+});
+```
+
+
+#### Jargons to know in DB:
+- Cluster
+	- A bought a machine, where we can write multiple databases.
+- Database
+	- A collections of seperate table where things are actually kept.
+- Table 
+	- Where the data is actually stored.

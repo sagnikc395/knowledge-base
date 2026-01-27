@@ -1,4 +1,7 @@
 {
   "cssTheme": "Flexoki",
-  "accentColor": "#4b2484"
+  "accentColor": "#243784",
+  "monospaceFontFamily": "Monaspace Argon",
+  "textFontFamily": "Charter",
+  "baseFontSize": 17
 }
