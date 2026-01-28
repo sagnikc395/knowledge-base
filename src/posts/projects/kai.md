@@ -17,4 +17,26 @@ date: 1/27/26
 			- overwrites a file's contents
 			- execute the python interpreter on a file 
 	- repeats step2 until the task is complete (or it fails, which is also possible)
-- 
+- Goals Of Project:
+	- Understand how the AI tools work under the hood
+	- Writing a CLI tool with Python
+	- Using a pre-trained LLM to build an agent from scratch.
+	- How to make better DX for developers to use these tools and how to use it.
+- Gemini is an LLM. 
+	- Given it a prompt , it will give you back an text , that it believes is the answer.
+- Tokens:
+	- Tokens are the currency of LLMs.
+	- The way LLMs measure how much text they have to process.
+	- Roughly 4 letters for most models.
+- LLM APIs aren't typically used in a "one-shot" manner , as we need to keep the context of the conversation that is happening 
+	- When we are talking to ChatGPT , the conversation has a history, and , if we keep track of that history ,then with each new prompt, the model can see the entire conversation and respond with the larger context of the conversation.
+- Most importantly, each message in the conversation has a "role".
+	 - eg: user role vs model / agent role 
+- for testing and building our agent to see if it works properly , added a calculator building app e2e.
+ - capabilities of the agent
+	 - ability to read the contents from files
+		 - more specifically 
+	- built a guardrail to read the files in the guarded directory so the LLM doesnt run amok.
+- getting the contents of a file
+	- return the file contents as a string , or perhaps a error string if something went wrong.
+	- as always safely scope to this to the specific working directory.
