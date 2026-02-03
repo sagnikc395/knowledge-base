@@ -1,0 +1,54 @@
+---
+title: Coding and Understanding Transformers from Scratch
+tags:
+  - 100xdevs
+  - transformers
+  - ai
+date: 2/3/26
+---
+### From text to attention 
+- How transformers see language 
+- connecting the conceptual foundations to implementations 
+- What we know till now :
+	- Neural networks processes numbers / embeddings 
+	- Models learn by adjusting weights 
+	- Attention will focus on relevant words 
+- Missing Pieces:
+	- How does the text transform into numbers ? 
+	- What does the model actually "see" ?
+	- How does attention work mechanically ?
+### Tokenization:
+- Character level model struggles
+	- Step problem 
+	- Extreme inefficient 
+	- high cognitive load 
+	- manual pattern learning 
+- Word Level Approach 
+	- Concept Mapping -> each word represents a single,discrete unit of meaning 
+	- Much more intuitive than character-level processing 
+	- Challenges:
+		- "Form" problem -> Are "cat", "cats", "cat's" three different concepts 
+		- Unknown/Typo words -> how to handle typos like "teh" or rare technical terms ?
+		- Out of vocabulary -> any word not in the training set becomes a "hole" in understanding.
+- vocab explosion :
+	- parameter bloat 
+	- "unknown" problem 
+	- multilingual scaling 
+	- solution:
+		- subword solution -> finding the goldilocks balanace bw characters and words .
+		- strategic splitting 
+			- middle ground -> bigger than characters (too granular) but smaller than whole words(too many)
+			- efficiency -> common word stay whole, rare words break into recognizable ,meaningful pieces.
+		- vocab of 30k-100k tokens can represent almost any text in any language.
+- Byte Pair Encoding (BPE)
+	- Algorithmic construction of how modern tokenization works 
+	- Algo:
+		- Initialization 
+			- Begin with each character as an individual token.
+		- Iterative Merging 
+			- merge the most frequent adjacent tokens pair into one.
+		- Optimization 
+			- repeat merges until reaching the target vocabulary size.
+		- Self-organizing 
+			- frequent patterns become single tokens; rare ones stay fragmented.
+	- 
