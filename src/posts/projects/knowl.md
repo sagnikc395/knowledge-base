@@ -40,6 +40,8 @@ date: 2/5/26
 	- using simple word based tokenization for keyword search.
 - Stop Words ->
 	- Remove common stop words that don't add much meaning 
+	- not all tokens are created equal
+	- eg: a, the, is , of etc.
 - Stemming -> 
 	- keep only the stem of words
 	- eg: `["running","jumping"]` -> `["run","jump"]`
