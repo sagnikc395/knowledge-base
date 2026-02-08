@@ -51,4 +51,4 @@ date: 2/3/26
 			- repeat merges until reaching the target vocabulary size.
 		- Self-organizing 
 			- frequent patterns become single tokens; rare ones stay fragmented.
-	- 34:31
+	- 
