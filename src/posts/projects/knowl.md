@@ -44,4 +44,20 @@ date: 2/5/26
 	- eg: a, the, is , of etc.
 - Stemming -> 
 	- keep only the stem of words
+	- i.e only need the root words 
+	- helps match different variations of the same word.
 	- eg: `["running","jumping"]` -> `["run","jump"]`
+	- why stem words?
+		- goal is to match words from the user's input to the words in our dataset.
+		- if we dont stem words, we can fail to retrieve some valid results.
+
+### tf-idf
+- inverted index is what makes the search fast.
+- a forward index maps location -> value. An "inverted index" maps value -> location.
+- very fast lookup and it gives us a way to cache things 
+### bm-25
+- better IDF calculation : more stable scoring for rare/common terms 
+- term frequency saturations : prevents terms from dominating by appearing too often 
+- document length normalization: accounts for longer vs shorter documents.
+- numerator -> N - df + 0.5 -> count of documents without the term (plus smoothing)
+- denominator -> df + 0.5 -> count of documents with the term (plus smoothing) (0.5 added to prevent division by 0 -> laplace smoothing)
