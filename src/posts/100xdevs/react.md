@@ -114,4 +114,37 @@ date: 1/22/26
 			- Eg: Button is a component that takes the state(currentCount) as an input and is supposed to render it accordingly.
 - We usually have to define all of our components once , and then all we have to do is to update the state of our application, React will take care of re-rendering the application.
 - ![[Screenshot 2026-01-27 at 6.52.32 PM.png]]
-- 
+- a state change renders a re-render.
+	- effectively the function takes a global state and does a re-render of the thing.
+	- the function takes a state as an input and spits a state as an output.
+
+### todo app:
+- in useState is the initial state value.
+- count and setCount are the two state variables that store the value for the same.
+- App() is our first component.
+- npm run build will generate a static build of all the code 
+	- similar to the JS browser / target based code it will generate 
+	- we can directly serve it .
+- when we want to render a JS variable in JSX we have to wrap it in {} braces. 
+- in onClickHandler dont have to call the function , just give the function name and react under the hood knows that we need to call this function.
+- react will automatically know when to update the state and given an state it will reconcile into a state it gets the value updated.
+-  we give it state and component, and any time the state updates, the component should re-render.
+	- because react does not look at every variable as a state variable.
+	- if we have to define a state variable then we have to do it a certain way.
+	- using useState() hook to define our state, and if we define the state , we can update it.
+- `const [count,setCount] = useState(0);`
+	- the first value put it in count and the second value put it in setCount.
+	- setCount when called , it calls another function that dispatches and re-renders the thing here.
+- the right way to use state variables, is that it gave a state variable and with that given value is to call the value.
+	- so any time onClickHandler is called , we have to set the state and react re-renders the thing similar to the thing on button press.
+- we pass inputs to an custom component is through something called `props`.
+	- can create multiple children components and the parent components call pass the values and render it there.
+	- can access them using props.obj_name and props.user_name
+	- can reuse the component again and again 
+- high-level we have defined our own application and reused it.
+- `setTodos([...todos,{...` spreads out all the todos and sets all the values from the array here 
+	- we want all the original todos and this new todo at the end.
+	- can add more items to the state and react takes care of handling of how to add the items to the todos.
+- while iterating over the list of objects, react to render would require a key property so that it is unique.
+- Any time a parent re-renders , its child re-renders as well.
+	- 
