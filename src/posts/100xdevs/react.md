@@ -147,4 +147,44 @@ date: 1/22/26
 	- can add more items to the state and react takes care of handling of how to add the items to the todos.
 - while iterating over the list of objects, react to render would require a key property so that it is unique.
 - Any time a parent re-renders , its child re-renders as well.
-	- 
+- to put any css , we put it as an object with 2 curly braces.
+```jsx 
+<button style={{}}></button>
+```
+- todos is a state which is being passed as a component.
+	- we can pass todos which is a state variable , compared to the new component.
+- vite is one of many ways to bootstrap and bundler to build a react app, others also exist.
+	- many such frameworks , to bootstrap our application, watching files, bundling files etc.
+
+### React Deeper Dive :
+#### React returns 
+- reach component can return a single top-level xml
+- Why?
+	- makes it easier to do reconciliation 
+	- jsx expressions should have one parent div 
+	- cannot return an xml that doesnt have a top level parent div 
+	- can instead of extra div , we can also add a empty fragment or a React.Fragment.
+- react -> dynamic website 
+	- the content changes very quickly 
+	- react is the easy way to create this
+	- create, update and upload anything on the dom is a good way to re-render 
+	- whenever the dom updates happen, is called a re-render.
+	- in react, we want to minimize the re-renders 
+- need to add optimizations to reduce the number of re-renders to make it performant.
+#### re-rendering 
+- a re-render means that 
+	- react did some work to calculate what all should update in this component.
+	- the component actually gets called (we can put a logger to confirm this)
+	- the inspector shows us a bounding box around the component
+- it happens when
+	- a state variable that is being used inside a component changes
+	- a parent component re-renders triggers all children re-rendering 
+- 2 ways of keeping the re-rendering less:
+	- pushing the state down 
+	- 40:59
+#### key 
+#### wrapper components 
+#### useEffect 
+#### useMemo
+#### useCallback 
+#### useRef 
