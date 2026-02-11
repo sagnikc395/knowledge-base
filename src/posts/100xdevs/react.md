@@ -252,6 +252,11 @@ setTodos[json]})},[]);
 ```
 - for making async useEffect , use the library useAsyncEffect or capsulate it inside another async function.
 - useEffect hook serves the same purpose as `componentDidMount` and `componentDidUpdate` and `componentWillUnmount` in react class components, but unified into a single API.
+- when the thing renders for the first time, the code will run and never will it run again , only the first time the component is mounted
+	- thats why a popular hook to do some actions under some conditions.
+- the dependency array at the end, tells when should the callback fn has to be run.
+	- it takes state variables as input and any time the state variable changes , it will run the callback fn.
+	- want to run a certain logic when the state variable changes.
 ##### useMemo
 - 
 ##### useCallback 
