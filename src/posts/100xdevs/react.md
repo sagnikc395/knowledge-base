@@ -148,7 +148,7 @@ date: 1/22/26
 - while iterating over the list of objects, react to render would require a key property so that it is unique.
 - Any time a parent re-renders , its child re-renders as well.
 - to put any css , we put it as an object with 2 curly braces.
-```jsx 
+```js 
 <button style={{}}></button>
 ```
 - todos is a state which is being passed as a component.
@@ -223,12 +223,16 @@ date: 1/22/26
 		- this asynchronous call can be called as a side effect to the codebase 
 		- these need to be seperate from our rendering cycle.
 		- eg: setTimeout , fetch, setInterval
-		- shouldnt necessairly collude with the rendering cycle
+		- shouldnt necessarily collude with the rendering cycle
 	- hooks 
 		- went part of react for the longest time 
 		- allows us to use many state management techniques without explicitly calling lifecycle events.
 		- they enable functional components to have access to stateful logic and lifecycle features, which were previously only possible in class components.
 		- This has lead to a more concise and readable way of writing components in React.
+##### useState
+- lets us describe the state of our application 
+- whenever state updates, it will trigger a re-render which will finally result in a DOM update.
+- the problem comes when we have to do some other side effect or hit a backend api etc. which we can't do with the useState.
 ##### useEffect 
 - allows us to do lifecycle event 
 - allows us to do things when component is mounted 
@@ -238,7 +242,7 @@ date: 1/22/26
 - similarly we would have an action when the things need to be unmounted.
 - useEffect lets us hook onto it.
 - we are only sending one request when the component mounts 
-```jsx 
+```js 
 const [todos,setTodos] = useState([]);
 
 useEffect(() => {
@@ -247,10 +251,16 @@ const json = await res.json();
 setTodos[json]})},[]);
 ```
 - for making async useEffect , use the library useAsyncEffect or capsulate it inside another async function.
+- useEffect hook serves the same purpose as `componentDidMount` and `componentDidUpdate` and `componentWillUnmount` in react class components, but unified into a single API.
 ##### useMemo
 - 
 ##### useCallback 
+- 
 ##### useRef 
+- 
+
+##### useContext
+- 
 
 #### custom hooks
 - hooks that we can create on our own and use it 
