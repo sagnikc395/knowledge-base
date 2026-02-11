@@ -121,11 +121,11 @@ date: 1/22/26
 ### todo app:
 - in useState is the initial state value.
 - count and setCount are the two state variables that store the value for the same.
-- App() is our first component.
+- `App()` is our first component.
 - npm run build will generate a static build of all the code 
 	- similar to the JS browser / target based code it will generate 
 	- we can directly serve it .
-- when we want to render a JS variable in JSX we have to wrap it in {} braces. 
+- when we want to render a JS variable in JSX we have to wrap it in `{}` braces. 
 - in onClickHandler dont have to call the function , just give the function name and react under the hood knows that we need to call this function.
 - react will automatically know when to update the state and given an state it will reconcile into a state it gets the value updated.
 -  we give it state and component, and any time the state updates, the component should re-render.
