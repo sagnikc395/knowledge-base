@@ -181,10 +181,59 @@ date: 1/22/26
 	- a parent component re-renders triggers all children re-rendering 
 - 2 ways of keeping the re-rendering less:
 	- pushing the state down 
-	- 40:59
+	- react.memo knows the title has not changed, so we dont need to change it.
+- wrapping a component inside react.memo will make it only change it when it has a dynamic state change , not only when there are static changes.
+- react has a exact copy of the DOM somewhere else and many times we change the state variable - it creates a new diff ,and based on the diff it decides what it needs to do - like create, update or delete element.
+- always push state from parent to child.
 #### key 
+- each child in a list should have a unique prop.
+- thats the way the diffing engine will keep track of changes that have formed.
+- key tells react to make the correct updates to the dom and keep track of the changes.
 #### wrapper components 
-#### useEffect 
-#### useMemo
-#### useCallback 
-#### useRef 
+- you can create an meta component, that takes the inner component as an onput.
+- not necessary that the component always has to take state as an input.
+- whenever we make a component, inside which we pass children, inside that we get access to the whole thing in the children component, inside the variable.
+- the structure of the outer thing and inside this what others can write inside this
+- using that we can reach the final state of what inside can be written inside it.
+### hooks:
+- until now we have discussed useState.
+- these functions that start with use are called as hooks.
+- hooks in react are functions that allow us to hook into react state and lifecycle features from function components.
+- other examples of hooks:
+	- useEffect
+	- useMemo
+	- useCallback 
+	- useRef
+	- useReducer 
+	- useContext 
+	- useLayoutEffect 
+- lifecycle features:
+	- earlier react used to be written in a different way.
+		- we got access to lifecycle functions 
+	- before functional components, we had class based components 
+	- `onComponentMount` and `onComponentUnmount` would be two methods associated with it and it will be used to hook onto it.
+	- bunch of the lifecycle functions , it re-renders
+	- used to be the way in class based components
+- harder to do it functional components, so hooks were introduced.
+##### useEffect 
+- allows us to do lifecycle event 
+- allows us to do things when component is mounted 
+- when the component gets put into the dom , is called a mount 
+- some things should run when this element is being put there 
+- that is the use of the `onComponentMount`
+- similarly we would have an action when the things need to be unmounted.
+- useEffect lets us hook onto it.
+- we are only sending one request when the component mounts 
+```jsx 
+const [todos,setTodos] = useState([]);
+
+useEffect(() => {
+fetch(url).then(async (res) => {
+const json = await res.json();
+setTodos[json]})},[]);
+```
+- for making async useEffect , use the library useAsyncEffect or capsulate it inside another async function.
+##### useMemo
+- 
+##### useCallback 
+##### useRef 
