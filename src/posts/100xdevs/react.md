@@ -215,6 +215,20 @@ date: 1/22/26
 	- bunch of the lifecycle functions , it re-renders
 	- used to be the way in class based components
 - harder to do it functional components, so hooks were introduced.
+- some jargon:
+	- side effects 
+		- the operations can affect other components, interact with browser or do asynchronous changes.
+		- in react, we have functional components and anything not related to rendering , etc. are considered part of side effects as they are not part of the main react rendering cycle.
+		- eg: fetching data from the backend 
+		- this asynchronous call can be called as a side effect to the codebase 
+		- these need to be seperate from our rendering cycle.
+		- eg: setTimeout , fetch, setInterval
+		- shouldnt necessairly collude with the rendering cycle
+	- hooks 
+		- went part of react for the longest time 
+		- allows us to use many state management techniques without explicitly calling lifecycle events.
+		- they enable functional components to have access to stateful logic and lifecycle features, which were previously only possible in class components.
+		- This has lead to a more concise and readable way of writing components in React.
 ##### useEffect 
 - allows us to do lifecycle event 
 - allows us to do things when component is mounted 
@@ -237,3 +251,10 @@ setTodos[json]})},[]);
 - 
 ##### useCallback 
 ##### useRef 
+
+#### custom hooks
+- hooks that we can create on our own and use it 
+- can create custom hooks for others to use
+
+#### prop drilling:
+- 
