@@ -257,19 +257,63 @@ setTodos[json]})},[]);
 - the dependency array at the end, tells when should the callback fn has to be run.
 	- it takes state variables as input and any time the state variable changes , it will run the callback fn.
 	- want to run a certain logic when the state variable changes.
+- axios is very big and only getting get function.
+	- using tree shaking , the final library would only get that library in the final build.
+- arrow functions vs normal functions 
+	- only matters  when require to use  bind and this in functions 
+- 
 ##### useMemo
-- 
+- memo means remembering some output given an input and not computing it again.
+	- like caching.
+	- have this cached value, dont recompute the result again.
+- eg: lets say you are a f1 driver and want to check how much petrol is left. Would u do that in every lap ? Would you do that every 10 laps ? or every 20 mins ?
+- eg2: create an app that does 2 things:
+	- increase a counter by 1
+	- lets user put a value in an input box (n) and we need to show sum from 1-n 
+	- restriction: everything needs to inside App
+- when we click on the button, it re-runs the expensive operation again of summing value and cant we just remember the value from the last and keep the sum intact.
+	- across values if you want to remember the values in state variable, we would use useMemo.
+	- an ugly way to do this would be via useEffect , where any time a loop is running we would take the value and store the result somewhere 
+	- the problem is to use a unneccesaray re-render 
+	```js 
+	const [counter,setCounter] = useState(0);
+	const [inputValue,setInputValue] = useState(1);
+	const [finalValue,setFinalValue] = useState(0);
+	
+	useEffect(() => {
+	let count = 0;
+	for(let i=1;i<= inputValue;i++){
+	count += 1;
+	}
+	},inputValue);
+	
+	return <div>
+	<input onChange={(e) => setInputValue(e.target.value)} placeholder={"Find the sum from 1 to n"}>
+	<br />
+	Sum from 1 to {inputValue} is {finalValue}
+	<br />
+	<button onClick={() => setCounter(counter+1)>Counter ({counter}) </button>
+	</div>
+	```
+- we are updating the state variable , which will cause 2 re-renders.
+- a better approach would be to run all the counter logic only when some value changes and not we recomputing the same thing again and again.
 ##### useCallback 
-- 
+- memo lets us skip re-rendering a component when its props are unchanged.
+	- if we wrap the child inside a memo, it will only re-render if the inputs to the child have changed.
+- TODO (refer react.dev)
 ##### useRef 
-- 
+- refer react.dev
 
 ##### useContext
-- 
+- refer react.dev 
 
 #### custom hooks
 - hooks that we can create on our own and use it 
 - can create custom hooks for others to use
+- must start with `use` primitive 
+	- can contain other hooks inside it 
+- the thing inside a hook must be another hook or a component.
+- 
 
 #### prop drilling:
 - 
