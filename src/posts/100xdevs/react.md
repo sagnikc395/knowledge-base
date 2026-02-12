@@ -300,7 +300,8 @@ setTodos[json]})},[]);
 ##### useCallback 
 - memo lets us skip re-rendering a component when its props are unchanged.
 	- if we wrap the child inside a memo, it will only re-render if the inputs to the child have changed.
-- TODO (refer react.dev)
+- basically if you ever want to memoize a function, we use useCallback.
+- useCallback is about not rendering a child, if the function doesnt need to change across renders.
 ##### useRef 
 - refer react.dev
 
@@ -313,7 +314,6 @@ setTodos[json]})},[]);
 - must start with `use` primitive 
 	- can contain other hooks inside it 
 - the thing inside a hook must be another hook or a component.
-- 
 
 #### prop drilling:
 - 
