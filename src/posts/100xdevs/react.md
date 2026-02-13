@@ -303,11 +303,10 @@ setTodos[json]})},[]);
 - basically if you ever want to memoize a function, we use useCallback.
 - useCallback is about not rendering a child, if the function doesnt need to change across renders.
 ##### useRef 
-- refer react.dev
+- you want to overwrite what the state library has written over the screen
 
 ##### useContext
-- refer react.dev 
-
+- ref from react.dev
 #### custom hooks
 - hooks that we can create on our own and use it 
 - can create custom hooks for others to use
@@ -316,4 +315,8 @@ setTodos[json]})},[]);
 - the thing inside a hook must be another hook or a component.
 
 #### prop drilling:
-- 
+
+#### routing in react:
+
+
+#### Context API
