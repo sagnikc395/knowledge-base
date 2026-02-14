@@ -788,3 +788,31 @@ def get_hex(color):
         case _:
             return "#FFFFFF"
 ```
+
+### Functools Module: 
+- ref: https://martinheinz.dev/blog/52
+- functool module offers many useful higher order functions that act on or return other functions, which we can leverage to implement function caching, overloading, creating decorators and in general to make our code much more functional.
+- experiments: https://github.com/sagnikc395/functools-explore
+
+#### Caching :
+- there are caching functions - `lru_cache`, `cache` and `cached_property`.
+- `lru_cache` as the name suggests provides the least recently used cache of function results or in other words - memoization of results.
+- can inspect the cache info of our function using the `cache_info` method and which shows number of cache hits or misses.
+- Decorator also provides a `clear_cache` and a`cache_parameters` methods for invalidating cached results and inspecting parameters respectively.
+- For more granular caching, can pass the parameter `typed=True` argument, which makes it so that arguments of different types are cached separately.
+- Another caching decorator in `functools` is a function simply called `cache`. 
+	- Simple wrapper on top of the `lru_cache` which will omit the `max_size` argument making it smaller and after as it doesn't need to evict old values.
+- `cached_property` decorator 
+	- used for caching the results of class attributes.
+	- useful if we have property that is expensive to compute while also immutable.
+	- Use Case: cache rendered HTML page which would get returned to user over-and-over again. Same could be done for certain database queries or long mathematical computation.
+	- only runs on lookups, therefore allowing us to modify the attribute.
+	- after the attribute is modified, the previously cached value won't be used , instead new value will be computed and cached.
+#### comparing and ordering:
+ - luckily, functools, module includes `@total_ordering` decorator that can help us with that. - all we need to do , is implement `__eq__` and one of the remaining methods and rest will be automatically providedd by the decorator.
+
+#### partial:
+- many external libraries and frameworks provide functions and interfaces that require us to pass in callback functions.
+- What if we need to also pass in some arguments along with the callback functions.
+	- thats where `functools.partial` comes in handy - `partial` can be used to freeze some (or all) of the function's arguments, creating new object with simplified function signatures.
+
