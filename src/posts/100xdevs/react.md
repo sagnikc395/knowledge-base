@@ -314,9 +314,51 @@ setTodos[json]})},[]);
 	- can contain other hooks inside it 
 - the thing inside a hook must be another hook or a component.
 
-#### prop drilling:
+### prop drilling:
+- how do you think one should manage state ?
+	- keep everything in the top level component or 
+	- keep everything as low as possible (at the Least Common Ancestor of children that need a state)
+- the idea is to keep things at the low level component 
+- should try to push down state as much as possible.
+	- so that other states dont need to re-render as much as possible.
+- store at the least common ancestor.
+- push it down as much as possible.
+- we are drilling down the props.
+- if there are components 
+	- ![[Screenshot 2026-02-15 at 8.20.34 AM.png]]
+	- if c1 has props, c2,c3 doesnt, they still need to pass it down the props , so that c4 can get it.
+- if there is a state variable, that needs to be used,it should be in their lowest ancestor, we are just passing it down.
+	- this is what is called as prop drilling .
+	- anti-pattern because how unmanageable it makes the code.
+	- it is unappealing because how visually unappealing it makes the code look like at.
+- Prop drilling doesnt mean that the parent re-renders children, it just means the syntactic uneasiness when writing code.
 
-#### routing in react:
-
-
-#### Context API
+### routing in react:
+- react-router-dom
+- two simple ways to directly switch 
+	- `window.locaton.href=path-name`
+	- global location object we have access to in the DOM
+	- but this we refetch the page everytime 
+- better to use `useNavigate()` hook so as to not take hard render of it.
+	- need to use inside a component 
+- lazy loading 
+	- rn , a complete bundle comes back all at once 
+		- the problem is , the person will just come to landing page , all the bundle will come back all at once , which is not required, if the person is just in the dashboard.
+		- the person should only receive the code for the given bundle the require - only give them a small bundle
+		- incremently giving them the website than giving the whole web page 
+	- react-router allows us to to do lazy loading and incrementally allows us to give the pages as required.
+	- they will lazily load the more page components , on the page they are not currently on.
+	- navigate wont fetch the data from backend , we do a fetch call from inside the component that we want to hit the backend APIs.
+	- Suspense API
+		- async data fetching wrapper 
+		- for async components and not have access to them immediately , we wrap it under a suspense API - depends on internet connection
+		- for cases like this, react provides the suspense API.
+		- wrapper the component to be rendered inside suspense, makes it that we have a mildly more client side optimized application.
+	- the only thing here is we have to wrap this under a suspense. 
+### Context API
+- lets us fix prop drilling 
+- it makes us very easy to pass state components, without drilling it down.
+- "teleport" data to the components in the tree that need it without passing it down the prop chain.
+- if we are using the context api, we are pushing our state management outside the core react components.
+- `reducer/useReducer()` hook 
+	- basics of state management in react without using a library 
