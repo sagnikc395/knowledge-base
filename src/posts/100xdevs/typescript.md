@@ -5,7 +5,7 @@ tags:
   - 100xdevs
 date: 2/17/26
 ---
-### Types of Languages
+### Typescript and Types of Languages
 - There are various types of languages, there are compiled and loosely typed language.
 - another distinction we can make in languages.
 	- Eg: Python,JS -> loosely typed languages , C++, Java -> strongly typed language
@@ -22,7 +22,7 @@ date: 2/17/26
 	- TS code does not work on your browser.
 		- TS never runs at all form line to line, JS is the runtime language.
 	- TS gets transpiled down to JS.
-		- typescript -> tsc -> javascript -> {browser,nodejs}
+		- `typescript -> tsc -> javascript -> {browser,nodejs}`
 	- it will do all the static checks , this will give a file that will get run in the browser.
 	- tsc compiler is supposed to ensure that there is no type errors in the code.
 	- if we have an error in our code, it will fail during compilation.
@@ -37,6 +37,8 @@ date: 2/17/26
 		- where should the compiler look for spit out `.ts` files.
 	- `noImplicitAny`
 		- To prevent `any` use on the codebase.
+	- `removeComments`
+		- Whether or not to include comments in the final `js` file.
 - `tsc -b` command to generate the corresponding js files from the ts files.
 - "use strict" is something that makes our code more strict.
 - basic types in typescript:
@@ -47,3 +49,8 @@ date: 2/17/26
 	- undefined 
 - Typescript can do type inference 
 	- we dont have to always give it a return type each time , typescript compiler knows and can infer it 
+
+### Types and Interfaces:
+- Interfaces 
+	- how to assign types to objects ? 
+	-
