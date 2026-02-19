@@ -53,4 +53,18 @@ date: 2/17/26
 ### Types and Interfaces:
 - Interfaces 
 	- how to assign types to objects ? 
-	-
+	- basically a way to combine multiple things into a single object 
+	- interfaces have another property that we can implement interfaces as a class
+- Types
+	- very similar to interfaces
+	- let us aggregate data together 
+	- but they let us do more composable things than interfaces.
+	- Types cannot be used to implement classes.
+	- Intersection:
+		- what if we want a type that has every property of multiple `types` and `interfaces`
+		- use an intersection of types for that 
+- Diff bw interfaces and types? 
+	- types let us do ors and ands , whereas interfaces let us extend a class.
+- Arrays in TS
+	- If we want to access arrays in TS, simple as adding a annotation next to the type.
+	- 
