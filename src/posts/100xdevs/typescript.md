@@ -1,0 +1,49 @@
+---
+title: Typescript
+tags:
+  - typescript
+  - 100xdevs
+date: 2/17/26
+---
+### Types of Languages
+- There are various types of languages, there are compiled and loosely typed language.
+- another distinction we can make in languages.
+	- Eg: Python,JS -> loosely typed languages , C++, Java -> strongly typed language
+- In JS, we not only are able to change the value but also the type.
+	- In C++ ,it is not allowed, like integer cannot be assigned to integer.
+- Starting out coding, loosely typed projects are easier to learn and there is a lower learning curve and easier to get dopamine hits than statically typed language.
+- In production, however you want very strong type checking and here the compiler will help and let them know if there is a problem with the code.
+	- Less runtime errors.
+- JS is a great language, but since it doesnt have types , it is not that great for production.
+	- TS was introduced as a new language to add types on top of JS.
+- Strict syntactical superset of JS that adds type information on top of it.
+- A native JS code , without very strong type checking will almost certainly work with Typescript.
+- How does TS code run ?
+	- TS code does not work on your browser.
+		- TS never runs at all form line to line, JS is the runtime language.
+	- TS gets transpiled down to JS.
+		- typescript -> tsc -> javascript -> {browser,nodejs}
+	- it will do all the static checks , this will give a file that will get run in the browser.
+	- tsc compiler is supposed to ensure that there is no type errors in the code.
+	- if we have an error in our code, it will fail during compilation.
+- TS easy to catch at compile time , and the code does what it is supposed to do.
+- `tsconfig.json` 
+	- config of our typescript
+	- `target`
+		- specifies the ECMAScript target version to which the Typescript compiler will compile the Typescript code.
+	- `rootDir`
+		- where should the compiler look for `.ts` files. Good practice is to keep it in the `src` folder.
+	- `outDir`
+		- where should the compiler look for spit out `.ts` files.
+	- `noImplicitAny`
+		- To prevent `any` use on the codebase.
+- `tsc -b` command to generate the corresponding js files from the ts files.
+- "use strict" is something that makes our code more strict.
+- basic types in typescript:
+	- Number 
+	- string 
+	- boolean 
+	- null
+	- undefined 
+- Typescript can do type inference 
+	- we dont have to always give it a return type each time , typescript compiler knows and can infer it 

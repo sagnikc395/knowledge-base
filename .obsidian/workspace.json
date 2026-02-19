@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9c17734243b81c60",
+        "id": "fc10756b811dc78c",
         "type": "tabs",
         "children": [
           {
-            "id": "86d1e1f633dde3d1",
+            "id": "96982f125c195054",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/posts/python-refresher/regex.md",
+                "file": "src/posts/100xdevs/typescript.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "regex"
+              "title": "typescript"
             }
           }
         ]
@@ -209,9 +209,10 @@
   },
   "active": "7f78cc99e52dfb49",
   "lastOpenFiles": [
-    "src/posts/data-engineering-zoomcamp/lec1.md",
-    "src/posts/python-refresher/regex.md",
     "src/posts/100xdevs/recoil.md",
+    "src/posts/100xdevs/typescript.md",
+    "src/posts/python-refresher/regex.md",
+    "src/posts/data-engineering-zoomcamp/lec1.md",
     "src/posts/100xdevs/react.md",
     "src/posts/100xdevs/imgs/Screenshot 2026-02-15 at 8.20.34 AM.png",
     "src/posts/100xdevs/README.md",
@@ -254,7 +255,6 @@
     "node_modules/micromark-util-decode-numeric-character-reference/readme.md",
     "node_modules/mdast-util-wiki-link/node_modules/mdast-util-to-markdown/readme.md",
     "node_modules/mdast-util-to-markdown/node_modules/unist-util-visit/readme.md",
-    "node_modules/micromark-util-decode-string/readme.md",
     "Untitled.canvas"
   ]
 }
