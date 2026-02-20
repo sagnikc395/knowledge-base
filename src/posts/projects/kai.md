@@ -40,3 +40,4 @@ date: 1/27/26
 - getting the contents of a file
 	- return the file contents as a string , or perhaps a error string if something went wrong.
 	- as always safely scope to this to the specific working directory.
+- 
