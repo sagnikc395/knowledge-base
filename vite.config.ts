@@ -1,11 +1,17 @@
-import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
-	plugins: [sveltekit()],
+	plugins: [react()],
+	resolve: {
+		alias: {
+			'$lib': path.resolve(__dirname, './src/lib'),
+			'$posts': path.resolve(__dirname, './src/posts')
+		}
+	},
 	server: {
 		fs: {
-			//allowing vite to serve files from one level up
 			allow: ['..']
 		}
 	}

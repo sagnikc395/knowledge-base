@@ -76,8 +76,16 @@ date: 2/17/26
 - or `Array<number>` 
 - both of them works.
 
-### Generics 
 
-### Enums 
+### Enums
+- Are a feature that allow us to define a level of named constraints.
+- The concept behind enumerations is to create human-readable way to represent a set of constant values , which might otherwise be represented as numbers or strings.
+- evaluated at compile times to check this and let us know the error in advance in the types.
+- something we use when we know that are a limited set of constrained, constant values.
+- the final value stored at runtime is still a number.(default value is 0)
+### Generics 
+- generics enable us to create components that work with any data type while still providing compile-time type safety.
+- 
+
 
 ### Imports and Exports 

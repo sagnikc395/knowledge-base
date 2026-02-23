@@ -5,6 +5,8 @@ export type Post = {
 	description?: string;
 	date: string;
 	published: boolean;
+	content: string;
+	metadata: Record<string, any>;
 };
 
 export type FileNode = {
