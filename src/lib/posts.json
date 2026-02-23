@@ -1,7 +1,16 @@
 [
   {
+    "title": "sveltekit-learn-readme",
+    "date": "2026-02-23T22:01:31.017Z",
+    "slug": "svelte-notes/sveltekit-learn-readme",
+    "category": "svelte-notes",
+    "published": true,
+    "content": "My notes and stuff while learning Sveltekit and TailwindCSS to make basic personal websites on my own.\n\n### Index:\n\n1. [[svelte-basics]] Covers the Basics of Svelte.\n2. [[learn-tailwind]] Covers TailwindCSS and stuff.\n3. [[sveltekit]] for everything related to make production grade apps with Svelte and SvelteKit.\n",
+    "metadata": {}
+  },
+  {
     "title": "Functional Programming In Python",
-    "date": "2026-02-23T21:58:27.033Z",
+    "date": "2026-02-23T22:01:31.016Z",
     "slug": "python-refresher/Functional Programming",
     "category": "python-refresher",
     "published": true,
@@ -15,17 +24,8 @@
     }
   },
   {
-    "title": "sveltekit-learn-readme",
-    "date": "2026-02-23T21:58:27.033Z",
-    "slug": "svelte-notes/sveltekit-learn-readme",
-    "category": "svelte-notes",
-    "published": true,
-    "content": "My notes and stuff while learning Sveltekit and TailwindCSS to make basic personal websites on my own.\n\n### Index:\n\n1. [[svelte-basics]] Covers the Basics of Svelte.\n2. [[learn-tailwind]] Covers TailwindCSS and stuff.\n3. [[sveltekit]] for everything related to make production grade apps with Svelte and SvelteKit.\n",
-    "metadata": {}
-  },
-  {
     "title": "ddia-notes",
-    "date": "2026-02-23T21:58:27.031Z",
+    "date": "2026-02-23T22:01:31.015Z",
     "slug": "data-engineering-zoomcamp/ddia/ddia-notes",
     "category": "data-engineering-zoomcamp",
     "published": true,

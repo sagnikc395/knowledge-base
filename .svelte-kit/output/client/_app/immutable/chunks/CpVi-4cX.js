@@ -1,1 +1,0 @@
-import{f as e,a as p}from"./CCM6-gPc.js";import"./ChUk9lal.js";import{l as n,s as l}from"./D9W1QFau.js";import{M as $}from"./i8E_CZTo.js";var d=e("<p>100xdevs course notes and learning</p>");function u(o,r){const s=n(r,["children","$$slots","$$events","$$legacy"]);$(o,l(()=>s,{children:(a,i)=>{var t=d();p(a,t)},$$slots:{default:!0}}))}export{u as default};

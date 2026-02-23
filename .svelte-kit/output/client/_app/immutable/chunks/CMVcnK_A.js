@@ -1,1 +1,0 @@
-import"./CCM6-gPc.js";import"./ChUk9lal.js";import{l as o,s as r}from"./D9W1QFau.js";import{M as l}from"./i8E_CZTo.js";const t={title:'"<% tp.file.title %>"',draft:"false",tags:null,date:null},{title:f,draft:m,tags:$,date:c}=t;function u(a,s){const e=o(s,["children","$$slots","$$events","$$legacy"]);l(a,r(()=>e,()=>t))}export{u as default,t as metadata};
