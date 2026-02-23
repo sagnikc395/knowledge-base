@@ -1,0 +1,900 @@
+{
+  ".svelte-kit/generated/server/internal.js": {
+    "file": "internal.js",
+    "name": "internal",
+    "src": ".svelte-kit/generated/server/internal.js",
+    "isEntry": true,
+    "imports": [
+      "_internal.js",
+      "_environment.js",
+      "_server.js"
+    ]
+  },
+  "_Functional Programming.js": {
+    "file": "chunks/Functional Programming.js",
+    "name": "Functional Programming",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_JS-Fundamentals.js": {
+    "file": "chunks/JS-Fundamentals.js",
+    "name": "JS-Fundamentals",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_MarkdownLayout.js": {
+    "file": "chunks/MarkdownLayout.js",
+    "name": "MarkdownLayout"
+  },
+  "_Object Oriented Programming in Python.js": {
+    "file": "chunks/Object Oriented Programming in Python.js",
+    "name": "Object Oriented Programming in Python",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_Python From Scratch.js": {
+    "file": "chunks/Python From Scratch.js",
+    "name": "Python From Scratch",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_README.js": {
+    "file": "chunks/README.js",
+    "name": "README",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_README2.js": {
+    "file": "chunks/README2.js",
+    "name": "README",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_Shells and Terminals.js": {
+    "file": "chunks/Shells and Terminals.js",
+    "name": "Shells and Terminals",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_backend-basics-2.js": {
+    "file": "chunks/backend-basics-2.js",
+    "name": "backend-basics-2",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_backend-basics.js": {
+    "file": "chunks/backend-basics.js",
+    "name": "backend-basics",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_catching-upto-transformers.js": {
+    "file": "chunks/catching-upto-transformers.js",
+    "name": "catching-upto-transformers",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_chapter.js": {
+    "file": "chunks/chapter.js",
+    "name": "chapter",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_context.js": {
+    "file": "chunks/context.js",
+    "name": "context"
+  },
+  "_ddia-notes.js": {
+    "file": "chunks/ddia-notes.js",
+    "name": "ddia-notes",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_dom.js": {
+    "file": "chunks/dom.js",
+    "name": "dom",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_environment.js": {
+    "file": "chunks/environment.js",
+    "name": "environment"
+  },
+  "_equality.js": {
+    "file": "chunks/equality.js",
+    "name": "equality"
+  },
+  "_exports.js": {
+    "file": "chunks/exports.js",
+    "name": "exports",
+    "imports": [
+      "_equality.js"
+    ]
+  },
+  "_html-css-fundamentals.js": {
+    "file": "chunks/html-css-fundamentals.js",
+    "name": "html-css-fundamentals",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_index.js": {
+    "file": "chunks/index.js",
+    "name": "index",
+    "imports": [
+      "_context.js"
+    ]
+  },
+  "_internal.js": {
+    "file": "chunks/internal.js",
+    "name": "internal",
+    "imports": [
+      "_index.js",
+      "_environment.js",
+      "_equality.js",
+      "_context.js",
+      "_server.js"
+    ]
+  },
+  "_kai.js": {
+    "file": "chunks/kai.js",
+    "name": "kai",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_knowl.js": {
+    "file": "chunks/knowl.js",
+    "name": "knowl",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_lec1.js": {
+    "file": "chunks/lec1.js",
+    "name": "lec1",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_mongo-in-depth.js": {
+    "file": "chunks/mongo-in-depth.js",
+    "name": "mongo-in-depth",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_neural-networks-from-scratch.js": {
+    "file": "chunks/neural-networks-from-scratch.js",
+    "name": "neural-networks-from-scratch",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_react.js": {
+    "file": "chunks/react.js",
+    "name": "react",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_realtime-data-streaming.js": {
+    "file": "chunks/realtime-data-streaming.js",
+    "name": "realtime-data-streaming",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_recoil.js": {
+    "file": "chunks/recoil.js",
+    "name": "recoil",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_regex.js": {
+    "file": "chunks/regex.js",
+    "name": "regex",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_reliable-scalable-maintainable-applications.js": {
+    "file": "chunks/reliable-scalable-maintainable-applications.js",
+    "name": "reliable-scalable-maintainable-applications",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_server.js": {
+    "file": "chunks/server.js",
+    "name": "server"
+  },
+  "_shared.js": {
+    "file": "chunks/shared.js",
+    "name": "shared",
+    "imports": [
+      "_utils.js"
+    ]
+  },
+  "_skeleton of svelte projects.js": {
+    "file": "chunks/skeleton of svelte projects.js",
+    "name": "skeleton of svelte projects",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_svelte-basics.js": {
+    "file": "chunks/svelte-basics.js",
+    "name": "svelte-basics",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_svelte-events.js": {
+    "file": "chunks/svelte-events.js",
+    "name": "svelte-events",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_svelte-logic.js": {
+    "file": "chunks/svelte-logic.js",
+    "name": "svelte-logic",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_svelte-props.js": {
+    "file": "chunks/svelte-props.js",
+    "name": "svelte-props",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_svelte-reactivity.js": {
+    "file": "chunks/svelte-reactivity.js",
+    "name": "svelte-reactivity",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_sveltekit-learn-readme.js": {
+    "file": "chunks/sveltekit-learn-readme.js",
+    "name": "sveltekit-learn-readme",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_sveltekit.js": {
+    "file": "chunks/sveltekit.js",
+    "name": "sveltekit",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_taste is the new moat.js": {
+    "file": "chunks/taste is the new moat.js",
+    "name": "taste is the new moat",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_transformers.js": {
+    "file": "chunks/transformers.js",
+    "name": "transformers",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js"
+    ]
+  },
+  "_typescript.js": {
+    "file": "chunks/typescript.js",
+    "name": "typescript",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownLayout.js",
+      "_context.js"
+    ]
+  },
+  "_utils.js": {
+    "file": "chunks/utils.js",
+    "name": "utils"
+  },
+  "_utils2.js": {
+    "file": "chunks/utils2.js",
+    "name": "utils",
+    "imports": [
+      "_JS-Fundamentals.js",
+      "_README.js",
+      "_backend-basics-2.js",
+      "_backend-basics.js",
+      "_dom.js",
+      "_html-css-fundamentals.js",
+      "_mongo-in-depth.js",
+      "_react.js",
+      "_recoil.js",
+      "_taste is the new moat.js",
+      "_typescript.js",
+      "_README2.js",
+      "_catching-upto-transformers.js",
+      "_neural-networks-from-scratch.js",
+      "_transformers.js",
+      "_Shells and Terminals.js",
+      "_ddia-notes.js",
+      "_reliable-scalable-maintainable-applications.js",
+      "_lec1.js",
+      "_kai.js",
+      "_knowl.js",
+      "_realtime-data-streaming.js",
+      "_Functional Programming.js",
+      "_Object Oriented Programming in Python.js",
+      "_Python From Scratch.js",
+      "_regex.js",
+      "_skeleton of svelte projects.js",
+      "_svelte-basics.js",
+      "_svelte-events.js",
+      "_svelte-logic.js",
+      "_svelte-props.js",
+      "_svelte-reactivity.js",
+      "_sveltekit-learn-readme.js",
+      "_sveltekit.js",
+      "_chapter.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/app/server/remote/index.js": {
+    "file": "remote-entry.js",
+    "name": "remote-entry",
+    "src": "node_modules/@sveltejs/kit/src/runtime/app/server/remote/index.js",
+    "isEntry": true,
+    "imports": [
+      "_shared.js",
+      "_environment.js",
+      "_server.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "name": "entries/fallbacks/error.svelte",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_context.js",
+      "_equality.js",
+      "_exports.js",
+      "_utils.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
+    "file": "index.js",
+    "name": "index",
+    "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js",
+    "isEntry": true,
+    "imports": [
+      "_environment.js",
+      "_server.js",
+      "_shared.js",
+      "_exports.js",
+      "_utils.js",
+      "_internal.js"
+    ]
+  },
+  "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.ttf": {
+    "file": "_app/immutable/assets/KaTeX_AMS-Regular.DRggAlZN.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.woff": {
+    "file": "_app/immutable/assets/KaTeX_AMS-Regular.DMm9YOAa.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.woff2": {
+    "file": "_app/immutable/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.ttf": {
+    "file": "_app/immutable/assets/KaTeX_Caligraphic-Bold.ATXxdsX0.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff": {
+    "file": "_app/immutable/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff2": {
+    "file": "_app/immutable/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.ttf": {
+    "file": "_app/immutable/assets/KaTeX_Caligraphic-Regular.wX97UBjC.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff": {
+    "file": "_app/immutable/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff2": {
+    "file": "_app/immutable/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.ttf": {
+    "file": "_app/immutable/assets/KaTeX_Fraktur-Bold.BdnERNNW.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.woff": {
+    "file": "_app/immutable/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.woff2": {
+    "file": "_app/immutable/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.ttf": {
+    "file": "_app/immutable/assets/KaTeX_Fraktur-Regular.CB_wures.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.woff": {
+    "file": "_app/immutable/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.woff2": {
+    "file": "_app/immutable/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Bold.ttf": {
+    "file": "_app/immutable/assets/KaTeX_Main-Bold.waoOVXN0.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Bold.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Bold.woff": {
+    "file": "_app/immutable/assets/KaTeX_Main-Bold.Jm3AIy58.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Bold.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Bold.woff2": {
+    "file": "_app/immutable/assets/KaTeX_Main-Bold.Cx986IdX.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Bold.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.ttf": {
+    "file": "_app/immutable/assets/KaTeX_Main-BoldItalic.DzxPMmG6.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.woff": {
+    "file": "_app/immutable/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.woff2": {
+    "file": "_app/immutable/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Italic.ttf": {
+    "file": "_app/immutable/assets/KaTeX_Main-Italic.3WenGoN9.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Italic.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Italic.woff": {
+    "file": "_app/immutable/assets/KaTeX_Main-Italic.BMLOBm91.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Italic.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Italic.woff2": {
+    "file": "_app/immutable/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Italic.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Regular.ttf": {
+    "file": "_app/immutable/assets/KaTeX_Main-Regular.ypZvNtVU.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Regular.woff": {
+    "file": "_app/immutable/assets/KaTeX_Main-Regular.Dr94JaBh.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Regular.woff2": {
+    "file": "_app/immutable/assets/KaTeX_Main-Regular.B22Nviop.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.ttf": {
+    "file": "_app/immutable/assets/KaTeX_Math-BoldItalic.B3XSjfu4.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.woff": {
+    "file": "_app/immutable/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.woff2": {
+    "file": "_app/immutable/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-Italic.ttf": {
+    "file": "_app/immutable/assets/KaTeX_Math-Italic.flOr_0UB.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-Italic.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-Italic.woff": {
+    "file": "_app/immutable/assets/KaTeX_Math-Italic.DA0__PXp.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-Italic.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-Italic.woff2": {
+    "file": "_app/immutable/assets/KaTeX_Math-Italic.t53AETM-.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-Italic.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.ttf": {
+    "file": "_app/immutable/assets/KaTeX_SansSerif-Bold.CFMepnvq.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.woff": {
+    "file": "_app/immutable/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.woff2": {
+    "file": "_app/immutable/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.ttf": {
+    "file": "_app/immutable/assets/KaTeX_SansSerif-Italic.YYjJ1zSn.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.woff": {
+    "file": "_app/immutable/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.woff2": {
+    "file": "_app/immutable/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.ttf": {
+    "file": "_app/immutable/assets/KaTeX_SansSerif-Regular.BNo7hRIc.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.woff": {
+    "file": "_app/immutable/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.woff2": {
+    "file": "_app/immutable/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Script-Regular.ttf": {
+    "file": "_app/immutable/assets/KaTeX_Script-Regular.C5JkGWo-.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Script-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Script-Regular.woff": {
+    "file": "_app/immutable/assets/KaTeX_Script-Regular.D5yQViql.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Script-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Script-Regular.woff2": {
+    "file": "_app/immutable/assets/KaTeX_Script-Regular.D3wIWfF6.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Script-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.ttf": {
+    "file": "_app/immutable/assets/KaTeX_Size1-Regular.Dbsnue_I.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.woff": {
+    "file": "_app/immutable/assets/KaTeX_Size1-Regular.C195tn64.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.woff2": {
+    "file": "_app/immutable/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.ttf": {
+    "file": "_app/immutable/assets/KaTeX_Size2-Regular.B7gKUWhC.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.woff": {
+    "file": "_app/immutable/assets/KaTeX_Size2-Regular.oD1tc_U0.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.woff2": {
+    "file": "_app/immutable/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size3-Regular.ttf": {
+    "file": "_app/immutable/assets/KaTeX_Size3-Regular.DgpXs0kz.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size3-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size3-Regular.woff": {
+    "file": "_app/immutable/assets/KaTeX_Size3-Regular.CTq5MqoE.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size3-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.ttf": {
+    "file": "_app/immutable/assets/KaTeX_Size4-Regular.DWFBv043.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.woff": {
+    "file": "_app/immutable/assets/KaTeX_Size4-Regular.BF-4gkZK.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.woff2": {
+    "file": "_app/immutable/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.ttf": {
+    "file": "_app/immutable/assets/KaTeX_Typewriter-Regular.D3Ib7_Hf.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.woff": {
+    "file": "_app/immutable/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.woff2": {
+    "file": "_app/immutable/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.woff2"
+  },
+  "src/routes/+layout.js": {
+    "file": "entries/pages/_layout.js",
+    "name": "entries/pages/_layout",
+    "src": "src/routes/+layout.js",
+    "isEntry": true
+  },
+  "src/routes/+layout.server.ts": {
+    "file": "entries/pages/_layout.server.ts.js",
+    "name": "entries/pages/_layout.server.ts",
+    "src": "src/routes/+layout.server.ts",
+    "isEntry": true,
+    "imports": [
+      "_utils2.js"
+    ]
+  },
+  "src/routes/+layout.svelte": {
+    "file": "entries/pages/_layout.svelte.js",
+    "name": "entries/pages/_layout.svelte",
+    "src": "src/routes/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_server.js",
+      "_context.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_layout.r7oiVktj.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2",
+      "_app/immutable/assets/KaTeX_AMS-Regular.DMm9YOAa.woff",
+      "_app/immutable/assets/KaTeX_AMS-Regular.DRggAlZN.ttf",
+      "_app/immutable/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2",
+      "_app/immutable/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff",
+      "_app/immutable/assets/KaTeX_Caligraphic-Bold.ATXxdsX0.ttf",
+      "_app/immutable/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2",
+      "_app/immutable/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff",
+      "_app/immutable/assets/KaTeX_Caligraphic-Regular.wX97UBjC.ttf",
+      "_app/immutable/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2",
+      "_app/immutable/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff",
+      "_app/immutable/assets/KaTeX_Fraktur-Bold.BdnERNNW.ttf",
+      "_app/immutable/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2",
+      "_app/immutable/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff",
+      "_app/immutable/assets/KaTeX_Fraktur-Regular.CB_wures.ttf",
+      "_app/immutable/assets/KaTeX_Main-Bold.Cx986IdX.woff2",
+      "_app/immutable/assets/KaTeX_Main-Bold.Jm3AIy58.woff",
+      "_app/immutable/assets/KaTeX_Main-Bold.waoOVXN0.ttf",
+      "_app/immutable/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2",
+      "_app/immutable/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff",
+      "_app/immutable/assets/KaTeX_Main-BoldItalic.DzxPMmG6.ttf",
+      "_app/immutable/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2",
+      "_app/immutable/assets/KaTeX_Main-Italic.BMLOBm91.woff",
+      "_app/immutable/assets/KaTeX_Main-Italic.3WenGoN9.ttf",
+      "_app/immutable/assets/KaTeX_Main-Regular.B22Nviop.woff2",
+      "_app/immutable/assets/KaTeX_Main-Regular.Dr94JaBh.woff",
+      "_app/immutable/assets/KaTeX_Main-Regular.ypZvNtVU.ttf",
+      "_app/immutable/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2",
+      "_app/immutable/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff",
+      "_app/immutable/assets/KaTeX_Math-BoldItalic.B3XSjfu4.ttf",
+      "_app/immutable/assets/KaTeX_Math-Italic.t53AETM-.woff2",
+      "_app/immutable/assets/KaTeX_Math-Italic.DA0__PXp.woff",
+      "_app/immutable/assets/KaTeX_Math-Italic.flOr_0UB.ttf",
+      "_app/immutable/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2",
+      "_app/immutable/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff",
+      "_app/immutable/assets/KaTeX_SansSerif-Bold.CFMepnvq.ttf",
+      "_app/immutable/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2",
+      "_app/immutable/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff",
+      "_app/immutable/assets/KaTeX_SansSerif-Italic.YYjJ1zSn.ttf",
+      "_app/immutable/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2",
+      "_app/immutable/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff",
+      "_app/immutable/assets/KaTeX_SansSerif-Regular.BNo7hRIc.ttf",
+      "_app/immutable/assets/KaTeX_Script-Regular.D3wIWfF6.woff2",
+      "_app/immutable/assets/KaTeX_Script-Regular.D5yQViql.woff",
+      "_app/immutable/assets/KaTeX_Script-Regular.C5JkGWo-.ttf",
+      "_app/immutable/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2",
+      "_app/immutable/assets/KaTeX_Size1-Regular.C195tn64.woff",
+      "_app/immutable/assets/KaTeX_Size1-Regular.Dbsnue_I.ttf",
+      "_app/immutable/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2",
+      "_app/immutable/assets/KaTeX_Size2-Regular.oD1tc_U0.woff",
+      "_app/immutable/assets/KaTeX_Size2-Regular.B7gKUWhC.ttf",
+      "_app/immutable/assets/KaTeX_Size3-Regular.CTq5MqoE.woff",
+      "_app/immutable/assets/KaTeX_Size3-Regular.DgpXs0kz.ttf",
+      "_app/immutable/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2",
+      "_app/immutable/assets/KaTeX_Size4-Regular.BF-4gkZK.woff",
+      "_app/immutable/assets/KaTeX_Size4-Regular.DWFBv043.ttf",
+      "_app/immutable/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2",
+      "_app/immutable/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff",
+      "_app/immutable/assets/KaTeX_Typewriter-Regular.D3Ib7_Hf.ttf"
+    ]
+  },
+  "src/routes/+page.svelte": {
+    "file": "entries/pages/_page.svelte.js",
+    "name": "entries/pages/_page.svelte",
+    "src": "src/routes/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_server.js",
+      "_context.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.DViV387I.css"
+    ]
+  },
+  "src/routes/graph/+page.server.ts": {
+    "file": "entries/pages/graph/_page.server.ts.js",
+    "name": "entries/pages/graph/_page.server.ts",
+    "src": "src/routes/graph/+page.server.ts",
+    "isEntry": true,
+    "imports": [
+      "_utils2.js"
+    ]
+  },
+  "src/routes/graph/+page.svelte": {
+    "file": "entries/pages/graph/_page.svelte.js",
+    "name": "entries/pages/graph/_page.svelte",
+    "src": "src/routes/graph/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.CjxSBAjC.css"
+    ]
+  },
+  "src/routes/notes/+page.server.ts": {
+    "file": "entries/pages/notes/_page.server.ts.js",
+    "name": "entries/pages/notes/_page.server.ts",
+    "src": "src/routes/notes/+page.server.ts",
+    "isEntry": true,
+    "imports": [
+      "_utils2.js"
+    ]
+  },
+  "src/routes/notes/+page.svelte": {
+    "file": "entries/pages/notes/_page.svelte.js",
+    "name": "entries/pages/notes/_page.svelte",
+    "src": "src/routes/notes/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_server.js",
+      "_context.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.pABCW45W.css"
+    ]
+  },
+  "src/routes/notes/[...slug]/+page.svelte": {
+    "file": "entries/pages/notes/_...slug_/_page.svelte.js",
+    "name": "entries/pages/notes/_...slug_/_page.svelte",
+    "src": "src/routes/notes/[...slug]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_context.js"
+    ]
+  },
+  "src/routes/notes/[...slug]/+page.ts": {
+    "file": "entries/pages/notes/_...slug_/_page.ts.js",
+    "name": "entries/pages/notes/_...slug_/_page.ts",
+    "src": "src/routes/notes/[...slug]/+page.ts",
+    "isEntry": true,
+    "dynamicImports": [
+      "_JS-Fundamentals.js",
+      "_README.js",
+      "_backend-basics-2.js",
+      "_backend-basics.js",
+      "_dom.js",
+      "_html-css-fundamentals.js",
+      "_mongo-in-depth.js",
+      "_react.js",
+      "_recoil.js",
+      "_taste is the new moat.js",
+      "_typescript.js",
+      "_README2.js",
+      "_catching-upto-transformers.js",
+      "_neural-networks-from-scratch.js",
+      "_transformers.js",
+      "_Shells and Terminals.js",
+      "_ddia-notes.js",
+      "_reliable-scalable-maintainable-applications.js",
+      "_lec1.js",
+      "_kai.js",
+      "_knowl.js",
+      "_realtime-data-streaming.js",
+      "_Functional Programming.js",
+      "_Object Oriented Programming in Python.js",
+      "_Python From Scratch.js",
+      "_regex.js",
+      "_skeleton of svelte projects.js",
+      "_svelte-basics.js",
+      "_svelte-events.js",
+      "_svelte-logic.js",
+      "_svelte-props.js",
+      "_svelte-reactivity.js",
+      "_sveltekit-learn-readme.js",
+      "_sveltekit.js",
+      "_chapter.js"
+    ]
+  }
+}

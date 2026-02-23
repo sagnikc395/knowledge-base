@@ -1,0 +1,1 @@
+.categories-grid.svelte-1uha8ag{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2rem;margin-top:3rem}.category-card.svelte-1uha8ag h2:where(.svelte-1uha8ag){font-size:1.2rem;border-bottom:1px solid #ccc;padding-bottom:.5rem;margin-top:0}.date.svelte-1uha8ag{font-size:.8rem;color:#666}@media(prefers-color-scheme:dark){.date.svelte-1uha8ag{color:#aaa}}
