@@ -4,6 +4,7 @@ import path from 'path';
 
 export default defineConfig({
 	plugins: [react()],
+	publicDir: 'static',
 	resolve: {
 		alias: {
 			'$lib': path.resolve(__dirname, './src/lib'),

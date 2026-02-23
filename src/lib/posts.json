@@ -1,16 +1,7 @@
 [
   {
-    "title": "sveltekit-learn-readme",
-    "date": "2026-02-23T22:01:31.017Z",
-    "slug": "svelte-notes/sveltekit-learn-readme",
-    "category": "svelte-notes",
-    "published": true,
-    "content": "My notes and stuff while learning Sveltekit and TailwindCSS to make basic personal websites on my own.\n\n### Index:\n\n1. [[svelte-basics]] Covers the Basics of Svelte.\n2. [[learn-tailwind]] Covers TailwindCSS and stuff.\n3. [[sveltekit]] for everything related to make production grade apps with Svelte and SvelteKit.\n",
-    "metadata": {}
-  },
-  {
     "title": "Functional Programming In Python",
-    "date": "2026-02-23T22:01:31.016Z",
+    "date": "2026-02-23T22:13:46.096Z",
     "slug": "python-refresher/Functional Programming",
     "category": "python-refresher",
     "published": true,
@@ -25,7 +16,7 @@
   },
   {
     "title": "ddia-notes",
-    "date": "2026-02-23T22:01:31.015Z",
+    "date": "2026-02-23T22:13:46.095Z",
     "slug": "data-engineering-zoomcamp/ddia/ddia-notes",
     "category": "data-engineering-zoomcamp",
     "published": true,
@@ -404,133 +395,6 @@
         "python"
       ],
       "date": "28/12/24"
-    }
-  },
-  {
-    "title": "Skeleton of Svelte Projects",
-    "date": "31/5/25",
-    "slug": "svelte-notes/skeleton of svelte projects",
-    "category": "svelte-notes",
-    "published": true,
-    "content": "\n## Skeleton of a Svelte Project\n\n- routes -> +page.svelte; main page that gets loaded for the first time.\n\n<h2>First bit of svelte code:</h2>\n<ul>\n<li>&lt;\\script> -> where we do our imports, setup our js and setup our state.</li>\n<li>create our own svelte file:</li>\n<li>inside the routes folders.</li>\n</ul>\n- Component name convention is to use a uppercase named file -> not necessary but use it like that.\n- There are techniques which we can use snippets to share code , but for the most part, we are using a single file component -> whatever we write in that file ends up being scoped to that component and that component only.\n\n## Props:\n\n- variables when we pass something from a variable to a component.\n\n```svelte\n<Header prop={prop_value} />\n```\n\n- It means that we can pass one thing down from another. Very common way to pass information from component to component.\n- Anything inside brackets is a variable and is a JS expression that can be used anywhere.\n\n## Syntax Highlighting\n\n- Svelte for VSCode extension.\n\n## defining types in Svelte\n\n- pretty similar to how we would use in normal typescript in a variable.\n- $ in svelte is called runes. eg: $props() to define props, $state() to define a state.\n\n## state in svelte\n\n- state was previously a value in Svelte.\n- In would be dynamically and changed reactivally depending on the state changes on that.\n- In Svelte5 they have introduced runes. In previous svelte it was hard to track which variables were changing and which were not and how they were changing.\n- $state can be set a default value and due to type suggestions can infer the type.\n- In Svelte we update the variable itself and that itself triggers the reactivity , there is no .setState specifically to make those changes.\n\n## other states\n\n- can get into other different scenarios with different types of states.\n- value and another value that depends on another value -> reactive state.\n- $derive() value is gonna be always be in sync -> state value that will always be in sync along with state.\n- Also in a single file, we can only use props just once.\n- frozenstate\n- derivedstate\n",
-    "metadata": {
-      "title": "Skeleton of Svelte Projects",
-      "tags": [
-        "svelte",
-        "ui",
-        "npm"
-      ],
-      "date": "31/5/25"
-    }
-  },
-  {
-    "title": "Svelte Basics",
-    "date": "31/5/25",
-    "slug": "svelte-notes/svelte-basics",
-    "category": "svelte-notes",
-    "published": true,
-    "content": "\n### What is Svelte ?\n\n- Svelte is a tool for building web applications.\n- Like other UI frameworks, it allows us to build our app declaratively out of components that combine markup, styles and behaviours.\n- These components are then compiled into small, efficient JS modules that eliminate overhead traditionally associated with UI frameworks.\n- Can build our entire app with Svelte, or we can add it incrementally to an existing codebase.\n- We can also ship components as standalone packages that will work anywhere.\n\n### Making our First Component\n\n- In Svelte, an application is composed from one or more components.\n- A component is a reusuable self-contained block of code that encapsulates HTML,CSS and Javascript that belongs together, written into a single `.svelte` file.\n\n```svelte\n<h1>Hello world!</h1>\n```\n\n- Adding a script tag to our component and declaring a name variable:\n\n```svelte\n<script lang=\"ts\">\n\tlet name = 'Svelte';\n</script>\n\n<h1>Hello world , this is {name}!</h1>\n```\n\n- We can then refer to the name in the markup.\n- We can also do some computation inside our components like:\n\n```svelte\n<script lang=\"ts\">\n\tlet time = Date.now();\n\tlet computedName = `the name is ${time}`;\n</script>\n\n<h1>Hello world!</h1><h2>{computedName.toLowerCase()}</h2>\n```\n\n- Inside the curly brackets, we can put any JS that we want.\n\n### Dynamic Attributes\n\n- Just like we can use curly braces to control text, we can use them to control element attributes.\n- Svelte seriously considers making web more usuable and accessible to the broadest possible userbase, including people with (ex) impaired vision or motion, or people without powerful hardware or good internet connections.\n- Accessibility (a11y) isnt always easy to get right, but Svelte will help us by warning us if we write inaccessible markup.\n\n```svelte\n<script>\n\tlet src = '/etc/image.gif';\n</script>\n\n<img {src} alt=\"never gonna give you up\" />\n```\n\n- We can use curly braces inside attributes.\n- It's not uncommon to have an attribute where the name and value are the same, like `src={src}`. So we can write a convenient shorthand for that as:\n\n```svelte\n<img {src} alt=\"{name} dances.\" />\n```\n\n### Styling:\n\n- Like in HTML we can add a `<style>` tag to our component.\n- Can add some styles to our custom `<p>` as:\n\n```svelte\n<p>This is a paragraph.</p>\n\n<style>\n\tp {\n\t\tcolor: goldenrod;\n\t\tfont-family: 'Comic Sans MS', cursive;\n\t\tfont-size: 2em;\n\t}\n</style>\n```\n\n- This CSS rules are only scoped to the component.\n- We won't accidentally change the style of `<p>` elements elsewhere in our app.\n\n### Nested Components:\n\n- It would be impractical to put our entire app in a single component.\n- Instead , we can import components from other files and include them in our markup.\n- We can then import a component using normal JS, import tag using the script tag.\n\n```svelte\n<script lang=\"ts\">\n\timport Nested from './Nested.svelte';\n</script>\n```\n\n- And then in the file we can include `<Nested />` as a component.\n- Also notice that even though `Nested.svelte` has a `<p>` element, the styles from `App.svelte` doesn't leak in.\n- Components names are capitalized, to distinguish them from HTML elements.\n\n```svelte\n<!-- App.svelte -->\n<script>\n\timport Nested from './Nested.Svelte';\n</script>\n\n<Nested />\n\n<!-- Nested.svelte -->\n<p>This is another paragraph.</p>\n```\n\n### HTML tags:\n\n- Normally , strings are inserted as plain text, meaning characters like `<` and `>` have no special meaning.\n- Sometimes we need to render HTML directly into a component.\n- Eg: words we have been reading right now exist in a markdown file that gets included on this page as a blob of HTML.\n- In Svelte, we do this with the special `@{html...}` tag.\n- **_IMP_**:\n  - Svelte doesn't perform any sanitization of the expression inside `@{html...}` before it gets inserted into DOM.\n  - This isn't an issue if the content is something we trust like an article like we wrote ourself.\n  - However if this is some untrusted user content eg: a comment on an article , then it's critical that we manually escape it , else we risk exposing our users to XSS ( Cross Site scripting) attacks.\n\n```svelte\n<script>\n\tlet string = `this is some other string <p>another string</p> NO JS !!!!`;\n</script>\n\n<p>{@html string}</p>\n```\n",
-    "metadata": {
-      "title": "Svelte Basics",
-      "tags": [
-        "frontend",
-        "svelte",
-        "ui",
-        "svelte-basics"
-      ],
-      "date": "31/5/25"
-    }
-  },
-  {
-    "title": "Svelte Events",
-    "date": "31/7/25",
-    "slug": "svelte-notes/svelte-events",
-    "category": "svelte-notes",
-    "published": true,
-    "content": "\n### DOM Events:\n\n- We can listen to any DOM event on an element (such as click or `pointermove`) with a `on<name>` function.\n\n```svelte\n<div {onpointermove}>\n\tThe pointer is at {Math.round(m.x)} x {Math.round(m.y)}\n</div>\n```\n\n- Like any other property where the name matches the value, we also use the short form.\n\n```svelte\n<script>\n\tlet m = $state({ x: 0, y: 0 });\n\n\tfunction onpointermove(event) {\n\t\tm.x = event.clientX;\n\t\tm.y = event.clientY;\n\t}\n</script>\n\n<div {onpointermove}>\n\tThe pointer is at {Math.round(m.x)} x {Math.round(m.y)}\n</div>\n\n<style>\n\tdiv {\n\t\tposition: fixed;\n\t\tleft: 0;\n\t\ttop: 0;\n\t\twidth: 100%;\n\t\theight: 100%;\n\t\tpadding: 1rem;\n\t}\n</style>\n```\n",
-    "metadata": {
-      "title": "Svelte Events",
-      "tags": [
-        "svelte",
-        "ui",
-        "frontend",
-        "DOM"
-      ],
-      "date": "31/7/25"
-    }
-  },
-  {
-    "title": "Svelte Logic",
-    "date": "26/7/25",
-    "slug": "svelte-notes/svelte-logic",
-    "category": "svelte-notes",
-    "published": true,
-    "content": "\n### if blocks:\n\n- HTML doesn't have a way of expressing logic, like conditionals and loops. Svelte docs.\n- To conditionally render some markup, we wrap it in an `if` block.\n\n```svelte\n<script>\n\tlet count = $state(0);\n\tfunction increment() {\n\t\tcount += 1;\n\t}\n</script>\n\n<button onclick={increment}>\n\tClicked {count}\n\t{count === 1 ? 'time' : 'times'}\n</button>\n\n{#if count > 100}\n\t<p>{count} is greater than 100!</p>\n{/if}\n```\n\n### else blocks:\n\n- Just like in JS, an `if` block can have an `else` block.\n\n```svelte\n{#if count > 10}\n\t<p>{count} is greater than 10</p>\n{:else}\n\t<p>{count} is betwen 0 and 10</p>\n{/if}\n```\n\n- `{#...}` opens a block. `{/...}` closes a block.\n- `{:...}` continues a block.\n\n### else-if blocks:\n\n- Multiple conditions can be `chained` together with a `else if`\n\n```svelte\n{#if count > 10}\n\t<p>{count} is greater than 10</p>\n{:else if count < 5}\n\t<p>{count} is less than 5</p>\n{:else}\n\t<p>{count} is between 5 and 10</p>\n{/if}\n```\n\n### each blocks:\n\n- When building user interfaces we'll often find ourself working with lists of data.\n- Instead of laboriously copying, pasting and editing components, we can get rid of all but the first button , then use an `each` block.\n- here colors in this any valid iterable or array-like object.\n\n```svelte\n<div>\n\t{#each colors as color, idx}\n\t\t<button\n\t\t\tstyle=\"background: {color}\"\n\t\t\taria-label={color}\n\t\t\taria-current={selected === { color }}\n\t\t\tonclick={() => (selected = { color })}\n\t\t>\n\t\t\t{idx + 1}\n\t\t</button>\n\t{/each}\n</div>\n```\n\n- We can use color in the loop also, and get the current index as a second argument.\n\n### Keyed-each blocks:\n\n- By default, updating the value of an `each` block will add or remove DOM nodes at the end of the block if the size changes, and update the remaining DOM. That might not what we want.\n- In Svelte, rendering works differently.\n  - The component 'runs' once, and subsequent updates are 'fine-grained'.\n  - This makes things faster and gives us more control.\n- We can specify a unique 'key' for each iteration of the each block so helps with rendering and only updating specific things.\n\n```svelte\n<!-- Thing.svelte -->\n<script>\n\tconst emojis = {\n\t\tapple: '🍎',\n\t\tbanana: '🍌',\n\t\tcarrot: '🥕',\n\t\tdoughnut: '🍩',\n\t\tegg: '🥚'\n\t};\n\n\t// `name` is updated whenever the prop value changes...\n\tlet { name } = $props();\n\n\t// ...but `emoji` is fixed upon initialisation\n\tconst emoji = emojis[name];\n</script>\n\n<p>{emoji} = {name}</p>\n\n\n<!-- App.svelte -->\n<script>\nlet things = $state([\n{ id: 1, name: 'apple' },\n\t\t{ id: 2, name: 'banana' },\n\t\t{ id: 3, name: 'carrot' },\n\t\t{ id: 4, name: 'doughnut' },\n\t\t{ id: 5, name: 'egg' }\n]);\n</script>\n\n<button onclick={() => things.shift()}>\n\tRemove the first thing\n</button>\n\n<#each things as thing (thing.id)>\n<Thing name={thing.name} />\n</each>\n```\n\n- We can use any object as the key, as Svelte uses a Map internally i.e can use (thing) instead of the (thing.id) also.\n- Using a string or number is generally safer, however, since it means identity persists without referential equality, for ex: when updating with fresh data from an API server.\n\n### await blocks:\n\n- Most web applications have to deal with asynchronous data at some point.\n- Svelte makes it easy for us to `await` the value of the promises directly in our markup.\n- However, note that only the most recent `promise` is considered, meaning that we don't need to worry about race conditions.\n- If we know that our promise can't reject, we can omit the `catch` block. We can also omit the first block if we don't want to show anything until the promise resolved.\n\n```svelte\n{#await promise then number}\n\t<p>You have rolled a {number}</p>\n{/await}\n```\n\n- So we can write it as :\n\n```svelte\n<script>\n\tasync function roll() {\n\t\t//fetch a ranom number from 1...6\n\t\treturn new Promise((fulfill, reject) => {\n\t\t\tsetTimeout(() => {\n\t\t\t\t//simulate a flaky network\n\t\t\t\tif (Math.random() < 0.5) {\n\t\t\t\t\treject(new Error('Request failed'));\n\t\t\t\t\treturn;\n\t\t\t\t}\n\t\t\t\tfulfil(Math.floor(Math.random() * 6));\n\t\t\t});\n\t\t});\n\t}\n\n\tlet promise = $state(roll());\n</script>\n\n<button onclick={() => (promise = roll())}> roll the dice </button>\n\n<p>...rolling</p>\n\n{#await promise then number}\n\t<p>You have rolled a {number}</p>\n{/await}\n```\n",
-    "metadata": {
-      "title": "Svelte Logic",
-      "tags": [
-        "svelte",
-        "frontend",
-        "ui",
-        "ui-logic",
-        "conditional-rendering"
-      ],
-      "date": "26/7/25"
-    }
-  },
-  {
-    "title": "Svelte Props",
-    "date": "26/7/25",
-    "slug": "svelte-notes/svelte-props",
-    "category": "svelte-notes",
-    "published": true,
-    "content": "\n### Declaring Props:\n\n- In any real application, we'll need to pass data from one component down to its children.\n- To do that , we need to declare properties, generally shortened to 'props'.\n- In Svelte, we do that with the `$props` rune.\n\n```svelte\n<!--  Nested.svelte -->\n<script>\n\tlet { answer,desc } = $props();\n</script>\n\n<p>The answer is {answer}</p>\n<p>Another {desc} </p>\n\n<!-- -->\n<script>\n\timport Nested from './Nested.svelte';\n</script>\n\n<Nested answer={42}/>\n<Nested answer={69} desc={\"Some Description\"} />\n```\n\n### Default Values:\n\n- We can easily specify default values for props in `Nested.svelte`.\n\n```svelte\n<script lang=\"ts\">\n\tlet { answer = 'another ans' } = $props();\n</script>\n```\n\n- Now if we add a second component without an answer prop, it will fall back to the default!\n\n### Spread Props:\n\n- We need not explicitly use all the various properties of the sent object via props.\n- But if the properties of sent props maps to the expected props , we can 'spread' them onto the component instead.\n\n```svelte\n<!-- PackgeInfo.sv-->\n<script>\n\tlet { name, version, description, website } = $props();\n</script>\n\n<p>\n\tThe <code>{name}</code> package is {description}. Download version {version} from\n\t<a href=\"https://www.npmjs.com/package/{name}\">npm</a> and <a href={website}>learn more here</a>\n</p>\n\n<!-- App.svelte -->\n<script>\nimport PackageInfo from './PackageInfo.svelte';\n\nconst pkg = {\n\tname : 'svelte',\n\tversion: 5,\n\tdescription: 'blazing fast',\n\twebsite: 'https://svelte.dev'\n};\n</script>\n\n\n<PackageInfo {...pkg} />\n```\n\n- Similarly in `PackageInfo.svelte` we can get an object containing all the props that were passed into a component using a rest property:\n\n```svelte\n<script>\n\tlet { name, ...stuff } = $props();\n</script>\n```\n\n- Or we can skip the destructuring altogether and access the properties by their object paths.\n-\n",
-    "metadata": {
-      "title": "Svelte Props",
-      "date": "26/7/25",
-      "tags": [
-        "frontend",
-        "svelte",
-        "ui",
-        "props",
-        "state"
-      ]
-    }
-  },
-  {
-    "title": "Svelte Reactivity",
-    "date": "25/7/25",
-    "slug": "svelte-notes/svelte-reactivity",
-    "category": "svelte-notes",
-    "published": true,
-    "content": "\n### State\n\n- At the heart of Svelte is a powerful system of reactivity for keeping the DOM in sync with our application state - eg: in response to an event.\n- We can make the declaration reactive by wrapping the value with `$state(...)`\n\n```svelte\n<script>\n\tlet count = $state(0);\n\n\tfunction incrementCounter() {\n\t\tcount += 1;\n\t\tif (count % 5 == 0) {\n\t\t\tcount = 0;\n\t\t}\n\t}\n</script>\n\n<!-- and using it as -->\n<button onclick={increment}>\n\tClicked {counter}\n\t{counter === 1 ? 'time' : 'times'}\n</button>\n```\n\n- This is called as a rune, and this is how we tell Svelte that `count` isn't a ordinary variable.\n- Runes look like functions , but they are not -- when we use Svelte , they are a language construct itself.\n\n### Deep State:\n\n- State not only reacts to reassignments, but also reacts to mutations - we call this deep reactivity.\n- We can also make an array reactive for example.\n\n```svelte\n<script>\n\tlet numbers = $state([1, 2, 3, 4, 5]);\n</script>\n```\n\n- And now when we change the array , the component updates. Or better , we can `push` to the array instead.\n\n```svelte\n<script>\n\tfunction addNumber() {\n\t\tnumbers[numbers.length] = numbers.length + 1;\n\t}\n</script>\n```\n\n- I.e better way to push it :\n\n```svelte\n<script>\n\tfunction addNumber() {\n\t\tnumbers.push(numbers.length + 1);\n\t}\n</script>\n```\n\n- Deep reactivity is implemented using [proxies](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) and mutations to the proxy itself do not affect the original object.\n\n### Derived State:\n\n- Often, we would need to derive state from other state. For this we have the `$derived` rune.\n\n```svelte\n<script>\n\tlet numbers = $state([1, 2, 3, 4, 5]);\n\tlet total = $derived(numbers.reduce((t, n) => t + n, 0));\n</script>\n\n<p>{numbers.join(' + ')} = {total}</p>\n```\n\n- This expression inside the `$derived` declaration will be re-evaluated whenever its dependencies(here numbers) are updated.\n\n### Inspecting State\n\n- Often useuful to be able to track the value of a piece of state as it changes over time.\n- If we add a console.log to a click handler and open the console drawer, well see a warning and a message saying that the message could not be cloned\n- This is because `numbers` is a reactive `proxy`. There are a couple of things that we can do\n  - We can create a non-reactive snapshot of the state using `$state.snapshot(...)`\n  - Alternatively we can use the `$inspect` rune to automatically log a snapshot of the state whenever it changes.\n  - We can customize how the info is displayed by using `$inspect(...)with(fn)` eg: can use `console.trace` to see where the state change originates from\n\n```svelte\n<script>\n\t$inspect(numbers).with(console.trace);\n</script>\n```\n\n- So the full code will be as :\n\n```svelte\n<script>\n\tlet numbers = $state([1, 2, 3, 4]);\n\tlet total = $derived(numbers.reduce((t, n) => t + n, 0));\n\n\tfunction addNumber() {\n\t\tnumbers.push(numbers.length + 1);\n\t\t//console.log(numbers);\n\t\tconsole.log($state.snapshot(numbers));\n\t}\n</script>\n\n<p>{numbers.join(' + ')} = {total}</p>\n\n<button onclick={addNumber}> Add a number </button>\n```\n\n### Effects:\n\n- We have only talked about reactivity in terms of state.\n- But that's only half of the equation - state is only reactive if something is reacting to it, otherwise it's just a sparkling variable.\n- The thing that reacts is called an `effect`.\n- Till now we have encountered effects - the ones that Svelte creates on our behalf to update the DOM in response to state changes - but we can also create our own with the `$effect` rune.\n- IMP:\n  - `$effect` is best thought of as a escape hatch, rather than something to use frequently.\n  - If we can put our side effects in an `event handler`, eg: , that's almost always preferable.\n- Cleanup function is called immediately before the effect function re-runs when the `interval` changes, and also when the component is destroyed.\n- If the effect function doesn't read any state when it runs, it will run once, when the component mounts.\n\n```svelte\n<script>\n\tlet elapsed = $state(0);\n\tlet interval = $state(100);\n\n\t$effect(() => {\n\t\tconst id = setInterval(() => {\n\t\t\telapsed += 1;\n\t\t}, interval);\n\n\t\t//cleanup for the effect\n\t\treturn () => {\n\t\t\tclearInterval(id);\n\t\t};\n\t});\n</script>\n\n<button onclick={() => (interval /= 2)}>speed up</button>\n<button onclick={() => (interval *= 2)}>slow down</button>\n\n<p>elapsed: {elapsed}</p>\n```\n\n- Note: Effects do not run during server-side rendering.\n\n### Universal Reactivity:\n\n- We can also use runes outside components, for example to share some global state.\n- We can use it as a global context as:\n\n```js\nexport const counter = $state({\n\tcount: 0\n});\n```\n\n- This causes an error, as we can't use runes in normal .js files, only .svelte.js files.\n- Renaming the file as shared.svelte.js\n\n```javascript\nexport const counter = $state({\n\tcount: 0\n});\n```\n\n- Counter:\n\n```svelte\n<script>\n\timport { counter } from './shared.svelte.js';\n</script>\n\n<button onclick={() => (counter.count += 1)}>\n\tclicks: {counter.count}\n</button>\n```\n\n- This will share the state, and when we click any button, all the three will update simultaenously.\n- We cannot export a `$state` declaration from a module if the declaration is reassigned (rather than just mutated) because the importers would have no way to know about it.\n",
-    "metadata": {
-      "title": "Svelte Reactivity",
-      "date": "25/7/25",
-      "tags": [
-        "svelte",
-        "frontend",
-        "reactivity",
-        "svelte-basics",
-        "ui"
-      ]
-    }
-  },
-  {
-    "title": "SvelteKit Notes",
-    "date": "31/5/25",
-    "slug": "svelte-notes/sveltekit",
-    "category": "svelte-notes",
-    "published": true,
-    "content": "\n- Sveltekit is the swiss army knife of JS frameworks -> backend framework for svelte\n  - fun -> no need to check for bundler config, routing ,ssr,csp, TS all built in\n  - fast -> server, server side rendering, hmr\n  - flexible -> spa, mpa, ssr, ssg all included !\n  - SvelteKit based on Svelte -> an UI framework that uses a compiler that lets us write concise components that do minimal work in the browser, using languages that we already know like HTML,CSS and JS.\n- Sveltekit can export static HTML files, run on your own Node server, deploy to edge functions. If a platforms runs JS, it runs sveltekit -> sometimes with 0 configuration.\n- It blurs the data between the frontend and the backend -> can also create a backend application with API and a frontend with it.\n- What does Sveltekit Solve ?\n  - Routing -> built-in file based routing\n  - Server-side Rendering\n  - Data Fetching\n  - Zero Config (ESLint, Prettier, Typescript,Playwright,Vitest)\n  - Code Splitting(loading data on demand) -> knows what to load what css, js to load for each page and preloading and the precious ms will be huge gain for performance.\n  - Handling Environment Variables\n  - Configurable rendering (SSR,SSG,CSR)\n  - Deployment\n### Creating a Project\n\n- `npm create svelte@latest my-app`\n- ![](/images/dev/Screenshot%202025-05-31%20at%209.27.21%20AM.png)\n- ![](/images/dev/Screenshot%202025-05-31%20at%209.27.52%20AM.png)\n\n### SvelteKit vs Svelte\n- Sveltekit apps are SSR by default for speed and SEO.\n- Can set the rendering type per page basis or for the entire site also.\n\n```ts\n//src/layout/+server.ts\nexport const prerender = true;\n//completely remove the JS also.\nexport const csr = false;\n```\n\n### Creating a SvelteKit Project From Scratch:\n\n- create the `svelte.config.js` file .Contains the vite processor\n- A preprocessor converts our svelte files into normal css and html and js.\n- there are also other font preproceesor that we can use for different things as such.\n- An adapter in the `svelte.config.js` adapts your system for deployment in the adapted target.\n- Project Structure:\n\n```\nsrc/\n\tapp.html\n\tapp.css\n\troutes/+page.svelte\n```\n\n- `page.svelte` is a special file describes the route at that level.\n- src folder is the heart of our project and maps to a page.\n- lib to share shared components. -> alias to a special env `$lib` and we would know the name to it.\n- app.d.ts -> type information for some special Sveltekit components.\n\n### Pages:\n\n- Sveltekit uses file based routing where routes according to the files in our project.\n- ![](/images/dev/Screenshot%202025-05-31%20at%2011.59.01%20AM.png)\n-\n",
-    "metadata": {
-      "title": "SvelteKit Notes",
-      "tags": [
-        "svelte",
-        "ui",
-        "frontend"
-      ],
-      "date": "31/5/25"
     }
   }
 ]
