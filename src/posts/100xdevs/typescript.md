@@ -65,6 +65,19 @@ date: 2/17/26
 		- use an intersection of types for that 
 - Diff bw interfaces and types? 
 	- types let us do ors and ands , whereas interfaces let us extend a class.
-- Arrays in TS
-	- If we want to access arrays in TS, simple as adding a annotation next to the type.
-	- 
+	- interfaces can't express unions, mapped types or conditional types. Type aliases can express any type.
+	- Interfaces can use extends, types can't.
+	- When we are working with objects that inherit from each pother, use interfaces. extends makes TS type checker run slightly faster than using &.
+	- Interfaces with the same name in the same scope merge their declarations leading to unexpected bugs.
+	- Type aliases have an implicit index signature of `Record<PropertyKey,unknown>` , which comes up occasionally.
+### Arrays in TS
+- If we want to access arrays in TS, simple as adding a annotation next to the type.
+- `number[]`
+- or `Array<number>` 
+- both of them works.
+
+### Generics 
+
+### Enums 
+
+### Imports and Exports 

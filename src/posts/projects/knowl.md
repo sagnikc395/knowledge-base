@@ -210,3 +210,5 @@ For the web search, you can use the **Tavily API** (easiest for agents) or scrap
     
 
 **Would you like me to dive deeper into the code for a specific part, like the exact math for the embeddings or the scraping logic for the web search?**
+
+Ref: https://www.youtube.com/watch?v=AUQJ9eeP-Ls
