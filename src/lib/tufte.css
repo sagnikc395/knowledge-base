@@ -67,87 +67,105 @@
 	font-display: swap;
 }
 
-/* Tufte CSS styles */
+/* Tufte CSS styles refined with Flexoki colors */
+:root {
+  --base-00: #FFFCF0; /* Background */
+  --base-10: #F2F0E5; /* Sidebar/Secondary BG */
+  --base-70: #6F6E69; /* Muted text */
+  --base-100: #100F0F; /* Main text */
+  --accent: #205EA6; /* Blue accent */
+  --accent-muted: #CECDC3;
+  --line-height: 1.65;
+  --font-serif: et-book, Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base-00: #100F0F;
+    --base-10: #1C1B1A;
+    --base-70: #878580;
+    --base-100: #CECDC3;
+    --accent: #4385BE;
+    --accent-muted: #403E3C;
+  }
+}
+
 html {
-	font-size: 15px;
+	font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
-	width: 87.5%;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 12.5%;
-	font-family:
-		et-book, Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
-	background-color: #fffff8;
-	color: #111;
-	max-width: 1400px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: var(--font-serif);
+	background-color: var(--base-00);
+	color: var(--base-100);
 	counter-reset: sidenote-counter;
+  line-height: var(--line-height);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Adds dark mode */
-@media (prefers-color-scheme: dark) {
-	body {
-		background-color: #151515;
-		color: #ddd;
-	}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--base-100);
+  margin-bottom: 1rem;
 }
 
 h1 {
 	font-weight: 400;
-	margin-top: 4rem;
+	margin-top: 3rem;
 	margin-bottom: 1.5rem;
-	font-size: 3.2rem;
-	line-height: 1;
+	font-size: 2.8rem;
+	line-height: 1.1;
 }
 
 h2 {
 	font-style: italic;
 	font-weight: 400;
-	margin-top: 2.1rem;
-	margin-bottom: 1.4rem;
-	font-size: 2.2rem;
-	line-height: 1;
+	margin-top: 2.5rem;
+	margin-bottom: 1rem;
+	font-size: 2.1rem;
+	line-height: 1.2;
 }
 
 h3 {
 	font-style: italic;
 	font-weight: 400;
-	font-size: 1.7rem;
+	font-size: 1.6rem;
 	margin-top: 2rem;
-	margin-bottom: 1.4rem;
-	line-height: 1;
+	margin-bottom: 0.8rem;
+	line-height: 1.2;
 }
 
 hr {
 	display: block;
 	height: 1px;
-	width: 55%;
+	width: 100%;
 	border: 0;
-	border-top: 1px solid #ccc;
-	margin: 1em 0;
+	border-top: 1px solid var(--accent-muted);
+	margin: 2em 0;
 	padding: 0;
 }
 
 p.subtitle {
 	font-style: italic;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	font-size: 1.8rem;
+	margin-top: 0.5rem;
+	margin-bottom: 2rem;
+	font-size: 1.2rem;
 	display: block;
-	line-height: 1;
+	line-height: 1.4;
+  color: var(--base-70);
 }
 
 .numeral {
 	font-family: et-book-roman-old-style;
 }
 
-.danger {
-	color: red;
-}
-
 article {
-	padding: 5rem 0rem;
+	padding: 2rem 0;
 }
 
 section {
@@ -158,328 +176,166 @@ section {
 p,
 dl,
 ol,
-ul {
-	font-size: 1.4rem;
-	line-height: 2rem;
+ul,
+blockquote,
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	font-size: 1.15rem;
+	line-height: var(--line-height);
+  max-width: 42rem; /* Optimal line length */
 }
 
 p {
 	margin-top: 1.4rem;
 	margin-bottom: 1.4rem;
-	padding-right: 0;
-	vertical-align: baseline;
 }
 
-/* Chapter Epigraphs */
-div.epigraph {
-	margin: 5em 0;
+@media (max-width: 1200px) {
+  p, dl, ol, ul, blockquote, .markdown-body h1, .markdown-body h2, .markdown-body h3 {
+    max-width: 100%;
+  }
 }
-
-div.epigraph > blockquote {
-	margin-top: 3em;
-	margin-bottom: 3em;
-}
-
-div.epigraph > blockquote,
-div.epigraph > blockquote > p {
-	font-style: italic;
-}
-
-div.epigraph > blockquote > footer {
-	font-style: normal;
-}
-
-div.epigraph > blockquote > footer > cite {
-	font-style: italic;
-}
-
-/* end chapter epigraphs styles */
 
 blockquote {
-	font-size: 1.4rem;
+	font-size: 1.1rem;
+  border-left: 2px solid var(--accent);
+  margin: 2rem 0;
+  padding-left: 1.5rem;
+  font-style: italic;
+  color: var(--base-70);
 }
 
 blockquote p {
-	width: 55%;
-	margin-right: 40px;
+  width: 100% !important;
 }
 
-blockquote footer {
-	width: 55%;
-	font-size: 1.1rem;
-	text-align: right;
-}
-
-section > p,
-section > footer,
-section > table {
-	width: 55%;
-}
-
-/* 50 + 5 == 55, to be the same width as paragraph */
-section > dl,
-section > ol,
-section > ul {
-	width: 50%;
-	-webkit-padding-start: 5%;
-}
-
-dt:not(:first-child),
-li:not(:first-child) {
-	margin-top: 0.25rem;
-}
-
-figure {
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	max-width: 55%;
-	-webkit-margin-start: 0;
-	-webkit-margin-end: 0;
-	margin: 0 0 3em 0;
-}
-
-figcaption {
-	float: right;
-	clear: right;
-	margin-top: 0;
-	margin-bottom: 0;
-	font-size: 1.1rem;
-	line-height: 1.6;
-	vertical-align: baseline;
-	position: relative;
-	max-width: 40%;
-}
-
-figure.fullwidth figcaption {
-	margin-right: 24%;
-}
-
-a:link,
-a:visited {
-	color: inherit;
-	text-underline-offset: 0.1em;
-	text-decoration-thickness: 0.05em;
-}
-
-/* Sidenotes, margin notes, figures, captions */
-img {
-	max-width: 100%;
-}
-
+/* Sidenotes and marginnotes refinement */
 .sidenote,
 .marginnote {
 	float: right;
 	clear: right;
-	margin-right: -60%;
-	width: 50%;
+	margin-right: -45%;
+	width: 40%;
 	margin-top: 0.3rem;
-	margin-bottom: 0;
-	font-size: 1.1rem;
-	line-height: 1.3;
+	margin-bottom: 1rem;
+	font-size: 0.9rem;
+	line-height: 1.4;
 	vertical-align: baseline;
 	position: relative;
+  color: var(--base-70);
 }
 
-.sidenote-number {
-	counter-increment: sidenote-counter;
+@media (max-width: 1200px) {
+  .sidenote, .marginnote {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+    display: block;
+    border-left: 2px solid var(--accent-muted);
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
-.sidenote-number:after,
-.sidenote:before {
-	font-family: et-book-roman-old-style;
-	position: relative;
-	vertical-align: baseline;
+a:link,
+a:visited {
+	color: var(--accent);
+	text-underline-offset: 0.2em;
+	text-decoration-thickness: 1px;
+  transition: all 0.2s ease;
 }
 
-.sidenote-number:after {
-	content: counter(sidenote-counter);
-	font-size: 1rem;
-	top: -0.5rem;
-	left: 0.1rem;
+a:hover {
+  color: var(--base-100);
+  text-decoration-thickness: 2px;
 }
 
-.sidenote:before {
-	content: counter(sidenote-counter) ' ';
-	font-size: 1rem;
-	top: -0.5rem;
+img {
+	max-width: 100%;
+  border-radius: 4px;
 }
 
-blockquote .sidenote,
-blockquote .marginnote {
-	margin-right: -82%;
-	min-width: 59%;
-	text-align: left;
+figure {
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  max-width: 42rem;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  margin: 2rem 0;
 }
 
-div.fullwidth,
-table.fullwidth {
-	width: 100%;
+figure.fullwidth {
+  max-width: 90%;
 }
 
-div.table-wrapper {
-	overflow-x: auto;
-	font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', sans-serif;
+figure img {
+  width: 100%;
 }
 
-.sans {
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
-	letter-spacing: 0.03em;
+figcaption {
+  float: right;
+  clear: right;
+  margin-right: -45%;
+  width: 40%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.0rem;
+  line-height: 1.4;
+  vertical-align: baseline;
+  position: relative;
+  color: var(--base-70);
+}
+
+figure.fullwidth figcaption {
+  float: none;
+  width: 100%;
+  margin-right: 0;
+  margin-top: 1rem;
+}
+
+@media (max-width: 1200px) {
+  figcaption {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+    margin-top: 1rem;
+  }
 }
 
 code,
 pre > code {
-	font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-	font-size: 1rem;
-	line-height: 1.42;
-	-webkit-text-size-adjust: 100%;
-	/* Prevent adjustments of font size after orientation changes in iOS. See https://github.com/edwardtufte/tufte-css/issues/81#issuecomment-261953409 */
-}
-
-.sans > code {
-	font-size: 1.2rem;
-}
-
-h1 > code,
-h2 > code,
-h3 > code {
-	font-size: 0.8em;
-}
-
-.marginnote > code,
-.sidenote > code {
-	font-size: 1rem;
-}
-
-pre > code {
+	font-family: var(--font-mono);
 	font-size: 0.9rem;
-	width: 52.5%;
-	margin-left: 2.5%;
-	overflow-x: auto;
-	display: block;
+	line-height: 1.5;
 }
 
-pre.fullwidth > code {
-	width: 90%;
+pre {
+  background: var(--base-10);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
 }
 
-.fullwidth {
-	max-width: 90%;
-	clear: both;
-}
-
+/* New Thought */
 span.newthought {
 	font-variant: small-caps;
 	font-size: 1.2em;
 }
 
-input.margin-toggle {
-	display: none;
+@media (max-width: 900px) {
+  body {
+    font-size: 15px;
+  }
+  
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.4rem; }
 }
 
-label.sidenote-number {
-	display: inline-block;
-	max-height: 2rem;
-	/* should be less than or equal to paragraph line-height */
-}
-
-label.margin-toggle:not(.sidenote-number) {
-	display: none;
-}
-
-.iframe-wrapper {
-	position: relative;
-	padding-bottom: 56.25%;
-	/* 16:9 */
-	padding-top: 25px;
-	height: 0;
-}
-
-.iframe-wrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-@media (max-width: 760px) {
-	body {
-		width: 84%;
-		padding-left: 8%;
-		padding-right: 8%;
-	}
-
-	hr,
-	section > p,
-	section > footer,
-	section > table {
-		width: 100%;
-	}
-
-	pre > code {
-		width: 97%;
-	}
-
-	section > dl,
-	section > ol,
-	section > ul {
-		width: 90%;
-	}
-
-	figure {
-		max-width: 90%;
-	}
-
-	figcaption,
-	figure.fullwidth figcaption {
-		margin-right: 0%;
-		max-width: none;
-	}
-
-	blockquote {
-		margin-left: 1.5em;
-		margin-right: 0em;
-	}
-
-	blockquote p,
-	blockquote footer {
-		width: 100%;
-	}
-
-	label.margin-toggle:not(.sidenote-number) {
-		display: inline;
-	}
-
-	.sidenote,
-	.marginnote {
-		display: none;
-	}
-
-	.margin-toggle:checked + .sidenote,
-	.margin-toggle:checked + .marginnote {
-		display: block;
-		float: left;
-		left: 1rem;
-		clear: both;
-		width: 95%;
-		margin: 1rem 2.5%;
-		vertical-align: baseline;
-		position: relative;
-	}
-
-	label {
-		cursor: pointer;
-	}
-
-	div.table-wrapper,
-	table {
-		width: 85%;
-	}
-
-	img {
-		width: 100%;
-	}
-}

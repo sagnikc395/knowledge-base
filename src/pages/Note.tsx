@@ -35,11 +35,11 @@ const Note: React.FC = () => {
   }
 
   return (
-    <section>
+    <section className="tufte-note">
       <h1 className="title">{post.title}</h1>
       <p className="subtitle">{new Date(post.date).toLocaleDateString()}</p>
 
-      <div className="markdown-body">
+      <div className="markdown-body article">
         <ReactMarkdown
           remarkPlugins={[remarkGfm, remarkMath]}
           rehypePlugins={[rehypeKatex, rehypeRaw]}
@@ -48,11 +48,14 @@ const Note: React.FC = () => {
               const src = props.src?.startsWith('/') 
                 ? `${import.meta.env.BASE_URL}${props.src.slice(1)}` 
                 : props.src;
+              
               return (
-                <span className="image-container">
-                  <img {...props} src={src} style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '1.5rem 0' }} />
-                  {props.alt && <span className="image-caption">{props.alt}</span>}
-                </span>
+                <figure className="fullwidth">
+                  <a href={src} target="_blank" rel="noopener noreferrer">
+                    <img {...props} src={src} loading="lazy" />
+                  </a>
+                  {props.alt && <figcaption>{props.alt}</figcaption>}
+                </figure>
               );
             },
             code: ({ node, inline, className, children, ...props }: any) => {
@@ -66,7 +69,7 @@ const Note: React.FC = () => {
                     lang: language || 'text',
                     theme: 'vesper'
                   });
-                  return <div dangerouslySetInnerHTML={{ __html: html }} />;
+                  return <div className="shiki-container" dangerouslySetInnerHTML={{ __html: html }} />;
                 } catch (e) {
                   console.error('Shiki highlighting failed:', e);
                 }
@@ -88,30 +91,91 @@ const Note: React.FC = () => {
         </ReactMarkdown>
       </div>
       <style>{`
-        .image-container { display: block; margin: 2rem 0; }
-        .image-caption { 
-          display: block; 
-          text-align: center; 
-          font-size: 0.8rem; 
-          color: #666; 
-          margin-top: 0.5rem;
+        .tufte-note {
+          max-width: 100%;
+        }
+        .title {
+          font-family: var(--font-serif);
+          font-size: 3.2rem;
+          margin-bottom: 0.5rem;
+          letter-spacing: -0.02em;
+          line-height: 1.1;
+        }
+        .subtitle {
+          font-family: var(--font-serif);
           font-style: italic;
+          font-size: 1.2rem;
+          color: var(--base-70);
+          margin-bottom: 3rem;
+          display: block;
         }
-        .markdown-body pre {
-          padding: 0 !important;
-          background: transparent !important;
+        .markdown-body {
+          font-family: var(--font-serif);
+          color: var(--base-100);
+          line-height: var(--line-height);
         }
-        .markdown-body pre shiki {
-          padding: 1rem;
-          border-radius: 4px;
-          overflow-x: auto;
+        
+        figure {
+          margin: 3rem 0;
+          padding: 0;
+          max-width: 100%;
         }
-        /* Custom styles for shiki output if needed */
+        
+        figure img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 2px;
+        }
+        
+        figcaption {
+          font-family: var(--font-serif);
+          font-size: 1rem;
+          line-height: 1.4;
+          margin-top: 1rem;
+          color: var(--base-70);
+          font-style: italic;
+          text-align: left;
+        }
+
+        .shiki-container {
+          margin: 2rem 0;
+        }
+
         .shiki {
-          padding: 1rem;
-          border-radius: 4px;
+          padding: 1.5rem !important;
+          border-radius: 8px !important;
           overflow-x: auto;
-          background-color: #101010 !important;
+          background-color: var(--base-10) !important;
+          font-family: var(--font-mono);
+          font-size: 0.9rem;
+          line-height: 1.6;
+          border: 1px solid var(--accent-muted);
+        }
+        
+        /* Markdown overrides for Tufte compatibility */
+        .markdown-body h2 { 
+          font-style: italic;
+          font-weight: 400;
+          font-size: 2.1rem;
+          margin-top: 2.5rem;
+          border-bottom: none;
+        }
+        .markdown-body h3 {
+          font-style: italic;
+          font-weight: 400;
+          font-size: 1.6rem;
+          margin-top: 2rem;
+        }
+        .markdown-body p {
+          margin-top: 1.4rem;
+          margin-bottom: 1.4rem;
+        }
+        .markdown-body blockquote {
+          margin: 2rem 0;
+          padding-left: 1.5rem;
+          border-left: 2px solid var(--accent);
+          font-style: italic;
         }
       `}</style>
     </section>

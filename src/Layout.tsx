@@ -54,10 +54,10 @@ const Layout: React.FC = () => {
         
         <div className="search-container">
           <div className="search-input-wrapper">
-            <Search size={18} className="search-icon" />
+            <Search size={16} className="search-icon" />
             <input 
               type="text" 
-              placeholder="Search notes..." 
+              placeholder="Search..." 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onFocus={() => setIsSearchOpen(true)}
@@ -74,7 +74,6 @@ const Layout: React.FC = () => {
                     onClick={() => handleSearchSelect(item.slug)}
                   >
                     <div className="result-title">{item.title}</div>
-                    <div className="result-category">{item.category}</div>
                   </div>
                 ))
               ) : (
@@ -84,32 +83,30 @@ const Layout: React.FC = () => {
           )}
         </div>
 
-        <div className="category">
-          <ul>
-            <li>
-              <Link to="/graph" onClick={() => setIsMenuOpen(false)}>Graph View</Link>
-            </li>
-          </ul>
+        <div className="nav-links">
+          <Link to="/graph" onClick={() => setIsMenuOpen(false)}>Graph View</Link>
+          
+          {Object.entries(categories).map(([category, items]) => (
+            <div key={category} className="nav-category">
+              <span className="category-label">{category}</span>
+              <ul>
+                {items.map(item => (
+                  <li key={item.slug}>
+                    <Link to={`/notes/${item.slug}`} onClick={() => setIsMenuOpen(false)}>
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
-
-        {Object.entries(categories).map(([category, items]) => (
-          <div key={category} className="category">
-            <p className="category-title"><strong>{category.toUpperCase()}</strong></p>
-            <ul>
-              {items.map(item => (
-                <li key={item.slug}>
-                  <Link to={`/notes/${item.slug}`} onClick={() => setIsMenuOpen(false)}>
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
       </nav>
 
       <main>
-        <Outlet />
+        <article>
+          <Outlet />
+        </article>
       </main>
 
       {isMenuOpen && (
@@ -121,117 +118,177 @@ const Layout: React.FC = () => {
       )}
 
       <style>{`
+        .app-shell { 
+          display: flex; 
+          min-height: 100vh; 
+          background: var(--base-00);
+          color: var(--base-100);
+          font-family: var(--font-serif);
+        }
+        
+        nav {
+          width: 260px; 
+          background: var(--base-00); 
+          padding: 3rem 1.5rem; 
+          height: 100vh; 
+          overflow-y: auto;
+          position: fixed; 
+          left: 0; 
+          top: 0; 
+          z-index: 1000;
+          transition: transform 0.3s ease;
+          border-right: 1px solid var(--accent-muted);
+        }
+
+        nav h3 { 
+          margin-bottom: 2rem;
+          font-family: var(--font-serif);
+          font-weight: 400;
+          font-size: 1.4rem;
+        }
+        
+        nav h3 a {
+          color: var(--base-100) !important;
+          text-decoration: none !important;
+        }
+
         .search-container {
-          margin: 1rem 0;
+          margin-bottom: 2rem;
           position: relative;
         }
+
         .search-input-wrapper {
           display: flex;
           align-items: center;
-          background: #eee;
-          padding: 0.5rem;
-          border-radius: 4px;
+          border-bottom: 1px solid var(--accent-muted);
+          padding: 0.3rem 0;
         }
+        
         .search-icon {
           margin-right: 0.5rem;
-          color: #666;
+          color: var(--base-70);
         }
+
         .search-input-wrapper input {
           border: none;
           background: transparent;
           width: 100%;
           outline: none;
           font-size: 0.9rem;
+          color: var(--base-100);
+          font-family: var(--font-serif);
+          font-style: italic;
         }
+
         .search-results {
           position: absolute;
           top: 100%;
           left: 0;
           right: 0;
-          background: white;
-          border: 1px solid #ddd;
-          border-radius: 4px;
-          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-          z-index: 1000;
+          background: var(--base-00);
+          border: 1px solid var(--accent-muted);
+          z-index: 1001;
           max-height: 300px;
           overflow-y: auto;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
-        @media (prefers-color-scheme: dark) {
-          .search-results {
-            background: #222;
-            border-color: #444;
-          }
-          .search-input-wrapper {
-            background: #333;
-          }
-        }
+
         .search-result-item {
-          padding: 0.75rem;
+          padding: 0.6rem 1rem;
           cursor: pointer;
-          border-bottom: 1px solid #eee;
         }
+
         .search-result-item:hover {
-          background: #f5f5f5;
+          background: var(--base-10);
         }
-        @media (prefers-color-scheme: dark) {
-          .search-result-item { border-bottom-color: #333; }
-          .search-result-item:hover { background: #333; }
+
+        .result-title { 
+          font-size: 0.9rem; 
         }
-        .result-title { font-weight: bold; font-size: 0.9rem; }
-        .result-category { font-size: 0.75rem; color: #666; }
-        .no-results { padding: 1rem; text-align: center; color: #666; }
-        .search-scrim {
-          position: fixed;
-          top: 0; left: 0; right: 0; bottom: 0;
-          z-index: 999;
+
+        .nav-links a {
+          display: block;
+          color: var(--accent);
+          text-decoration: none;
+          margin-bottom: 0.5rem;
+          font-size: 1rem;
         }
+
+        .nav-category {
+          margin-top: 1.5rem;
+        }
+
+        .category-label {
+          display: block;
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: var(--base-70);
+          margin-bottom: 0.5rem;
+        }
+
+        nav ul { list-style: none; padding-left: 0; }
+        nav li { margin-bottom: 0.3rem; }
         
-        /* Layout styles from +layout.svelte */
-        :global(body) {
-          padding-left: 0 !important;
-          margin: 0 !important;
-          width: 100% !important;
-          max-width: 100% !important;
+        nav li a { 
+          color: var(--base-100); 
+          font-size: 0.95rem;
+          opacity: 0.8;
+        }
+
+        nav li a:hover { 
+          opacity: 1;
+          text-decoration: underline;
+        }
+
+        main { 
+          flex: 1; 
+          margin-left: 260px; 
+          padding: 3rem 5%; 
           display: flex;
-          flex-direction: column;
-          overflow-x: hidden;
+          justify-content: flex-start;
+          min-height: 100vh;
+          box-sizing: border-box;
         }
-        .app-shell { display: flex; min-height: 100vh; position: relative; }
-        .scrim {
-          display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-          background: rgba(0, 0, 0, 0.1); z-index: 99;
+
+        article {
+          width: 100%;
+          max-width: 42rem;
         }
-        nav {
-          width: 250px; background: #fffff8; border-right: 1px solid #eee;
-          padding: 2rem 1.5rem; height: 100vh; overflow-y: auto;
-          position: fixed; left: 0; top: 0; z-index: 1000;
-          transition: transform 0.3s ease; font-size: 0.9rem;
-        }
-        nav h3 { margin-top: 0; font-size: 1.4rem; }
-        nav ul { list-style: none; padding-left: 0; margin-top: 0.5rem; }
-        nav li { margin-bottom: 0.5rem; }
-        nav a { text-decoration: none; color: #111; }
-        nav a:hover { text-decoration: underline; }
-        .category-title { margin-bottom: 0.5rem; margin-top: 1.5rem; display: block; font-size: 0.8rem; letter-spacing: 0.1em; }
-        main { flex: 1; margin-left: 250px; padding: 2rem 4rem; max-width: 1000px; width: 100%; box-sizing: border-box; }
+
         .menu-toggle {
-          display: none; position: fixed; top: 1rem; left: 1rem; z-index: 200;
-          background: none; border: none; font-size: 1.5rem; cursor: pointer; padding: 0.5rem;
-          background-color: rgba(255, 255, 255, 0.8); border-radius: 4px;
+          display: none; 
+          position: fixed; 
+          top: 1rem; 
+          right: 1rem; 
+          z-index: 1100;
+          background: var(--base-00); 
+          border: 1px solid var(--accent-muted);
+          cursor: pointer; 
+          padding: 0.5rem;
+          border-radius: 4px;
         }
-        @media (prefers-color-scheme: dark) {
-          nav { background-color: #151515; border-right-color: #333; }
-          nav a { color: #ddd; }
-          .menu-toggle { color: #ddd; background-color: rgba(0,0,0,0.5); }
+
+        .scrim {
+          display: none; 
+          position: fixed; 
+          top: 0; 
+          left: 0; 
+          width: 100vw; 
+          height: 100vh;
+          background: rgba(0, 0, 0, 0.1); 
+          z-index: 99;
         }
-        @media (max-width: 900px) {
-          nav { transform: translateX(-100%); box-shadow: 2px 0 5px rgba(0,0,0,0.1); }
+
+        @media (max-width: 1000px) {
+          nav { transform: translateX(-100%); }
           nav.open { transform: translateX(0); }
           .scrim { display: block; }
-          main { margin-left: 0; padding: 4rem 1.5rem; }
+          main { margin-left: 0; padding: 5rem 1.5rem; }
           .menu-toggle { display: block; }
         }
       `}</style>
+
     </div>
   );
 };

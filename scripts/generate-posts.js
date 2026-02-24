@@ -40,7 +40,8 @@ async function generate() {
         processedBody = processedBody.replace(/!\[\[(.*?)\]\]/g, (match, filename) => {
             const possibleImagePath = path.join(postDir, 'imgs', filename);
             if (fs.existsSync(possibleImagePath)) {
-                const targetFilename = `${slug.replace(/\//g, '-')}-${filename}`;
+                const safeFilename = filename.replace(/\s+/g, '-');
+                const targetFilename = `${slug.replace(/\//g, '-')}-${safeFilename}`;
                 fs.copySync(possibleImagePath, path.join(staticImagesDir, targetFilename));
                 return `![${filename}](/images/posts/${targetFilename})`;
             }
@@ -53,7 +54,8 @@ async function generate() {
                 const possibleImagePath = path.resolve(postDir, src);
                 if (fs.existsSync(possibleImagePath)) {
                     const filename = path.basename(src);
-                    const targetFilename = `${slug.replace(/\//g, '-')}-${filename}`;
+                    const safeFilename = filename.replace(/\s+/g, '-');
+                    const targetFilename = `${slug.replace(/\//g, '-')}-${safeFilename}`;
                     fs.copySync(possibleImagePath, path.join(staticImagesDir, targetFilename));
                     return `![${alt}](/images/posts/${targetFilename})`;
                 }

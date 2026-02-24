@@ -80,19 +80,66 @@ const Home: React.FC = () => {
 
   return (
     <section>
-      <h1>All Notes</h1>
-      <ul className="tree">
-        {tree.map((node, i) => (
-          <RenderNode key={i} node={node} />
-        ))}
-      </ul>
+      <h1 className="home-title">All Notes</h1>
+      <div className="tree-container">
+        <ul className="tree">
+          {tree.map((node, i) => (
+            <RenderNode key={i} node={node} />
+          ))}
+        </ul>
+      </div>
       <style>{`
-        .date { font-size: 0.8rem; color: #666; }
-        @media (prefers-color-scheme: dark) { .date { color: #aaa; } }
-        ul.tree { list-style: none; padding-left: 1rem; }
-        ul.tree ul { width: auto; padding-left: 1.5rem; list-style: none; }
-        summary { cursor: pointer; font-weight: bold; margin-bottom: 0.5rem; }
-        li { margin-bottom: 0.5rem; }
+        .home-title {
+          font-family: var(--font-serif);
+          font-size: 3rem;
+          margin-bottom: 3rem;
+          font-weight: 400;
+        }
+        .tree-container {
+          margin-top: 2rem;
+        }
+        ul.tree { 
+          list-style: none; 
+          padding-left: 0; 
+        }
+        ul.tree ul { 
+          list-style: none; 
+          padding-left: 1.5rem;
+          margin-top: 0.5rem;
+          margin-bottom: 1rem;
+          border-left: 1px solid var(--accent-muted);
+        }
+        summary { 
+          cursor: pointer; 
+          font-family: var(--font-serif);
+          font-style: italic;
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+          color: var(--base-100);
+          display: block;
+        }
+        summary::-webkit-details-marker {
+          display: none;
+        }
+        li { 
+          margin-bottom: 0.5rem; 
+        }
+        li a {
+          color: var(--accent);
+          text-decoration: none;
+          font-family: var(--font-serif);
+          font-size: 1.1rem;
+        }
+        li a:hover {
+          text-decoration: underline;
+        }
+        .date { 
+          font-size: 0.9rem; 
+          color: var(--base-70);
+          font-family: var(--font-serif);
+          font-style: italic;
+          margin-left: 0.5rem;
+        }
       `}</style>
     </section>
   );
