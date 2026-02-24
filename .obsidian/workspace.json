@@ -193,7 +193,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -207,8 +208,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7f78cc99e52dfb49",
+  "active": "f05dd03f591a1aa9",
   "lastOpenFiles": [
+    "dist/assets/index-xJKyNy5u.js",
+    "dist/assets/index-pgoPAIW_.css",
     "dist/assets/vitesse-black-Bkuqu6BP.js",
     "dist/assets/synthwave-84-CbfX1IO0.js",
     "dist/assets/snazzy-light-Bw305WKR.js",
@@ -218,8 +221,6 @@
     "dist/assets/nord-Ddv68eIx.js",
     "dist/assets/material-theme-D5KoaKCx.js",
     "dist/assets/houston-DnULxvSX.js",
-    "dist/assets/gruvbox-light-soft-hJgmCMqR.js",
-    "dist/assets/gruvbox-dark-soft-CVdnzihN.js",
     "dist/my-diagram.png",
     "dist/images/migrated/Finance/microeconomics/assets/Screenshot 2025-07-19 at 4.42.04 PM.png",
     "dist/images/migrated/data-engineering-zoomcamp/imgs/Screenshot 2026-01-18 at 9.53.50 PM.png",

@@ -45,9 +45,12 @@ const Note: React.FC = () => {
           rehypePlugins={[rehypeKatex, rehypeRaw]}
           components={{
             img: ({ node, ...props }) => {
+              const src = props.src?.startsWith('/') 
+                ? `${import.meta.env.BASE_URL}${props.src.slice(1)}` 
+                : props.src;
               return (
                 <span className="image-container">
-                  <img {...props} style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '1.5rem 0' }} />
+                  <img {...props} src={src} style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '1.5rem 0' }} />
                   {props.alt && <span className="image-caption">{props.alt}</span>}
                 </span>
               );
