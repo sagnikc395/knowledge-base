@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-	base: '/knowledge-base/',
+	base: process.env.VITE_BASE || '/knowledge-base/',
 	plugins: [react()],
 	publicDir: 'static',
 	resolve: {

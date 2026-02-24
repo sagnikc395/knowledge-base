@@ -1,7 +1,7 @@
 [
   {
     "title": "Functional Programming In Python",
-    "date": "2026-02-24T02:00:59.752Z",
+    "date": "2026-02-24T13:34:50.809Z",
     "slug": "python-refresher/Functional Programming",
     "category": "python-refresher",
     "published": true,
@@ -16,12 +16,29 @@
   },
   {
     "title": "ddia-notes",
-    "date": "2026-02-24T02:00:59.751Z",
+    "date": "2026-02-24T13:34:50.808Z",
     "slug": "data-engineering-zoomcamp/ddia/ddia-notes",
     "category": "data-engineering-zoomcamp",
     "published": true,
     "content": "my notes and writeups for Designing Data Intensive Applications book.\n\nIndex:\n\n- Chapter1 -> introduces the terminology and approach. It examines what we are actually mean by words like reliability,scalability and maintainibility, and how we can try to achieve these goals.\n- Chapter2 -> compares several different data models and query langauges - most visible distinguishing facor bw databases from a developer's point of view. How different models are appropriate to different situations.\n- Chapter3 -> turns to internals of storage engines and looks at how databases lay out data on disk. Different storage engines are optimized for different workloads, and choosing the right ne can have a huge effect on performance.\n- Chapter4 -> compares various formats for data encoding (serialization) and especially examines how they fare in an env where application requirements change and schemas need to adatpt over time.\n",
     "metadata": {}
+  },
+  {
+    "title": "SQL and Postgres",
+    "date": "2/24/26",
+    "slug": "100xdevs/postgres",
+    "category": "100xdevs",
+    "published": true,
+    "content": "### Types of Databases\n- There are a few types of databases,all service different types of use-cases.\n- NoSQL databases\n\t- Store data in a `schema-less` fashion. Extremely lean and fast way to store data.\n\t- Examples : `MongoDb`\n- Graph Databases\n\t- Data is stored in the form of a graph. Specifically useful where relationships need to be stored in social networks.\n\t- Eg: Neo4j\n- Vector Databases\n\t- Stored data in the form of vectors\n\t- Text converted into a embedding and stores that.\n- SQL Databases\n\t- Store data in the form of rows.\n\t- Most full stack applications will use this\n\t- E",
+    "metadata": {
+      "title": "SQL and Postgres",
+      "tags": [
+        "databases",
+        "postgres",
+        "sql"
+      ],
+      "date": "2/24/26"
+    }
   },
   {
     "title": "Typescript",

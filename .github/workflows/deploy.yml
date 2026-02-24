@@ -26,12 +26,13 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps:deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v5
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -42,8 +43,12 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - name: Create 404.html
-        run: cp dist/index.html dist/404.html
+        env:
+          VITE_BASE: ${{ steps.pages.outputs.base_path }}
+      - name: Create 404.html and .nojekyll
+        run: |
+          cp dist/index.html dist/404.html
+          touch dist/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
