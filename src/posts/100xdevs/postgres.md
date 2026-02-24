@@ -100,4 +100,15 @@ date: 2/24/26
 		- returns rows where there is at least one match in both tables. 
 		- if there is no match , the rows are not returned.
 		- most common type of join 
-		- 
+- SQL
+	- have a strict schema 
+	- requires us to 
+		- define our schema 
+		- put in data that follows that schema 
+		- update the schema as our app changes and performs migrations 
+	- so there are 4 paths using an SQL database 
+		- running the database 
+		- using a library that let us connect and put data in it 
+		- creating a table and defining its schema 
+		- run queries on the database to interact with the data 
+	- 
