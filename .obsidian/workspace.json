@@ -193,8 +193,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,7 +207,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f05dd03f591a1aa9",
+  "active": "7f78cc99e52dfb49",
   "lastOpenFiles": [
     "dist/assets/vitesse-black-Bkuqu6BP.js",
     "dist/assets/synthwave-84-CbfX1IO0.js",

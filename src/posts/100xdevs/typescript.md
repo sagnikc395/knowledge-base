@@ -85,7 +85,23 @@ date: 2/17/26
 - the final value stored at runtime is still a number.(default value is 0)
 ### Generics 
 - generics enable us to create components that work with any data type while still providing compile-time type safety.
-- 
-
-
 ### Imports and Exports 
+- TS follows the ES6 module system using import and export statements to share code between different files.
+
+### Typescript Advance APIs:
+#### Pick:
+- Allows us to create a new type by selecting a set of properties (keys) from an existing type (Type).
+- Image if we have an user model , with several properties, but for a user profile display, we only need a subset of these properties.
+#### Partial:
+- Makes all properties of a type optional, creating a type with the same properties but each marked as optional.
+#### readonly 
+- when we have an configuration object  that should not be altered after initialization, making it `ReadOnly` ensures its properties cannot be changed.
+
+#### Record and Map
+- Record lets us give a cleaner type to objects.
+- Easier way to deal with objects.
+- maps gives an even fancier way
+
+#### Exclude
+- In a function that can accept several types of inputs , but we want to exclude specific types form being passed to it.
+- 
