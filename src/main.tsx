@@ -8,9 +8,11 @@ import GraphView from './pages/GraphView';
 import './lib/tufte.css';
 import 'katex/dist/katex.min.css';
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter basename="/knowledge-base">
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
