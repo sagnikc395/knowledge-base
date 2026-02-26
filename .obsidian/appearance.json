@@ -1,7 +1,8 @@
 {
-  "cssTheme": "Flexoki",
-  "accentColor": "#243784",
+  "cssTheme": "Minimal",
+  "accentColor": "#8594d1",
   "monospaceFontFamily": "Monaspace Argon",
-  "textFontFamily": "Charter",
-  "baseFontSize": 17
+  "textFontFamily": "Geneva",
+  "baseFontSize": 17,
+  "interfaceFontFamily": "Inter"
 }

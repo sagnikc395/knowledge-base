@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "bee0f1e821c8e960",
+        "id": "b3845d92e8cda4a0",
         "type": "tabs",
         "children": [
           {
-            "id": "f05dd03f591a1aa9",
+            "id": "f1a7f613a8132ba8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/posts/100xdevs/postgres.md",
+                "file": "src/posts/100xdevs/nextjs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "postgres"
+              "title": "nextjs"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "b67e343037ce5372",
@@ -209,9 +208,23 @@
   },
   "active": "7f78cc99e52dfb49",
   "lastOpenFiles": [
+    "src/posts/100xdevs/zustand.md",
+    "src/posts/100xdevs/webrtc.md",
+    "src/posts/100xdevs/openapi_spec.md",
+    "src/posts/100xdevs/redis_pubsubs_queues.md",
+    "src/posts/100xdevs/websockets.md",
+    "src/posts/100xdevs/csr_ssr_ssg.md",
+    "src/posts/100xdevs/ci_cd.md",
+    "src/posts/100xdevs/docker.md",
+    "src/posts/100xdevs/auth.md",
+    "src/posts/100xdevs/nextjs.md",
+    "src/posts/100xdevs/tailwind.md",
+    "src/posts/100xdevs/imgs/Screenshot 2026-02-25 at 7.55.35 PM.png",
+    "src/posts/100xdevs/postgres.md",
+    "Untitled.base",
+    "2026-02-25.md",
     "src/posts/100xdevs/prisma.md",
     "elizabeth meeting notes.md",
-    "src/posts/100xdevs/postgres.md",
     "README.md",
     "dist/assets/vitesse-light-CVO1_9PV.js",
     "dist/assets/vitesse-black-Bkuqu6BP.js",
@@ -222,19 +235,16 @@
     "dist/assets/red-bN70gL4F.js",
     "dist/assets/poimandres-CS3Unz2-.js",
     "dist/assets/plastic-3e1v2bzS.js",
-    "dist/assets/one-light-PoHY5YXO.js",
     "dist/assets/et-book-bold-line-figures-CYrTGXwY.svg",
     "dist/assets/et-book-roman-old-style-figures-BzDpfWYP.svg",
     "dist/assets/et-book-roman-line-figures-DHJTOZ4q.svg",
     "dist/assets/et-book-display-italic-old-style-figures-4T99rT7F.svg",
     "dist/assets/favicon-D618I29X.png",
-    "src/posts/100xdevs/recoil.md",
     "src/posts/100xdevs/typescript.md",
     "dist/images/posts/projects-realtime-data-streaming-Screenshot-2026-02-08-at-5.25.56-PM.png",
     "dist/images/posts/ai-ml-bootcamp-neural-networks-from-scratch-Screenshot-2026-01-24-at-11.31.22-AM.png",
     "dist/images/posts/ai-ml-bootcamp-neural-networks-from-scratch-Screenshot-2026-01-24-at-11.15.52-AM.png",
     "dist/images/posts/ai-ml-bootcamp-neural-networks-from-scratch-Screenshot-2026-01-24-at-11.06.04-AM.png",
-    "dist/images/posts/ai-ml-bootcamp-neural-networks-from-scratch-Screenshot-2026-01-24-at-10.55.52-AM.png",
     "node_modules/commander/Readme.md",
     "node_modules/mdast-util-gfm-footnote/node_modules/mdast-util-to-markdown/readme.md",
     "node_modules/eslint-scope/README.md",
@@ -244,17 +254,6 @@
     "node_modules/punycode/README.md",
     "node_modules/unist-util-visit-parents/node_modules/@types/unist/README.md",
     "node_modules/unist-util-visit-parents/readme.md",
-    "node_modules/unist-util-stringify-position/node_modules/@types/unist/README.md",
-    "node_modules/unist-util-stringify-position/readme.md",
-    "node_modules/mdast-util-gfm-footnote/node_modules/micromark-util-decode-string/readme.md",
-    "node_modules/mdast-util-gfm-footnote/node_modules/micromark-util-decode-numeric-character-reference/readme.md",
-    "node_modules/mdast-util-gfm-footnote/node_modules/@types/unist/README.md",
-    "node_modules/zwitch/readme.md",
-    "node_modules/ts-api-utils/README.md",
-    "node_modules/ts-api-utils/LICENSE.md",
-    "node_modules/tinyglobby/README.md",
-    "node_modules/strip-json-comments/readme.md",
-    "node_modules/stringify-entities/readme.md",
     "Untitled.canvas"
   ]
 }
