@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "b67e343037ce5372",
@@ -208,6 +209,9 @@
   },
   "active": "7f78cc99e52dfb49",
   "lastOpenFiles": [
+    "Untitled.base",
+    "src/posts/100xdevs/nextjs.md",
+    "src/posts/100xdevs/imgs/Screenshot 2026-03-01 at 7.48.26 PM.png",
     "src/posts/100xdevs/zustand.md",
     "src/posts/100xdevs/webrtc.md",
     "src/posts/100xdevs/openapi_spec.md",
@@ -217,11 +221,9 @@
     "src/posts/100xdevs/ci_cd.md",
     "src/posts/100xdevs/docker.md",
     "src/posts/100xdevs/auth.md",
-    "src/posts/100xdevs/nextjs.md",
     "src/posts/100xdevs/tailwind.md",
     "src/posts/100xdevs/imgs/Screenshot 2026-02-25 at 7.55.35 PM.png",
     "src/posts/100xdevs/postgres.md",
-    "Untitled.base",
     "2026-02-25.md",
     "src/posts/100xdevs/prisma.md",
     "elizabeth meeting notes.md",
@@ -244,7 +246,6 @@
     "dist/images/posts/projects-realtime-data-streaming-Screenshot-2026-02-08-at-5.25.56-PM.png",
     "dist/images/posts/ai-ml-bootcamp-neural-networks-from-scratch-Screenshot-2026-01-24-at-11.31.22-AM.png",
     "dist/images/posts/ai-ml-bootcamp-neural-networks-from-scratch-Screenshot-2026-01-24-at-11.15.52-AM.png",
-    "dist/images/posts/ai-ml-bootcamp-neural-networks-from-scratch-Screenshot-2026-01-24-at-11.06.04-AM.png",
     "node_modules/commander/Readme.md",
     "node_modules/mdast-util-gfm-footnote/node_modules/mdast-util-to-markdown/readme.md",
     "node_modules/eslint-scope/README.md",
@@ -253,7 +254,6 @@
     "node_modules/mdast-util-gfm-footnote/node_modules/mdast-util-to-string/readme.md",
     "node_modules/punycode/README.md",
     "node_modules/unist-util-visit-parents/node_modules/@types/unist/README.md",
-    "node_modules/unist-util-visit-parents/readme.md",
     "Untitled.canvas"
   ]
 }
