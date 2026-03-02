@@ -136,12 +136,31 @@ export const UseCard = () => {
 		- code in a single repo
 		- all standard things we get in a backend framework like express
 		- server components can directly talk to the backend.
-- 
+- also while using prisma with it, use a singleton pattern as it makes maximum code reuse.
+	- so as to not make multiple connections to the prisma config.
+	- because next dev in dev mode will instantiate a new `PrismaClient` instance each time due to hot reloading that will create a connection to the database. This can quickly exhaust the database connections as each `PrismaClient` instance holds its own connection pool.
+- Server Actions 
+	- till now we wrote some simple api endpoints.
+	- have a slight inconvineience , is that if we want to hit from the server, the request goes out from the browser and then this client is called.
+	- to call the same thing on the backend, we have to send a http request in backend to backend communication.
+	- server actions let us define functions that we can call both on the client and the server.
+	- ![[Screenshot 2026-03-02 at 9.52.36 AM.png]]
+	- benefits of server actions:
+		- single functions can be used in both client and server components
+		- gives us types of the function response on the frontend (like trpc)
+		- can be integrated seamlessly with forms 
 ### Authentication using Cookies:
+- 
 
 ### NextAuth:
 
 
 ### Middlewares in Nextjs:
+- Code that runs before / after our request handler.
+- Commonly used for things like:
+	- analytics 
+	- authentication 
+	- redirecting the user
+- 
 
 ### CSR VS SSR VS SSG:
