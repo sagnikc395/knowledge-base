@@ -36,4 +36,23 @@ tags:
 		- format and bundle errors 
 		- transform data as needed 
 		- customize the runtime configuration 
-- Timestamp: 1:23:24 
+	- wtf is context ? 
+		- when initializing our router, tRPC allows us to:
+			- setup request contexts 
+			- assign metadata to procedures
+			- format and handle errors
+			- transform data as needed 
+			- customize the runtime configuration
+		- context for the specific thing -> kind of like a session 
+		- anytime a request comes, it has a extra context on what is happening with what is present with the request itself.
+		- `opts.ctx` holds the context for the request and we can work through it.
+		- context holds the data that all of our tRPC procedures will have access to, and is a great place to put things like database connections or authentication information.
+		- setting it up is a 2 fold process : defining the type during initialization and then creating the runtime context for each request.
+- Output Validators
+	- like input validators, we have a set of ways to do output validations also.
+- Merging Routers
+	- Create routers separately and then merger them.
+	- `t.MergeRouter`
+	- rather than defining in a single router, we can defining multiple routers and then can merge using `t.MergeRouter`
+- Data Transformers 
+- Next.js Integration
