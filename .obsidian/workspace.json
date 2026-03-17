@@ -206,8 +206,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7f78cc99e52dfb49",
+  "active": "f1a7f613a8132ba8",
   "lastOpenFiles": [
+    "src/posts/100xdevs/imgs/Screenshot 2026-03-17 at 11.48.11 AM.png",
     "src/posts/projects/knowl.md",
     "src/posts/projects/kai.md",
     "src/posts/100xdevs/monorepos.md",
@@ -253,7 +254,6 @@
     "dist/assets/et-book-roman-line-figures-DHJTOZ4q.svg",
     "dist/assets/et-book-display-italic-old-style-figures-4T99rT7F.svg",
     "src/posts/100xdevs/typescript.md",
-    "node_modules/commander/Readme.md",
     "Untitled.canvas"
   ]
 }

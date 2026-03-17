@@ -174,3 +174,26 @@ export const UseCard = () => {
 	- modern technique used in web dev where the rendering of a webpage is performed in the browser using js. Instead of the server sending a fully rendered HTML page to the client.
 	- Eg: React 
 	- ![[Screenshot 2026-03-17 at 11.36.50 AM.png]]
+	- Downsides:
+		- Not SEO optimized
+		- User sees a flash before the page renders 
+		- waterfalling problem
+- Server Side Rendering 
+	-  foundational techniques 
+	- when the rendering (process of converting JS components to HTML) happens on the server, called as SSR
+	- ![[Screenshot 2026-03-17 at 11.48.11 AM.png]]
+	- initial HTML page is popularized
+	- Cons:
+		- expensive since every request needs to render on the server 
+		- harder to scale, can't cache to CDNs
+	- 
+
+- Static Side Generation
+	- page HTML is generated at build time.
+	- that means that in production, page HTML is generated when we run next build.
+	- this HTML will then be reused on each request.
+	- can be cached by a CDN
+	- Why?
+		- if we use static site generation, we can defer the expensive operation of rendering a page to the build time so that it only happens once.
+	- how ?
+		- 
