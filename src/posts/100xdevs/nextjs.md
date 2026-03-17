@@ -161,6 +161,16 @@ export const UseCard = () => {
 	- analytics 
 	- authentication 
 	- redirecting the user
-- 
+- actually biggest use of middlewares is authorization and  authentication -- which nextauth sort of takes care 
+	- ensure that user identity and check session cookies before granting access to specific pages or API routes.
+- another big use cases is logging and analytics -> capture and analyze request data for insights before processing by the page or API.
+- they expect to have a single miidleware.ts file in the root folder.
+	- we can still organize our middleware logic modularly. Break out the middleware functionalities into seperate ts or js files and import them into our main middlware.ts file.
+	- allows for cleaner management of route-specific middleware , aggregated in middleware.ts for centralized control.
+	- by enforcing a single middleware file, it simplifies configuration, prevents potential conflicts and optimizes performance by avoiding multiple middleware layers.
 
 ### CSR VS SSR VS SSG:
+- Client Side Rendering
+	- modern technique used in web dev where the rendering of a webpage is performed in the browser using js. Instead of the server sending a fully rendered HTML page to the client.
+	- Eg: React 
+	- ![[Screenshot 2026-03-17 at 11.36.50 AM.png]]

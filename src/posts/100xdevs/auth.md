@@ -1,0 +1,58 @@
+---
+title: Authentication Foundations and NextAuth
+tags:
+  - authentication
+  - cookies
+  - nextauth
+  - 100xdevs
+date: 3/7/26
+---
+- ideas on how to do authentication with cookies and what even are cookies
+- CSRF attacks and connect a react app with a express app with cookies.
+- all routes are protected and get information that we get using our own information , not others information.
+- how to do the authentication right ?
+- Authentication using jwt and localstorage
+	- ![[Screenshot 2026-03-07 at 9.36.29 AM.png]]
+	- the first thing that we do when we reach signup , fill out a form with some details and do signup
+	- we send a request to an endpoint with username, password and other details and entry goes to a db provided the details are not already there 
+	- a email verification happens and a password hashing happens
+		- using the bcrypt library to hash the passwords.
+		- verified set to false initially, when we verify it, verification set to true.
+	- server checks if the password and username is right or not.
+	- if those are right, we would have to send a header with the jwt token in every subsequent request for protected routes.
+	- they will send the authorization header around, give them the user details with them.
+		- we explictly send the header with each request.
+- Authentication using Cookies
+	- Cookies : small pieces of data sent from a website and stored on localStorage while the user in browsing.
+		- Designed to be a reliable mechanisms for websites to remember things.
+	- Session Management 
+	- Personalization 
+	- Tracking
+	- Security
+		- We sort of get a token from the backend and store in the browser's storage and everytime we use the protected routes, that token is used to identify the user.
+	- why not localStorage ?
+		- cannot do in nextjs 
+		- the first request that goes out , can't put the token when the request goes out.
+			- cause the browser is sending the first request, as the browser is sending a header.
+			- we don't send the header by default
+			- and nextjs does server side rendering 
+				- the very first request that comes from the browser, has the users data , already rendered on the server and returned back.
+		- once the server sets the cookies, server does all the cheks, they will sent it do it in every request, by default.
+			- in react , we get the html,css and js and then programmatically send it.
+		- whatever is in the set cookie header, goes into the server programmatically , especially in the top-level header request.
+	- cookies give us these constructs out of the box.
+	- ![[Screenshot 2026-03-07 at 11.33.46 AM.png]]
+	- Properties of Cookies:
+		- Types of Cookies:
+			- Persistent -> stay even if we close the window
+			- Session -> go away after the window closes
+			- Secure -> sent only over secure, encrypted connections (HTTPS)
+		- Properties of Cookies:
+			- HttpOnly -> can not be accessed by client side scripts
+			- SameSite -> Ensures that the cookies are not send on cross origin requests 
+		- Strict 
+		- Lax -> only on GET requests and on top level navigation 
+		- None 
+		- domains -> can also specify from what all domains the cookies should be sent from
+		- 56:31
+		- 
