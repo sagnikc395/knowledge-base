@@ -1,0 +1,57 @@
+---
+title: Learning PyTorch
+tags:
+  - pytorch
+  - automatic-gradient
+  - 100xdevs
+date: 3/17/26
+---
+- 5 step recipe
+	- using raw math and basic arrays 
+- to see why torch's tools exist 
+	- to make the engine from your bare hands 
+- 5 steps are 
+	- Step1 : Prediction 
+		- Math : Make a prediction `y^ = f(x;\theta)`
+		- Raw Tensors : `y_hat = X @ W +b`
+		- torch.nn : `y_hat = model(X)`
+	- Step 2: Loss Calc 
+		- Math: Quantify the loss : `L = loss(y_hat,y)`
+		- Raw Tensors: `loss = torch.mean((y_hat - y)**2)`
+		- torch.nn : `loss = criterion(y_hat,y)`
+	- Step 3: Gradient Calc
+		- Math: Find the slope of the loss 
+		- Raw Tensors : `loss.backward()`
+		- torch.nn : `loss.backward()`
+	- Step4 : Param Update 
+		- Math: Step down the slope 
+		- Raw tensors : `W -= lr * W.grad`
+		- torch.nn : `optimizer.step()`
+	- Step 5: Gradient Reset 
+		- Math: Reset for the next loop
+		- Raw tensor : `W.grad.zero_()`
+		- torch.nn : `optimizer.zero_grad()`
+- Core features of PyTorch:
+	- tensor computations 
+	- GPU acceleration 
+	- dynamic computation graph 
+	- automatic differentiation 
+	- distributed training 
+	- interoperability with other libraries 
+- PyTorch Core Modules:
+	- torch -> core module providing support for multidim array and mathematical operations on them 
+	- torch.autograd -> automatic differentiation engine that records operations on tensors to compute gradients for optimization 
+	- torch.nn -> provides a nn library, including layers, activations,loss functions 
+	- torch.optim -> contains optimization algorithms like SGD, Adam,RMSProp used for training neural networks 
+	- torch.jit -> supports JIT compilation and TorchScript for optimizing models and enabling deployment without Python dependencies
+	- torch.distributed -> tools for distributed training across multiple GPUs and machines, facilitating parallel computation.
+	- torch.utils.data -> for data handling including the Dataset and Dataloader class for managing and loading datasets 
+	- torch.cuda -> CUDA backend interface 
+	- torch multiprocessing -> parallelism using CUDA like Python's multiprocessing but with CUDA backends
+	- torch.quantization -> tools for model quantization to reduce model size and improve inference speed, especially on edge devices.
+	- torch.distributed -> tools for distributed training across multiple GPUs and machines, facilitating parallel computation.
+	- torch.onnx -> exporting Pytorch's models to the ONNX format for interoperability with other frameworks and deployments.
+- Tensors in Pytorch:
+	- tensors is a specialized multi-=dim array designed for mathematical and computational efficiency.
+	- dimensions -> directions/ spans 
+	- 
