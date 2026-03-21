@@ -51,7 +51,6 @@ date: 3/17/26
 	- torch.quantization -> tools for model quantization to reduce model size and improve inference speed, especially on edge devices.
 	- torch.distributed -> tools for distributed training across multiple GPUs and machines, facilitating parallel computation.
 	- torch.onnx -> exporting Pytorch's models to the ONNX format for interoperability with other frameworks and deployments.
-- Tensors in Pytorch:
-	- tensors is a specialized multi-=dim array designed for mathematical and computational efficiency.
-	- dimensions -> directions/ spans 
+- Pattern1 : Direct Creation from Data
+	- We have a Python list, and we want a tensor. Use `torch.tensor()`
 	- 

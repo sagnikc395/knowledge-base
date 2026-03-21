@@ -11,14 +11,14 @@
             "id": "58b0102c7fe3e217",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "src/posts/ai-engineering/agents.md",
-                "mode": "source",
-                "source": false
+                "aFile": "Clippings/Gregory Szorc's Digital Home   What I've Learned About Optimizing Python.md",
+                "bFile": "Clippings/Gregory Szorc's Digital Home   What I've Learned About Optimizing Python.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "agents"
+              "icon": "diff",
+              "title": "Diff: Gregory Szorc's Digital Home   What I've Learned About Optimizing Python  (Working Tree)"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "b67e343037ce5372",
@@ -207,15 +206,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7f78cc99e52dfb49",
+  "active": "58b0102c7fe3e217",
   "lastOpenFiles": [
-    "Screenshot 2026-03-18 at 10.11.13 AM.png",
+    "src/posts/ai-ml-bootcamp/imgs/Screenshot 2026-03-18 at 10.11.13 AM.png",
+    "Clippings/Gregory Szorc's Digital Home   What I've Learned About Optimizing Python.md",
+    "src/posts/ai-ml-bootcamp/pytorch notes.md",
+    "Clippings",
+    "src/posts/ai-engineering/agents.md",
     "src/posts/ai-engineering/imgs",
     "src/posts/ai-engineering/Untitled 1.md",
-    "src/posts/ai-engineering/agents.md",
     "src/posts/ai-engineering/imgs/Screenshot 2026-03-18 at 10.10.18 AM.png",
     "src/posts/ai-engineering",
-    "src/posts/ai-ml-bootcamp/pytorch notes.md",
     "src/posts/100xdevs/nextjs.md",
     "src/posts/100xdevs/imgs/Screenshot 2026-03-17 at 11.48.11 AM.png",
     "src/posts/projects/knowl.md",
@@ -245,16 +246,13 @@
     "src/posts/100xdevs/imgs/Screenshot 2026-02-25 at 7.55.35 PM.png",
     "src/posts/100xdevs/postgres.md",
     "2026-02-25.md",
-    "src/posts/100xdevs/prisma.md",
     "dist/assets/vitesse-light-CVO1_9PV.js",
     "dist/assets/vitesse-black-Bkuqu6BP.js",
     "dist/assets/synthwave-84-CbfX1IO0.js",
     "dist/assets/snazzy-light-Bw305WKR.js",
     "dist/assets/rose-pine-moon-D4_iv3hh.js",
     "dist/assets/rose-pine-qdsjHGoJ.js",
-    "dist/assets/red-bN70gL4F.js",
     "dist/assets/et-book-bold-line-figures-CYrTGXwY.svg",
-    "dist/assets/et-book-roman-old-style-figures-BzDpfWYP.svg",
     "Untitled.canvas"
   ]
 }
