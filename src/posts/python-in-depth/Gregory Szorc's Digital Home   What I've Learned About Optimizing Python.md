@@ -1,13 +1,14 @@
 ---
-title: "Gregory Szorc's Digital Home  | What I've Learned About Optimizing Python"
-source: "https://gregoryszorc.com/blog/2019/01/10/what-i've-learned-about-optimizing-python/"
+title: Gregory Szorc's Digital Home  | What I've Learned About Optimizing Python
+source: https://gregoryszorc.com/blog/2019/01/10/what-i've-learned-about-optimizing-python/
 author:
-  - "Gregory Szorc"
+  - Gregory Szorc
 published:
 created: 2026-03-21
-description: "Design and Optimzing High Performance Python Code"
+description: Design and Optimzing High Performance Python Code
 tags:
-  - "clippings python high-performance-python"
+  - python
+  - optimization
 ---
 January 10, 2019 at 03:00 PM | categories: [Python](https://gregoryszorc.com/blog/category/python)
 

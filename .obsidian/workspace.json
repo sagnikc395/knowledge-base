@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "78c02900978c4922",
+        "id": "e72d1a8f0056d16d",
         "type": "tabs",
         "children": [
           {
-            "id": "58b0102c7fe3e217",
+            "id": "99075acf1dda0385",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "Clippings/Gregory Szorc's Digital Home   What I've Learned About Optimizing Python.md",
-                "bFile": "Clippings/Gregory Szorc's Digital Home   What I've Learned About Optimizing Python.md",
-                "aRef": ""
+                "file": "src/posts/python-in-depth/Gregory Szorc's Digital Home   What I've Learned About Optimizing Python.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: Gregory Szorc's Digital Home   What I've Learned About Optimizing Python  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "Gregory Szorc's Digital Home   What I've Learned About Optimizing Python"
             }
           }
         ]
@@ -206,10 +206,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "58b0102c7fe3e217",
+  "active": "7f78cc99e52dfb49",
   "lastOpenFiles": [
     "src/posts/ai-ml-bootcamp/imgs/Screenshot 2026-03-18 at 10.11.13 AM.png",
-    "Clippings/Gregory Szorc's Digital Home   What I've Learned About Optimizing Python.md",
+    "src/posts/python-in-depth/Gregory Szorc's Digital Home   What I've Learned About Optimizing Python.md",
     "src/posts/ai-ml-bootcamp/pytorch notes.md",
     "Clippings",
     "src/posts/ai-engineering/agents.md",
